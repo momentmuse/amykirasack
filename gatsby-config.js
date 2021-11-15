@@ -2,6 +2,10 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "Amy Kirasack",
+    author: {
+      name: `Amy Kirasack`,
+      summary: `Sucking at something is the first step to being sorta good at something.`,
+    },
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -33,5 +37,8 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: `gatsby-plugin-typescript`,
+    }
   ],
 };
