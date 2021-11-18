@@ -1,4 +1,5 @@
 ---
+slug: '/blog/hello-gatsby'
 title: Hello Gatsby!
 date: '2021-11-21T21:22:22.782Z'
 description: "Gatsby is the name of my cat. Isn't she cute?"

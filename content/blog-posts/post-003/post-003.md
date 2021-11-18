@@ -1,4 +1,5 @@
 ---
+slug: '/blog/mrrreeow'
 title: Mrrreeow!
 date: '2021-11-24T19:16:12.782Z'
 description: 'Today, Gatsby will provide some words of wisdom for our blog.'

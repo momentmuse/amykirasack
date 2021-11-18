@@ -1,4 +1,5 @@
 ---
+slug: '/blog/hello-blog'
 title: Hello blog!
 date: '2021-11-17T21:22:22.782Z'
 description: 'Hello there. This is my first post.'

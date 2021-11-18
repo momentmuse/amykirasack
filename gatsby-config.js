@@ -12,14 +12,16 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
+    'gatsby-plugin-typescript',
+
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: 'src/images/icon.png',
       },
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -32,15 +34,22 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'blog-posts',
-        path: './content/blog-posts/',
+        path: `${__dirname}/content/blog-posts/`,
       },
       __key: 'blog-posts',
     },
     {
-      resolve: `gatsby-plugin-typescript`,
-    },
-    {
       resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 700,
+            },
+          },
+        ],
+      },
     },
   ],
 };
