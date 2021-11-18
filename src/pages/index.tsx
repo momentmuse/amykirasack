@@ -5,7 +5,7 @@ import Contact from './../components/contact';
 import Layout from './../components/layout';
 
 const IndexPage = () => {
-  // fix layout error?
+  // fix layout error? needs children
   return (
     <Layout>
       <title>Heyooo</title>

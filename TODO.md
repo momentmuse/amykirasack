@@ -3,19 +3,20 @@
 ➡️ ✅ Build out components skeleton
 ➡️ ✅ Create index with dummy components
 ➡️ ✅ Create layout and connect with pages
-➡️ Add Links (to other pages, and anchor to components in index)
+➡️ ✅ Add Links (to other pages, and anchor to components in index)
 
-➡️ Create blog post template
-➡️ Create blog posts .md files
-➡️ Write query, order query desc date
+➡️ ✅ Create blog post template
+➡️ ✅ Create blog posts .md files
+➡️ ✅ Write queries
+➡️ ✅ Programmatically create blog post links (gatsby-node.js?)
 
-➡️ Display in Carousel
+➡️ Query for all blog posts (order by desc date)
 ➡️ Display in Blog Page
-➡️ Programmatically create blog post links (gatsby-node.js?)
+➡️ Display in Carousel
 
 ➡️ Create work carousel (with links to websites)
-➡️ Single markdown file for work history?
-➡️ Add link with downloadable pdf of resume
+➡️ Single markdown file for work history? Don't need markdown file?
+➡️ Add link with downloadable pdf of resume?
 ➡️ Connect with Github and show projects
 
 ➡️ Create contact form

@@ -28,7 +28,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div>
-    <div
+    <nav
       style={{
         margin: `0 auto`,
         padding: `1.45rem 1.0875rem`,
@@ -54,7 +54,7 @@ const Header = ({ siteTitle }) => (
           <Link to="/#contact">Contact</Link>
         </li>
       </ul>
-    </div>
+    </nav>
   </header>
 );
 
