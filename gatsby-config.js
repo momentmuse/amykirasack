@@ -39,6 +39,14 @@ module.exports = {
       __key: 'blog-posts',
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'work',
+        path: `${__dirname}/content/jobs/`,
+      },
+      __key: 'jobs',
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
