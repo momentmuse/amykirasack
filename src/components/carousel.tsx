@@ -6,7 +6,7 @@ const Carousel = () => {
   // Refactor Carousel to accept Blog or Jobs data depending on passed id from props
 
   const sanitizeYear = (start, end) => {
-    return start === end ? end : `{start} - {end}`;
+    return start === end ? end : `${start} - ${end}`;
   };
 
   return (
@@ -55,7 +55,7 @@ const Carousel = () => {
                     <p>
                       {sanitizeYear(
                         job.frontmatter.startyear,
-                        job.frontmatter.startyear
+                        job.frontmatter.endyear
                       )}
                     </p>
                   </div>
