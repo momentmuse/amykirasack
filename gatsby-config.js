@@ -31,13 +31,16 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'pages',
-        path: './src/pages/',
+        name: 'blog-posts',
+        path: './content/blog-posts/',
       },
-      __key: 'pages',
+      __key: 'blog-posts',
     },
     {
       resolve: `gatsby-plugin-typescript`,
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
     },
   ],
 };
