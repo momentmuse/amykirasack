@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const Carousel = () => {
   // TODO: Try to make DRYer.
@@ -25,6 +26,11 @@ const Carousel = () => {
                 startyear
                 title
                 url
+                image {
+                  childImageSharp {
+                    gatsbyImageData(width: 280, placeholder: DOMINANT_COLOR)
+                  }
+                }
               }
             }
           }
@@ -42,10 +48,14 @@ const Carousel = () => {
           >
             <h1>🎠 This is the Carousel component 🎠</h1>
             {jobs?.map((job) => {
+              const image = getImage(job.frontmatter.image);
+              console.log('imagggeeee', image);
+
               return (
                 <article key={job.frontmatter.url}>
                   <div>
                     <h2>{job.frontmatter.title}</h2>
+                    <GatsbyImage image={image} alt={'company image'} />
                     <h3>
                       <a href={job.frontmatter.url} target="_blank">
                         {job.frontmatter.company}

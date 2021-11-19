@@ -1,13 +1,12 @@
 import * as React from 'react';
-import { graphql } from 'gatsby';
-// import Layout from './../components/layout';
+import { Link, graphql } from 'gatsby';
+import Layout from './../components/layout';
 
 const Template = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (
-    // <Layout>
-    <>
+    <Layout>
       <h1>This is the BlogPost template</h1>
       <article>
         <div>
@@ -16,9 +15,10 @@ const Template = ({ data }) => {
         </div>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </article>
-      <p>TODO: Add nav back to blog, next and prev post</p>
-    </>
-    // </Layout>
+      <p>
+        <Link to={'/blog'}>to blog index</Link>
+      </p>
+    </Layout>
   );
 };
 
