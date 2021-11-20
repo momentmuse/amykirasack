@@ -1,6 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 const Header = ({ siteTitle }) => (
   <header
@@ -10,6 +11,7 @@ const Header = ({ siteTitle }) => (
       display: `flex`,
     }}
   >
+    <Helmet title={siteTitle} titleTemplate="%s | Software Engineer" />
     <div
       style={{
         margin: `0 auto`,

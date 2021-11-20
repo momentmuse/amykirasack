@@ -14,8 +14,10 @@
 ➡️ ✅ Display in Blog Index Page
 ➡️ ✅ Create work carousel (with links to websites)
 ➡️ ✅ Markdown files for work history
+➡️ ✅ Add link back to blog index
+➡️ ✅ Add images to work carousel
 
-➡️ Add layout and back nav (browser history?) to blogpost collection route page
+➡️ ✅ Site title (React Helmet)
 ➡️ Connect portfolio with Github and show projects
 ➡️ Refactor Carousel/Blog idx etc for DRYness
 ➡️ Add link with downloadable pdf of resume?
@@ -29,6 +31,7 @@
 
 ➡️ Add Typescript to files
 ➡️ Add images & optimize them
+➡️ Add [SEO component](https://www.gatsbyjs.com/docs/add-seo-component/)
 ➡️ Normalize css
 
 ➡️ Style pages with styled-components (mobile-first)

@@ -49,7 +49,6 @@ const Carousel = () => {
             <h1>🎠 This is the Carousel component 🎠</h1>
             {jobs?.map((job) => {
               const image = getImage(job.frontmatter.image);
-              console.log('imagggeeee', image);
 
               return (
                 <article key={job.frontmatter.url}>
