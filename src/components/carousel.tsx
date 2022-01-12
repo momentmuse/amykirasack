@@ -46,7 +46,7 @@ const Carousel = () => {
               height: `80vh`,
             }}
           >
-            <h1>🎠 This is the Carousel component 🎠</h1>
+            <h1>🎠 Nothing ever becomes real 'til it is experienced. 🎠</h1>
             {jobs?.map((job) => {
               const image = getImage(job.frontmatter.image);
 

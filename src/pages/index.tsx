@@ -22,6 +22,10 @@ const IndexPage = () => {
             🎉🎉🎉
           </span>
         </h1>
+        <h1>
+          Be curious, inventive, adventurous, passionate, anything you want to
+          be, here now.
+        </h1>
       </div>
       <div>
         <About id={'about'} />

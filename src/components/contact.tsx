@@ -9,7 +9,14 @@ const Contact = ({ id }) => {
         height: `80vh`,
       }}
     >
-      <h1>📧 This is the Contact component 📧</h1>
+      <h1>
+        📧 Much unhappiness has come into the world because of bewilderment and
+        things left unsaid. 📧
+      </h1>
+      <p>
+        Have an opportunity or idea you’d like to share? Just want to say hi?
+        Don't be a stranger, drop me a line.
+      </p>
 
       <form name="contact" method="POST">
         {/* data-netlify="true" <= add this as attribute to form tag */}
