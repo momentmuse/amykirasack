@@ -1,6 +1,18 @@
 import * as React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
 const About = ({ id }) => {
+  const data = useStaticQuery(graphql`
+    {
+      file(extension: { eq: "pdf" }, absolutePath: { regex: "/cv/" }) {
+        publicURL
+        name
+      }
+    }
+  `);
+
+  console.log('here be data ', data);
+
   return (
     <div
       id={id}
@@ -19,6 +31,10 @@ const About = ({ id }) => {
         more. Currently based in the UK, where you’ll find me meditating on my
         balcony with far too many plants.
       </p>
+
+      <a href={data.file.publicURL} target="_blank" className="button">
+        Download my CV
+      </a>
     </div>
   );
 };

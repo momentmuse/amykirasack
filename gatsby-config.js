@@ -47,6 +47,14 @@ module.exports = {
       __key: 'jobs',
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'cv',
+        path: `${__dirname}/content/cv/`,
+      },
+      __key: 'cv',
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
