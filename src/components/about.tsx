@@ -11,8 +11,6 @@ const About = ({ id }) => {
     }
   `);
 
-  console.log('here be data ', data);
-
   return (
     <div
       id={id}
@@ -34,6 +32,22 @@ const About = ({ id }) => {
 
       <a href={data.file.publicURL} target="_blank" className="button">
         Download my CV
+      </a>
+      <br />
+      <a
+        href="https://github.com/momentmuse"
+        target="_blank"
+        className="button"
+      >
+        Github
+      </a>
+      <br />
+      <a
+        href="https://www.linkedin.com/in/amy-kirasack"
+        target="_blank"
+        className="button"
+      >
+        LinkedIn
       </a>
     </div>
   );

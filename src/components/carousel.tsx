@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-const Carousel = () => {
+const Carousel = ({ id }) => {
   // TODO: Try to make DRYer.
   // Refactor Carousel to accept Blog or Jobs data depending on passed id from props
 
@@ -41,6 +41,7 @@ const Carousel = () => {
 
         return (
           <div
+            id={id}
             style={{
               backgroundColor: `cornsilk`,
               height: `80vh`,

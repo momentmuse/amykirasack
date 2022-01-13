@@ -18,16 +18,14 @@
 ✅ Add images to work carousel
 
 ✅ Site title (React Helmet)
-Connect portfolio with Github and show projects
-Refactor Carousel/Blog idx etc for DRYness
-Add link with downloadable pdf of resume?
-
 ✅ Create contact form
-Connect to email on netlify
 
 ✅ Write bio, other copy
-Edit 404 page
+✅ Add link with downloadable pdf of resume?
+
+✅ Edit 404 page
 Add SEO component and tags
+Refactor Carousel/Blog idx etc for DRYness (useStaticQuery)
 
 Add Typescript to files
 Add images & optimize them
@@ -40,4 +38,6 @@ Add animations with react-spring :)
 Add console message?
 
 Refactor 😎
+Connect to email on netlify
+
 Deploy! :)
