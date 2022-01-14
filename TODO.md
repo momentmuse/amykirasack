@@ -27,7 +27,7 @@
 Add [SEO component](https://www.gatsbyjs.com/docs/add-seo-component/)
 ✅ Refactor Carousel/Blog idx etc for DRYness (useStaticQuery)
 
-Add Typescript to files
+Add Typescript to files or switch to Proptypes
 Add images & optimize them
 Normalize css
 
@@ -36,7 +36,9 @@ Add [active styles](https://www.gatsbyjs.com/docs/reference/built-in-components/
 Add animations with react-spring :)
 Add console message?
 
+Add some blog posts
 Refactor 😎
+Add form validation to contact form
 Connect to email on netlify
 
 Deploy! :)

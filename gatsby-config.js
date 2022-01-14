@@ -1,11 +1,9 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.yourdomain.tld',
+    siteUrl: 'https://www.amykirasack.com',
     title: 'Amy Kirasack',
-    author: {
-      name: `Amy Kirasack`,
-      summary: `Sucking at something is the first step to being sorta good at something.`,
-    },
+    description: `Clean, communicative, and comprehensive code. Because code isn’t just for computers. It’s for humans, too.`,
+    author: 'Amy Kirasack',
   },
   plugins: [
     'gatsby-plugin-styled-components',
