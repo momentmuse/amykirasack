@@ -1,8 +1,24 @@
 import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 
-const Carousel = ({ id }) => {
+interface CarouselProps {
+  id: string;
+}
+
+interface Job {
+  frontmatter: {
+    title: string;
+    image: ImageDataLike;
+    url: string;
+    company: string;
+    description: string;
+    startyear: number;
+    endyear: number;
+  };
+}
+
+const Carousel = ({ id }: CarouselProps) => {
   const data = useStaticQuery(graphql`
     {
       allMarkdownRemark(
@@ -30,7 +46,7 @@ const Carousel = ({ id }) => {
 
   const jobs = data.allMarkdownRemark.nodes;
 
-  const sanitizeYear = (start, end) => {
+  const sanitizeYear = (start: number, end: number) => {
     return start === end ? end : `${start} - ${end}`;
   };
 
@@ -43,14 +59,14 @@ const Carousel = ({ id }) => {
       }}
     >
       <h1>🎠 Nothing ever becomes real 'til it is experienced. 🎠</h1>
-      {jobs?.map((job) => {
+      {jobs?.map((job: Job) => {
         const image = getImage(job.frontmatter.image);
 
         return (
           <article key={job.frontmatter.url}>
             <div>
               <h2>{job.frontmatter.title}</h2>
-              <GatsbyImage image={image} alt={'company image'} />
+              {image && <GatsbyImage image={image} alt={'company image'} />}
               <h3>
                 <a href={job.frontmatter.url} target="_blank">
                   {job.frontmatter.company}

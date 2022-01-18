@@ -1,7 +1,11 @@
 import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const About = ({ id }) => {
+interface AboutProps {
+  id: string;
+}
+
+const About = ({ id }: AboutProps) => {
   const data = useStaticQuery(graphql`
     {
       file(extension: { eq: "pdf" }, absolutePath: { regex: "/cv/" }) {

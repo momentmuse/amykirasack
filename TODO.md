@@ -24,12 +24,13 @@
 ✅ Add link with downloadable pdf of resume?
 
 ✅ Edit 404 page
-Add [SEO component](https://www.gatsbyjs.com/docs/add-seo-component/)
+✅ Add [SEO component](https://www.gatsbyjs.com/docs/add-seo-component/)
 ✅ Refactor Carousel/Blog idx etc for DRYness (useStaticQuery)
 
-Add Typescript to files or switch to Proptypes
+Add Typescript to files
 Add images & optimize them
 Normalize css
+Change favicon, icons
 
 Style pages with styled-components (mobile-first)
 Add [active styles](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-link/#add-custom-styles-for-the-currently-active-link) for links and accessibility options (aria, screen readers etc)

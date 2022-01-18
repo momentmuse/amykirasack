@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
-const Header = ({ siteTitle }) => (
+interface HeaderProps {
+  siteTitle: string;
+}
+
+const Header = ({ siteTitle }: HeaderProps) => (
   <header
     style={{
       background: `cadetblue`,

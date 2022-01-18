@@ -1,6 +1,10 @@
 import * as React from 'react';
 
-const Contact = ({ id }) => {
+interface ContactProps {
+  id: string;
+}
+
+const Contact = ({ id }: ContactProps) => {
   return (
     <div
       id={id}
