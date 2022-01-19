@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Header from './header';
 import PropTypes from 'prop-types';
+import 'normalize.css';
 
 interface LayoutProps {
   children: JSX.Element[];
