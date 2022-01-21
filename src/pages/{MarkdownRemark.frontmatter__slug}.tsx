@@ -2,7 +2,19 @@ import * as React from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from './../components/layout';
 
-const Template = ({ data }) => {
+interface TemplateProps {
+  data: {
+    markdownRemark: {
+      html: string;
+      frontmatter: {
+        date: string;
+        title: string;
+      };
+    };
+  };
+}
+
+const Template = ({ data }: TemplateProps) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (

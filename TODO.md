@@ -27,14 +27,16 @@
 ✅ Add [SEO component](https://www.gatsbyjs.com/docs/add-seo-component/)
 ✅ Refactor Carousel/Blog idx etc for DRYness (useStaticQuery)
 
-Add Typescript to files
-Add images & optimize them
-Normalize css
-Change favicon, icons
+✅ Add Typescript to files
+✅ Add images & optimize them
+✅ Normalize css
+✅ Change favicon, icons
 
-Style pages with styled-components (mobile-first)
+Style pages with Theme UI, css (mobile-first)
 Add [active styles](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-link/#add-custom-styles-for-the-currently-active-link) for links and accessibility options (aria, screen readers etc)
-Add animations with react-spring :)
+Add typewriter animations
+Add div blobs
+Add [parallax](https://github.com/jscottsmith/react-scroll-parallax) scrolling animations :)
 Add console message?
 
 Add some blog posts

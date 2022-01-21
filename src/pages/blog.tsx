@@ -22,24 +22,30 @@ interface BlogProps {
 
 const Blog = ({ data }: BlogProps) => {
   const posts = data.allMarkdownRemark?.nodes;
-  const generatePosts = (posts: Post[]): JSX.Element[] => {
-    return posts.map((post: Post) => {
-      return (
-        <article key={post.frontmatter.slug}>
-          <div>
-            <h2>
-              <Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link>
-            </h2>
-            <h3>{post.frontmatter.description}</h3>
-            <p>{post.frontmatter.date}</p>
-            <p>{post.excerpt}</p>
-            <p>
-              <Link to={post.frontmatter.slug}>Read more</Link>
-            </p>
-          </div>
-        </article>
-      );
-    });
+  const generatePosts = (posts: Post[]): JSX.Element => {
+    return (
+      <>
+        {posts.map((post) => {
+          return (
+            <article key={post.frontmatter.slug}>
+              <div>
+                <h2>
+                  <Link to={post.frontmatter.slug}>
+                    {post.frontmatter.title}
+                  </Link>
+                </h2>
+                <h3>{post.frontmatter.description}</h3>
+                <p>{post.frontmatter.date}</p>
+                <p>{post.excerpt}</p>
+                <p>
+                  <Link to={post.frontmatter.slug}>Read more</Link>
+                </p>
+              </div>
+            </article>
+          );
+        })}
+      </>
+    );
   };
 
   return (
