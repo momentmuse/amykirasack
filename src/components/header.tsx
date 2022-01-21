@@ -2,29 +2,44 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
+import Logo from './../assets/images/icon.png';
 
 interface HeaderProps {
   siteTitle: string;
 }
 
 const StyledHeader = styled.header`
-  background: ${({ theme }) => theme.color.primary};
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: transparent;
   display: flex;
   font-family: ${({ theme }) => theme.font.family.heading};
   > div {
     margin: 0 auto;
-    padding: 1.5rem;
+    padding: 0.5rem;
   }
+`;
+
+const NavLogo = styled.img`
+  width: 2em;
 `;
 
 const Navbar = styled.nav`
   margin: 0 auto;
   padding: 1.5rem;
   > ul {
-    margin: 0 auto;
+    margin-left:
     padding: 1.5rem;
     list-style-type: none;
   }
+`;
+
+const StyledLink = styled(Link)`
+  color: ${({ theme }) => theme.color.primary};
+  text-decoration: none;
 `;
 
 const Header = ({ siteTitle }: HeaderProps) => (
@@ -32,30 +47,24 @@ const Header = ({ siteTitle }: HeaderProps) => (
     <Helmet title={siteTitle} titleTemplate="%s | Software Engineer" />
     <div>
       <h1>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
+        <StyledLink to="/">
+          <NavLogo src={Logo} alt="site logo"></NavLogo>
+        </StyledLink>
       </h1>
     </div>
     <Navbar>
       <ul>
         <li>
-          <Link to="/#work">Work</Link>
+          <StyledLink to="/#work">Work</StyledLink>
         </li>
         <li>
-          <Link to="/#about">About</Link>
+          <StyledLink to="/#about">About</StyledLink>
         </li>
         <li>
-          <Link to="/blog">Blog</Link>
+          <StyledLink to="/blog">Blog</StyledLink>
         </li>
         <li>
-          <Link to="/#contact">Contact</Link>
+          <StyledLink to="/#contact">Contact</StyledLink>
         </li>
       </ul>
     </Navbar>

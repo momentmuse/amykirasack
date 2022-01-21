@@ -8,7 +8,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import theme from './../theme';
 
 interface LayoutProps {
-  children: JSX.Element[];
+  children: JSX.Element;
 }
 
 const MainWrapper = styled.div`

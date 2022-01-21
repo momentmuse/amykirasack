@@ -1,36 +1,24 @@
 import * as React from 'react';
+import Layout from './../components/layout';
+import Hero from './../components/hero';
 import About from './../components/about';
 import Carousel from './../components/carousel';
 import Contact from './../components/contact';
-import Layout from './../components/layout';
+import styled from 'styled-components';
+
+const Section = styled.section`
+  margin-top: 20vh;
+`;
 
 const IndexPage = () => {
   return (
     <Layout>
-      <title>Heyooo</title>
-      <div
-        style={{
-          height: `40vh`,
-        }}
-      >
-        <h1>
-          This is the index!!
-          <br />
-          <span>— you just made a Gatsby site! </span>
-          <span role="img" aria-label="Party popper emojis">
-            🎉🎉🎉
-          </span>
-        </h1>
-        <h1>
-          Be curious, inventive, adventurous, passionate, anything you want to
-          be, here now.
-        </h1>
-      </div>
-      <div>
+      <Section>
+        <Hero />
         <About id={'about'} />
         <Carousel id={'work'} />
         <Contact id={'contact'} />
-      </div>
+      </Section>
     </Layout>
   );
 };

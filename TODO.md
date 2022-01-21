@@ -40,6 +40,7 @@ Add [parallax](https://github.com/jscottsmith/react-scroll-parallax) scrolling a
 Add console message?
 
 Add some blog posts
+Add projects!
 Refactor 😎
 Add form validation to contact form
 Connect to email on netlify
