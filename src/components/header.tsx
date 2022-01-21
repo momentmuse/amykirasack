@@ -1,28 +1,37 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
+import styled from 'styled-components';
 
 interface HeaderProps {
   siteTitle: string;
 }
 
+const StyledHeader = styled.header`
+  background: ${({ theme }) => theme.color.primary};
+  display: flex;
+  font-family: ${({ theme }) => theme.font.family.heading};
+  > div {
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+`;
+
+const Navbar = styled.nav`
+  margin: 0 auto;
+  padding: 1.5rem;
+  > ul {
+    margin: 0 auto;
+    padding: 1.5rem;
+    list-style-type: none;
+  }
+`;
+
 const Header = ({ siteTitle }: HeaderProps) => (
-  <header
-    style={{
-      background: `cadetblue`,
-      marginBottom: `1.45rem`,
-      display: `flex`,
-    }}
-  >
+  <StyledHeader>
     <Helmet title={siteTitle} titleTemplate="%s | Software Engineer" />
-    <div
-      style={{
-        margin: `0 auto`,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+    <div>
+      <h1>
         <Link
           to="/"
           style={{
@@ -34,19 +43,8 @@ const Header = ({ siteTitle }: HeaderProps) => (
         </Link>
       </h1>
     </div>
-    <nav
-      style={{
-        margin: `0 auto`,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <ul
-        style={{
-          margin: `0 auto`,
-          listStyleType: `none`,
-          padding: `1.45rem 1.0875rem`,
-        }}
-      >
+    <Navbar>
+      <ul>
         <li>
           <Link to="/#work">Work</Link>
         </li>
@@ -60,16 +58,8 @@ const Header = ({ siteTitle }: HeaderProps) => (
           <Link to="/#contact">Contact</Link>
         </li>
       </ul>
-    </nav>
-  </header>
+    </Navbar>
+  </StyledHeader>
 );
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
-};
 
 export default Header;

@@ -32,7 +32,7 @@
 ✅ Normalize css
 ✅ Change favicon, icons
 
-Style pages with Theme UI, css (mobile-first)
+Style pages with styled-components (mobile-first)
 Add [active styles](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-link/#add-custom-styles-for-the-currently-active-link) for links and accessibility options (aria, screen readers etc)
 Add typewriter animations
 Add div blobs
