@@ -2,6 +2,7 @@ import * as React from 'react';
 import HeroSplashSq from './../assets/videos/hero-splash-sq.mp4';
 import HeroSplash from './../assets/videos/hero-splash.mp4';
 import styled, { useTheme } from 'styled-components';
+import Typewriter from 'typewriter-effect';
 
 interface Size {
   width: number | undefined;
@@ -10,6 +11,30 @@ interface Size {
 
 const HeroContainer = styled.div`
   margin-top: 2vh;
+`;
+
+const StyledType = styled.div`
+  position: absolute;
+  top: 30%;
+  left: 10%;
+
+  @media ${({ theme }) => theme.device.laptop} {
+    top: 40%;
+    left: 33%;
+  }
+
+  & .Typewriter__wrapper,
+  & .Typewriter__cursor {
+    text-shadow: 2px 2px 2px ${({ theme }) => theme.color.background};
+    color: ${({ theme }) => theme.color.muted};
+    font-family: ${({ theme }) => theme.font.family.heading};
+    font-size: ${({ theme }) => theme.font.size.xlarge};
+  }
+`;
+
+const StyledVideoContainer = styled.div`
+  position: relative;
+  z-index: -1;
 `;
 
 const Hero = () => {
@@ -49,14 +74,23 @@ const Hero = () => {
 
   return (
     <HeroContainer>
-      <h1>
-        "Be imaginative.", "Stay curious.", "Believe it. Build it." "Clean,
-        communicative, and comprehensive code.",
-      </h1>
-      <h2>Because software is for humans, too.</h2>
-      <video autoPlay playsInline loop muted width="100%">
-        {windowWidth && <source src={optimizeVideo()} type="video/mp4" />}
-      </video>
+      <h1>Clean, communicative, and comprehensive code.</h1>
+      <StyledVideoContainer>
+        <StyledType>
+          <Typewriter
+            options={{
+              delay: 80,
+              strings: 'Because software is for humans, too.',
+              autoStart: true,
+              loop: false,
+              cursor: '_',
+            }}
+          />
+        </StyledType>
+        <video autoPlay playsInline loop muted width="100%">
+          {windowWidth && <source src={optimizeVideo()} type="video/mp4" />}
+        </video>
+      </StyledVideoContainer>
     </HeroContainer>
   );
 };

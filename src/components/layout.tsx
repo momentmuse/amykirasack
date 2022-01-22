@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Header from './header';
+import styled, { ThemeProvider } from 'styled-components';
+import theme from './../theme';
 import 'normalize.css';
 import '@fontsource/alice';
 import '@fontsource/nunito';
-import styled, { ThemeProvider } from 'styled-components';
-import theme from './../theme';
+import '@fontsource/dm-mono';
 
 interface LayoutProps {
   children: JSX.Element;
@@ -17,12 +18,12 @@ const MainWrapper = styled.div`
   position: relative;
   top: 3vh;
   margin: 0 auto;
-  width: 90vw;
+
   @media ${({ theme }) => theme.device.tablet} {
-    width: 80vw;
+    width: 90vw;
   }
   @media ${({ theme }) => theme.device.laptop} {
-    width: 60vw;
+    width: 80vw;
   }
 `;
 

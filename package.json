@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@fontsource/alice": "^4.5.1",
+    "@fontsource/dm-mono": "^4.5.1",
     "@fontsource/nunito": "^4.5.1",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
@@ -35,7 +36,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "typewriter-effect": "^2.18.2"
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.5",

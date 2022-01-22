@@ -26,7 +26,7 @@ const font = {
     xsmall: '0.5em',
     small: '0.8em',
     medium: '1em',
-    large: '1.5',
+    large: '1.5em',
     xlarge: '2em',
     xxlarge: '2.5em',
   },
