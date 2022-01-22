@@ -1,6 +1,6 @@
 import * as React from 'react';
-import HeroSplashSq from './../assets/videos/hero-splash-sq.mp4';
-import HeroSplash from './../assets/videos/hero-splash.mp4';
+import HeroSplashSq from './../videos/hero-splash-sq.mp4';
+import HeroSplash from './../videos/hero-splash.mp4';
 import styled, { useTheme } from 'styled-components';
 import Typewriter from 'typewriter-effect';
 
@@ -11,6 +11,16 @@ interface Size {
 
 const HeroContainer = styled.div`
   margin-top: 2vh;
+
+  h1 {
+    font-family: ${({ theme }) => theme.font.family.heading};
+    color: ${({ theme }) => theme.color.dark};
+  }
+`;
+
+const StyledVideoContainer = styled.div`
+  position: relative;
+  z-index: -1;
 `;
 
 const StyledType = styled.div`
@@ -27,14 +37,9 @@ const StyledType = styled.div`
   & .Typewriter__cursor {
     text-shadow: 2px 2px 2px ${({ theme }) => theme.color.background};
     color: ${({ theme }) => theme.color.muted};
-    font-family: ${({ theme }) => theme.font.family.heading};
+    font-family: ${({ theme }) => theme.font.family.body};
     font-size: ${({ theme }) => theme.font.size.xlarge};
   }
-`;
-
-const StyledVideoContainer = styled.div`
-  position: relative;
-  z-index: -1;
 `;
 
 const Hero = () => {
@@ -74,7 +79,9 @@ const Hero = () => {
 
   return (
     <HeroContainer>
-      <h1>Clean, communicative, and comprehensive code.</h1>
+      <h1>
+        Clean, communicative, <br /> and comprehensive code.
+      </h1>
       <StyledVideoContainer>
         <StyledType>
           <Typewriter

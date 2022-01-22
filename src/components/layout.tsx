@@ -5,7 +5,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import theme from './../theme';
 import 'normalize.css';
 import '@fontsource/alice';
-import '@fontsource/nunito';
+import '@fontsource/nunito-sans';
 import '@fontsource/dm-mono';
 
 interface LayoutProps {

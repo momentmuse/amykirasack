@@ -13,8 +13,8 @@ const color = {
 
 const font = {
   family: {
-    heading: 'Alice, Georgia, serif',
-    body: 'Nunito, Roboto, sans-serif',
+    heading: 'Nunito Sans, Roboto, sans-serif',
+    body: 'Alice, Georgia, serif',
     monospace: 'DM Mono, Menlo, monospace',
   },
   weight: {
@@ -54,7 +54,7 @@ const styles = {
   h1: {
     fontFamily: font.family.heading,
     size: font.size.xxlarge,
-    color: 'coral',
+    color: color.muted,
   },
   h2: {
     fontFamily: font.family.heading,

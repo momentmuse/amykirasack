@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import Logo from './../assets/images/icon.png';
+import Logo from './../images/icon.png';
 
 interface HeaderProps {
   siteTitle: string;
