@@ -1,4 +1,16 @@
 import * as React from 'react';
+import styled from 'styled-components';
+
+const ContactContainer = styled.div`
+  background-color: ${({ theme }) => theme.color.muted};
+  color: ${({ theme }) => theme.color.mid};
+  h1 {
+    font-family: ${({ theme }) => theme.font.family.heading};
+  }
+  p {
+    font-family: ${({ theme }) => theme.font.family.body};
+  }
+`;
 
 interface ContactProps {
   id: string;
@@ -6,16 +18,10 @@ interface ContactProps {
 
 const Contact = ({ id }: ContactProps) => {
   return (
-    <div
-      id={id}
-      style={{
-        backgroundColor: `rosybrown`,
-        height: `80vh`,
-      }}
-    >
+    <ContactContainer id={id}>
       <h1>
-        📧 Much unhappiness has come into the world because of bewilderment and
-        things left unsaid. 📧
+        Much unhappiness has come into the world because of bewilderment and
+        things left unsaid.
       </h1>
       <p>
         Have an opportunity or idea you’d like to share? Just want to say hi?
@@ -43,7 +49,7 @@ const Contact = ({ id }: ContactProps) => {
           <button type="submit">Send</button>
         </p>
       </form>
-    </div>
+    </ContactContainer>
   );
 };
 

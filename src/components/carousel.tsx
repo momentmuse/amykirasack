@@ -51,13 +51,7 @@ const Carousel = ({ id }: CarouselProps) => {
   };
 
   return (
-    <div
-      id={id}
-      style={{
-        backgroundColor: `cornsilk`,
-        height: `80vh`,
-      }}
-    >
+    <div id={id}>
       <h1>🎠 Nothing ever becomes real 'til it is experienced. 🎠</h1>
       {jobs?.map((job: Job) => {
         const image = getImage(job.frontmatter.image);

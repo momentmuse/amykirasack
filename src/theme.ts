@@ -1,11 +1,11 @@
 // --- Configurable Values ---
 
 const color = {
-  primary: '#68a691',
-  secondary: '#ef6f6C',
-  muted: '#6d545d',
-  accent: '#2f3061',
-  background: '#fff8e4',
+  primary: '#8c9a8d',
+  secondary: '#eab871',
+  muted: '#d88c6c',
+  accent: '#6d545d',
+  background: '#f0e9df',
   light: '#f0f0f0',
   mid: '#4e4e4e',
   dark: '#282c34',
@@ -19,7 +19,7 @@ const font = {
   },
   weight: {
     heading: 700,
-    bold: 700,
+    bold: 900,
     body: 400,
   },
   size: {
@@ -84,3 +84,24 @@ export default theme;
 // light: '#f0f0f0',
 // mid: '#4e4e4e',
 // dark: '#282c34',
+
+// primary: '#68a691',
+// d4e5df
+// secondary: '#ef6f6C',
+// fdd7d6
+// muted: '#6d545d',
+// e1ced5
+// accent: '#2f3061',
+// b7b7ce
+// background: '#fff8e4',
+// light: '#f0f0f0',
+// mid: '#4e4e4e',
+// dark: '#282c34',
+
+// bg: #F0E9DF
+// green: #8C9A8D
+// dew: #d9e0d9,
+// yellow: #EAB871
+// mustard: #efddc3
+// orange: #D88C6C
+// coral: #ebc7b5

@@ -14,7 +14,7 @@ const HeroContainer = styled.div`
 
   h1 {
     font-family: ${({ theme }) => theme.font.family.heading};
-    color: ${({ theme }) => theme.color.dark};
+    color: ${({ theme }) => theme.color.accent};
   }
 `;
 
@@ -36,9 +36,9 @@ const StyledType = styled.div`
   & .Typewriter__wrapper,
   & .Typewriter__cursor {
     text-shadow: 2px 2px 2px ${({ theme }) => theme.color.background};
-    color: ${({ theme }) => theme.color.muted};
-    font-family: ${({ theme }) => theme.font.family.body};
-    font-size: ${({ theme }) => theme.font.size.xlarge};
+    color: ${({ theme }) => theme.color.accent};
+    font-family: ${({ theme }) => theme.font.family.monospace};
+    font-size: ${({ theme }) => theme.font.size.large};
   }
 `;
 
@@ -86,11 +86,11 @@ const Hero = () => {
         <StyledType>
           <Typewriter
             options={{
-              delay: 80,
+              delay: 85,
               strings: 'Because software is for humans, too.',
               autoStart: true,
               loop: false,
-              cursor: '_',
+              cursor: '█',
             }}
           />
         </StyledType>

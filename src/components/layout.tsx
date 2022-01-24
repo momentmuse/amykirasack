@@ -19,12 +19,12 @@ const MainWrapper = styled.div`
   top: 3vh;
   margin: 0 auto;
 
-  @media ${({ theme }) => theme.device.tablet} {
+  /* @media ${({ theme }) => theme.device.tablet} {
     width: 90vw;
   }
   @media ${({ theme }) => theme.device.laptop} {
     width: 80vw;
-  }
+  } */
 `;
 
 const Footer = styled.footer`
