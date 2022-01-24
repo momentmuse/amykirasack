@@ -4,8 +4,7 @@ import Header from './header';
 import styled, { ThemeProvider } from 'styled-components';
 import theme from './../theme';
 import 'normalize.css';
-import '@fontsource/alice';
-import '@fontsource/nunito-sans';
+import '../css/typography.css';
 import '@fontsource/dm-mono';
 
 interface LayoutProps {
@@ -27,15 +26,22 @@ const MainWrapper = styled.div`
   } */
 
   h1,
-  h2 {
-    font-family: ${({ theme }) => theme.font.family.heading};
+  h2,
+  h3 {
+    font-family: '${({ theme }) => theme.font.family.heading}';
     color: ${({ theme }) => theme.color.accent};
-    letter-spacing: -1.5px;
+    letter-spacing: -0.5px;
   }
 
   p {
     font-family: ${({ theme }) => theme.font.family.body};
     color: ${({ theme }) => theme.color.mid};
+  }
+
+  a {
+    font-family: ${({ theme }) => theme.font.family.bodyBold};
+    color: ${({ theme }) => theme.color.accent};
+    text-decoration: ${({ theme }) => theme.color.light} wavy underline;
   }
 `;
 

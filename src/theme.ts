@@ -13,8 +13,9 @@ const color = {
 
 const font = {
   family: {
-    heading: 'Nunito Sans, Roboto, sans-serif',
-    body: 'Alice, Georgia, serif',
+    heading: 'Young Serif',
+    body: 'Glacial Indifference, sans-serif',
+    bodyBold: 'Glacial Indifference Bold',
     monospace: 'DM Mono, Menlo, monospace',
   },
   weight: {

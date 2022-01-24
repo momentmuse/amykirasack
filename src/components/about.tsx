@@ -1,9 +1,28 @@
 import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import AboutMe from './../images/barcacafe.jpg';
+import AboutMe2 from './../images/paris-atelier.jpg';
 import styled from 'styled-components';
 
 const AboutContainer = styled.div`
   background-color: ${({ theme }) => theme.color.secondary};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    flex-direction: row;
+  }
+
+  img {
+    max-width: 320px;
+  }
+`;
+
+const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 interface AboutProps {
@@ -23,36 +42,38 @@ const About = ({ id }: AboutProps) => {
   return (
     <>
       <AboutContainer id={id}>
-        <h1>What's in a name? </h1>
-        <p>Clean, communicative, and comprehensive code.</p>
-        <p>Because code isn’t just for computers. It’s for humans, too.</p>
+        <img src={AboutMe2} />
+        <img src={AboutMe} />
 
-        <p>
-          Canadian-born coffee enthusiast, cat lover, and globetrotter. I’ve
-          lived in Canada, the US, Singapore, Japan, and Spain, but spent time
-          in many more. Currently based in the UK, where you’ll find me
-          meditating on my balcony with far too many plants.
-        </p>
+        <TextContainer>
+          <h1>What's in a name? </h1>
+          <p>
+            Canadian-born coffee enthusiast, cat lover, and globetrotter. I’ve
+            lived in Canada, the US, Singapore, Japan, and Spain, but spent time
+            in many more. Currently based in the UK, where you’ll find me
+            meditating on my balcony with far too many plants.
+          </p>
 
-        <a href={data.file.publicURL} target="_blank" className="button">
-          Download my CV
-        </a>
-        <br />
-        <a
-          href="https://github.com/momentmuse"
-          target="_blank"
-          className="button"
-        >
-          Github
-        </a>
-        <br />
-        <a
-          href="https://www.linkedin.com/in/amy-kirasack"
-          target="_blank"
-          className="button"
-        >
-          LinkedIn
-        </a>
+          <a href={data.file.publicURL} target="_blank" className="button">
+            Download my CV
+          </a>
+          <br />
+          <a
+            href="https://github.com/momentmuse"
+            target="_blank"
+            className="button"
+          >
+            Github
+          </a>
+          <br />
+          <a
+            href="https://www.linkedin.com/in/amy-kirasack"
+            target="_blank"
+            className="button"
+          >
+            LinkedIn
+          </a>
+        </TextContainer>
       </AboutContainer>
     </>
   );
