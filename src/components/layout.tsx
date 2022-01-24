@@ -25,11 +25,23 @@ const MainWrapper = styled.div`
   @media ${({ theme }) => theme.device.laptop} {
     width: 80vw;
   } */
+
+  h1,
+  h2 {
+    font-family: ${({ theme }) => theme.font.family.heading};
+    color: ${({ theme }) => theme.color.accent};
+    letter-spacing: -1.5px;
+  }
+
+  p {
+    font-family: ${({ theme }) => theme.font.family.body};
+    color: ${({ theme }) => theme.color.mid};
+  }
 `;
 
 const Footer = styled.footer`
   margin-top: 2vh;
-  font-family: ${({ theme }) => theme.font.family.heading};
+  font-family: ${({ theme }) => theme.font.family.body};
   color: ${({ theme }) => theme.color.mid};
 `;
 

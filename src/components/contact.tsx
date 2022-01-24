@@ -3,13 +3,6 @@ import styled from 'styled-components';
 
 const ContactContainer = styled.div`
   background-color: ${({ theme }) => theme.color.muted};
-  color: ${({ theme }) => theme.color.mid};
-  h1 {
-    font-family: ${({ theme }) => theme.font.family.heading};
-  }
-  p {
-    font-family: ${({ theme }) => theme.font.family.body};
-  }
 `;
 
 interface ContactProps {

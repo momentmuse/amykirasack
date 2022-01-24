@@ -1,6 +1,11 @@
 import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
+import styled from 'styled-components';
+
+const CarouselContainer = styled.div`
+  background-color: ${({ theme }) => theme.color.primary};
+`;
 
 interface CarouselProps {
   id: string;
@@ -51,7 +56,7 @@ const Carousel = ({ id }: CarouselProps) => {
   };
 
   return (
-    <div id={id}>
+    <CarouselContainer id={id}>
       <h1>🎠 Nothing ever becomes real 'til it is experienced. 🎠</h1>
       {jobs?.map((job: Job) => {
         const image = getImage(job.frontmatter.image);
@@ -77,7 +82,7 @@ const Carousel = ({ id }: CarouselProps) => {
           </article>
         );
       })}
-    </div>
+    </CarouselContainer>
   );
 };
 

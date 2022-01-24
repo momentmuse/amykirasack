@@ -4,13 +4,6 @@ import styled from 'styled-components';
 
 const AboutContainer = styled.div`
   background-color: ${({ theme }) => theme.color.secondary};
-  color: ${({ theme }) => theme.color.mid};
-  h1 {
-    font-family: ${({ theme }) => theme.font.family.heading};
-  }
-  p {
-    font-family: ${({ theme }) => theme.font.family.body};
-  }
 `;
 
 interface AboutProps {
