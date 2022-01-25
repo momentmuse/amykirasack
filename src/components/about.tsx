@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import AboutMe from './../images/barcacafe.jpg';
-import AboutMe2 from './../images/paris-atelier.jpg';
+import AboutMe1 from './../images/viaduct.png';
+import AboutMe2 from './../images/fundy.png';
+import AboutMe3 from './../images/espai.png';
 import styled from 'styled-components';
 
 const AboutContainer = styled.div`
@@ -42,8 +43,9 @@ const About = ({ id }: AboutProps) => {
   return (
     <>
       <AboutContainer id={id}>
+        <img src={AboutMe1} />
         <img src={AboutMe2} />
-        <img src={AboutMe} />
+        <img src={AboutMe3} />
 
         <TextContainer>
           <h1>What's in a name? </h1>

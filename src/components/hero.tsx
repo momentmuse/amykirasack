@@ -11,11 +11,6 @@ interface Size {
 
 const HeroContainer = styled.div`
   margin-top: 2vh;
-
-  h1 {
-    font-family: ${({ theme }) => theme.font.family.heading};
-    color: ${({ theme }) => theme.color.accent};
-  }
 `;
 
 const StyledVideoContainer = styled.div`

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import ContactMe from './../images/barcacat.jpg';
+import ContactMe from './../images/amycat.png';
 
 const ContactContainer = styled.div`
   background-color: ${({ theme }) => theme.color.muted};

@@ -32,15 +32,14 @@
 ✅ Normalize css
 ✅ Change favicon, icons
 
-Style pages with styled-components (mobile-first)
-Add [active styles](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-link/#add-custom-styles-for-the-currently-active-link) for links and accessibility options (aria, screen readers etc)
-Add typewriter animations
-Add div blobs
+✅ Add typewriter animations
 Add [parallax](https://github.com/jscottsmith/react-scroll-parallax) scrolling animations :)
+Add div blobs
+Style pages with styled-components (mobile-first)
 Add console message?
 
 Add some blog posts
-Add projects!
+✅ Add projects!
 Refactor 😎
 Add form validation to contact form
 Connect to email on netlify
