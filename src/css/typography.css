@@ -14,3 +14,7 @@
   font-family: 'Young Serif';
   src: url('./../fonts/YoungSerif-Regular.ttf');
 }
+@font-face {
+  font-family: 'Butler Black';
+  src: url('./../fonts/Butler-Black.woff');
+}

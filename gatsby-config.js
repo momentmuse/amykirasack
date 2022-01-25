@@ -13,7 +13,13 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    `gatsby-plugin-styled-components`,
+    'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-anchor-links',
+      options: {
+        duration: 500,
+      },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

@@ -9,8 +9,13 @@ const ContactContainer = styled.div`
   align-items: center;
   justify-content: center;
 
+  padding: ${({ theme }) => theme.styles.padding};
   @media ${({ theme }) => theme.device.tablet} {
+    padding: ${({ theme }) => theme.styles.paddingTablet};
     flex-direction: row;
+  }
+  @media ${({ theme }) => theme.device.laptop} {
+    padding: ${({ theme }) => theme.styles.paddingLaptop};
   }
 
   img {

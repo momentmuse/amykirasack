@@ -5,6 +5,31 @@ import styled from 'styled-components';
 
 const CarouselContainer = styled.div`
   background-color: ${({ theme }) => theme.color.primary};
+  padding: ${({ theme }) => theme.styles.padding};
+  @media ${({ theme }) => theme.device.tablet} {
+    padding: ${({ theme }) => theme.styles.paddingTablet};
+  }
+  @media ${({ theme }) => theme.device.laptop} {
+    padding: ${({ theme }) => theme.styles.paddingLaptop};
+  }
+`;
+
+const ScrollingCarousel = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
+const JobContainer = styled.div`
+  flex: 0 0 auto;
+  width: 60vw;
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 30vw;
+  }
 `;
 
 interface CarouselProps {
@@ -58,30 +83,32 @@ const Carousel = ({ id }: CarouselProps) => {
   return (
     <CarouselContainer id={id}>
       <h1>Nothing ever becomes real ’til it is experienced.</h1>
-      {jobs?.map((job: Job) => {
-        const image = getImage(job.frontmatter.image);
+      <ScrollingCarousel>
+        {jobs?.map((job: Job) => {
+          const image = getImage(job.frontmatter.image);
 
-        return (
-          <article key={job.frontmatter.url}>
-            <div>
-              <h2>{job.frontmatter.title}</h2>
-              {image && <GatsbyImage image={image} alt={'company image'} />}
-              <h3>
-                <a href={job.frontmatter.url} target="_blank">
-                  {job.frontmatter.company}
-                </a>
-              </h3>
-              <p>{job.frontmatter.description}</p>
-              <p>
-                {sanitizeYear(
-                  job.frontmatter.startyear,
-                  job.frontmatter.endyear
-                )}
-              </p>
-            </div>
-          </article>
-        );
-      })}
+          return (
+            <article key={job.frontmatter.url}>
+              <JobContainer>
+                <h2>{job.frontmatter.title}</h2>
+                {image && <GatsbyImage image={image} alt={'company image'} />}
+                <h3>
+                  <a href={job.frontmatter.url} target="_blank">
+                    {job.frontmatter.company}
+                  </a>
+                </h3>
+                <p>{job.frontmatter.description}</p>
+                <p>
+                  {sanitizeYear(
+                    job.frontmatter.startyear,
+                    job.frontmatter.endyear
+                  )}
+                </p>
+              </JobContainer>
+            </article>
+          );
+        })}
+      </ScrollingCarousel>
     </CarouselContainer>
   );
 };

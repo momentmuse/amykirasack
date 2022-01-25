@@ -2,7 +2,6 @@ import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import AboutMe1 from './../images/viaduct.png';
 import AboutMe2 from './../images/fundy.png';
-import AboutMe3 from './../images/espai.png';
 import styled from 'styled-components';
 
 const AboutContainer = styled.div`
@@ -11,9 +10,13 @@ const AboutContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  padding: ${({ theme }) => theme.styles.padding};
   @media ${({ theme }) => theme.device.tablet} {
+    padding: ${({ theme }) => theme.styles.paddingTablet};
     flex-direction: row;
+  }
+  @media ${({ theme }) => theme.device.laptop} {
+    padding: ${({ theme }) => theme.styles.paddingLaptop};
   }
 
   img {
@@ -41,42 +44,40 @@ const About = ({ id }: AboutProps) => {
   `);
 
   return (
-    <>
-      <AboutContainer id={id}>
-        <img src={AboutMe3} />
-        <TextContainer>
-          <h1>What’s in a name?</h1>
-          <p>
-            Canadian-born coffee enthusiast, cat lover, and globetrotter. I’ve
-            lived in Canada, the US, Singapore, Japan, and Spain, but spent time
-            in many more. Currently based in the UK, where you’ll find me
-            meditating on my balcony with far too many plants.
-          </p>
+    <AboutContainer id={id}>
+      <img src={AboutMe1} />
+      <img src={AboutMe2} />
+      <TextContainer>
+        <h1>What’s in a name?</h1>
 
-          <a href={data.file.publicURL} target="_blank" className="button">
-            Download my CV
-          </a>
-          <br />
-          <a
-            href="https://github.com/momentmuse"
-            target="_blank"
-            className="button"
-          >
-            Github
-          </a>
-          <br />
-          <a
-            href="https://www.linkedin.com/in/amy-kirasack"
-            target="_blank"
-            className="button"
-          >
-            LinkedIn
-          </a>
-          <img src={AboutMe1} />
-          <img src={AboutMe2} />
-        </TextContainer>
-      </AboutContainer>
-    </>
+        <p>
+          Canadian-born coffee enthusiast, cat lover, and globetrotter. I’ve
+          lived in Canada, the US, Singapore, Japan, and Spain, but spent time
+          in many more. Currently based in the UK, where you’ll find me
+          meditating on my balcony with far too many plants.
+        </p>
+
+        <a href={data.file.publicURL} target="_blank" className="button">
+          Download my CV
+        </a>
+        <br />
+        <a
+          href="https://github.com/momentmuse"
+          target="_blank"
+          className="button"
+        >
+          Github
+        </a>
+        <br />
+        <a
+          href="https://www.linkedin.com/in/amy-kirasack"
+          target="_blank"
+          className="button"
+        >
+          LinkedIn
+        </a>
+      </TextContainer>
+    </AboutContainer>
   );
 };
 

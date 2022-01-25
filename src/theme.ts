@@ -3,6 +3,7 @@
 const color = {
   primary: '#68a691',
   secondary: '#eab871',
+  tertiary: '#2f3061',
   muted: '#d88c6c',
   accent: '#6d545d',
   background: '#f0e9df',
@@ -16,6 +17,7 @@ const font = {
     heading: 'Young Serif',
     body: 'Glacial Indifference, sans-serif',
     bodyBold: 'Glacial Indifference Bold',
+    alt: 'Butler Black',
     monospace: 'DM Mono, Menlo, monospace',
   },
   weight: {
@@ -30,6 +32,7 @@ const font = {
     large: '1.5em',
     xlarge: '2em',
     xxlarge: '2.5em',
+    xxxlarge: '3.5em',
   },
   lineHeight: {
     heading: 1.125,
@@ -52,26 +55,9 @@ const device = {
 };
 
 const styles = {
-  h1: {
-    fontFamily: font.family.heading,
-    size: font.size.xxlarge,
-    color: color.muted,
-  },
-  h2: {
-    fontFamily: font.family.heading,
-    size: font.size.xlarge,
-    color: color.accent,
-  },
-  body: {
-    fontFamily: font.family.body,
-    size: font.size.medium,
-    color: color.light,
-  },
-  typewriter: {
-    fontFamily: font.family.monospace,
-    size: font.size.xlarge,
-    color: color.accent,
-  },
+  padding: '2em 1em',
+  paddingTablet: '2em 7em',
+  paddingLaptop: '2em 10em',
 };
 
 const theme = { color, font, styles, device };

@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from 'styled-components';
 import Logo from './../images/icon.png';
 
@@ -21,23 +22,21 @@ const StyledHeader = styled.header`
     margin: 0 auto;
     padding: 0.5rem;
   }
-`;
-
-const NavLogo = styled.img`
-  width: 2em;
+  img {
+    width: 2em;
+  }
 `;
 
 const Navbar = styled.nav`
   margin: 0 auto;
   padding: 1.5rem;
   > ul {
-    margin-left:
-    padding: 1.5rem;
+    margin-left: 1.5rem;
     list-style-type: none;
   }
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(AnchorLink)`
   color: ${({ theme }) => theme.color.primary};
   text-decoration: none;
 `;
@@ -48,7 +47,7 @@ const Header = ({ siteTitle }: HeaderProps) => (
     <div>
       <h1>
         <StyledLink to="/">
-          <NavLogo src={Logo} alt="site logo"></NavLogo>
+          <img src={Logo} alt="site logo" />
         </StyledLink>
       </h1>
     </div>
