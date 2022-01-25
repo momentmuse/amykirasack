@@ -30,12 +30,28 @@ const MainWrapper = styled.div`
   h3 {
     font-family: '${({ theme }) => theme.font.family.heading}';
     color: ${({ theme }) => theme.color.accent};
-    letter-spacing: -0.5px;
+    letter-spacing: -0.7px;
+  }
+
+  h1::before {
+    content: '“';
+    font-family: 'Times New Roman', serif;
+    font-size: ${({ theme }) => theme.font.size.xlarge};
+    text-shadow: -2px 2px 0px ${({ theme }) => theme.color.background};
+  }
+
+  h1::after {
+    content: '”';
+    font-family: 'Times New Roman', serif;
+    font-size: ${({ theme }) => theme.font.size.xlarge};
+    text-shadow: -2px 2px 0px ${({ theme }) => theme.color.background};
+    vertical-align: text-top;
   }
 
   p {
     font-family: ${({ theme }) => theme.font.family.body};
-    color: ${({ theme }) => theme.color.mid};
+    color: ${({ theme }) => theme.color.accent};
+    font-size: ${({ theme }) => theme.font.size.medium};
   }
 
   a {

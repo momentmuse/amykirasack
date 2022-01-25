@@ -43,12 +43,9 @@ const About = ({ id }: AboutProps) => {
   return (
     <>
       <AboutContainer id={id}>
-        <img src={AboutMe1} />
-        <img src={AboutMe2} />
         <img src={AboutMe3} />
-
         <TextContainer>
-          <h1>What's in a name? </h1>
+          <h1>What’s in a name?</h1>
           <p>
             Canadian-born coffee enthusiast, cat lover, and globetrotter. I’ve
             lived in Canada, the US, Singapore, Japan, and Spain, but spent time
@@ -75,6 +72,8 @@ const About = ({ id }: AboutProps) => {
           >
             LinkedIn
           </a>
+          <img src={AboutMe1} />
+          <img src={AboutMe2} />
         </TextContainer>
       </AboutContainer>
     </>

@@ -10,7 +10,7 @@ interface Size {
 }
 
 const HeroContainer = styled.div`
-  margin-top: 2vh;
+  width: 100%;
 `;
 
 const StyledVideoContainer = styled.div`
@@ -20,20 +20,27 @@ const StyledVideoContainer = styled.div`
 
 const StyledType = styled.div`
   position: absolute;
-  top: 30%;
-  left: 10%;
+  left: 29%;
+  top: 18%;
+  width: 65%;
 
-  @media ${({ theme }) => theme.device.laptop} {
-    top: 40%;
-    left: 33%;
+  @media ${({ theme }) => theme.device.tablet} {
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 33%;
+    width: 42%;
   }
 
   & .Typewriter__wrapper,
   & .Typewriter__cursor {
-    text-shadow: 2px 2px 2px ${({ theme }) => theme.color.background};
+    text-shadow: 2px 2px 20px ${({ theme }) => theme.color.light};
     color: ${({ theme }) => theme.color.accent};
     font-family: ${({ theme }) => theme.font.family.monospace};
     font-size: ${({ theme }) => theme.font.size.large};
+    @media ${({ theme }) => theme.device.laptop} {
+      font-size: ${({ theme }) => theme.font.size.xlarge};
+    }
   }
 `;
 
@@ -74,17 +81,17 @@ const Hero = () => {
 
   return (
     <HeroContainer>
-      <h1>
-        Clean, communicative, <br /> and comprehensive code.
-      </h1>
       <StyledVideoContainer>
         <StyledType>
           <Typewriter
             options={{
               delay: 85,
-              strings: 'Because software is for humans, too.',
+              strings: [
+                'Clean, communicative && comprehensive code.',
+                'Because software is for humans, too. ☺️ ',
+              ],
               autoStart: true,
-              loop: false,
+              loop: true,
               cursor: '█',
             }}
           />
