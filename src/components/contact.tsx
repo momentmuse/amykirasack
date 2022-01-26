@@ -2,7 +2,8 @@ import * as React from 'react';
 import styled from 'styled-components';
 import ContactMe from './../images/amycat.png';
 import ScrollingHeadline from './ScrollingHeadline';
-import { Container, Padding } from '../styles';
+import { Container, Padding, BlobMask, Blobs } from '../styles';
+import { Parallax } from 'react-scroll-parallax';
 
 const ContactContainer = styled(Container)`
   background-color: ${({ theme }) => theme.color.muted};
@@ -11,6 +12,10 @@ const ContactContainer = styled(Container)`
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+const ImageMask = styled(BlobMask)`
+  mask-image: url(${Blobs.contact});
 `;
 
 interface ContactProps {
@@ -52,7 +57,11 @@ const Contact = ({ id }: ContactProps) => {
             </p>
           </form>
         </TextContainer>
-        <img src={ContactMe} />
+        <Parallax translateX={[30, -30]}>
+          <ImageMask>
+            <img src={ContactMe} />
+          </ImageMask>
+        </Parallax>
       </Padding>
     </ContactContainer>
   );

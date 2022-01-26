@@ -20,13 +20,6 @@ const MainWrapper = styled.div`
   margin: 0 auto;
   overflow-x: hidden;
 
-  /* @media ${({ theme }) => theme.device.tablet} {
-    width: 90vw;
-  }
-  @media ${({ theme }) => theme.device.laptop} {
-    width: 80vw;
-  } */
-
   h1,
   h2,
   h3 {
@@ -36,17 +29,21 @@ const MainWrapper = styled.div`
   }
 
   h1 {
+    color: ${({ theme }) => theme.color.background};
+    text-shadow: 0 0 2px ${({ theme }) => theme.color.light},
+      0 0 2px ${({ theme }) => theme.color.accent},
+      0 0 2px ${({ theme }) => theme.color.accent},
+      0 0 2px ${({ theme }) => theme.color.accent};
     &::before {
       content: '“';
       font-family: 'Times New Roman', serif;
-      font-size: ${({ theme }) => theme.font.size.xlarge};
-      text-shadow: -2px 2px 0px ${({ theme }) => theme.color.light};
+      font-size: ${({ theme }) => theme.font.size.xxlarge};
     }
     &::after {
       content: '”';
       font-family: 'Times New Roman', serif;
-      font-size: ${({ theme }) => theme.font.size.xlarge};
-      text-shadow: -2px 2px 0px ${({ theme }) => theme.color.light};
+      font-size: ${({ theme }) => theme.font.size.xxlarge};
+
       vertical-align: text-top;
     }
   }

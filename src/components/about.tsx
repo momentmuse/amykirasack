@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import ScrollingHeadline from './ScrollingHeadline';
-import { Container, Padding } from '../styles';
+import { Container, Padding, BlobMask, Blobs } from '../styles';
 import { Parallax } from 'react-scroll-parallax';
 
 const AboutContainer = styled(Container)`
@@ -17,6 +17,14 @@ const AboutContainer = styled(Container)`
 const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+const ImageMaskA = styled(BlobMask)`
+  mask-image: url(${Blobs.aboutA});
+`;
+
+const ImageMaskB = styled(BlobMask)`
+  mask-image: url(${Blobs.aboutB});
 `;
 
 const TextContainer = styled.div`
@@ -47,8 +55,16 @@ const About = ({ id }: AboutProps) => {
       />
       <Padding>
         <ImageContainer>
-          <img src={AboutMe1} />
-          <img src={AboutMe2} />
+          <Parallax translateY={[-20, 30]} translateX={[30, -10]}>
+            <ImageMaskA>
+              <img src={AboutMe1} />
+            </ImageMaskA>
+          </Parallax>
+          <Parallax translateY={[25, -25]} translateX={[-20, 40]}>
+            <ImageMaskB>
+              <img src={AboutMe2} />
+            </ImageMaskB>
+          </Parallax>
         </ImageContainer>
 
         <TextContainer>
