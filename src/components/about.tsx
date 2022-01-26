@@ -3,6 +3,9 @@ import { useStaticQuery, graphql } from 'gatsby';
 import AboutMe1 from './../images/viaduct.png';
 import AboutMe2 from './../images/fundy.png';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const AboutContainer = styled.div`
   background-color: ${({ theme }) => theme.color.secondary};
@@ -58,7 +61,8 @@ const About = ({ id }: AboutProps) => {
         </p>
 
         <a href={data.file.publicURL} target="_blank" className="button">
-          Download my CV
+          <FontAwesomeIcon icon={faFilePdf} />
+          Get my CV
         </a>
         <br />
         <a
@@ -66,6 +70,7 @@ const About = ({ id }: AboutProps) => {
           target="_blank"
           className="button"
         >
+          <FontAwesomeIcon icon={faGithub} />
           Github
         </a>
         <br />
@@ -74,6 +79,7 @@ const About = ({ id }: AboutProps) => {
           target="_blank"
           className="button"
         >
+          <FontAwesomeIcon icon={faLinkedin} />
           LinkedIn
         </a>
       </TextContainer>

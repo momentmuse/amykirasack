@@ -14,6 +14,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-styled-components',
+    'g,atsby-plugin-fontawesome-css',
     {
       resolve: 'gatsby-plugin-anchor-links',
       options: {
