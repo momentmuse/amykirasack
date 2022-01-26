@@ -2,8 +2,10 @@ import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import styled from 'styled-components';
+import ScrollingHeadline from './ScrollingHeadline';
+import { Parallax } from 'react-scroll-parallax';
 
-const CarouselContainer = styled.div`
+const JobsContainer = styled.div`
   background-color: ${({ theme }) => theme.color.primary};
   padding: ${({ theme }) => theme.styles.padding};
   @media ${({ theme }) => theme.device.tablet} {
@@ -24,7 +26,7 @@ const ScrollingCarousel = styled.div`
   }
 `;
 
-const JobContainer = styled.div`
+const Job = styled.div`
   flex: 0 0 auto;
   width: 60vw;
   @media ${({ theme }) => theme.device.tablet} {
@@ -32,7 +34,7 @@ const JobContainer = styled.div`
   }
 `;
 
-interface CarouselProps {
+interface JobsProps {
   id: string;
 }
 
@@ -48,7 +50,7 @@ interface Job {
   };
 }
 
-const Carousel = ({ id }: CarouselProps) => {
+const Jobs = ({ id }: JobsProps) => {
   const data = useStaticQuery(graphql`
     {
       allMarkdownRemark(
@@ -81,15 +83,19 @@ const Carousel = ({ id }: CarouselProps) => {
   };
 
   return (
-    <CarouselContainer id={id}>
-      <h1>Nothing ever becomes real ’til it is experienced.</h1>
+    <JobsContainer id={id}>
+      <ScrollingHeadline
+        headline={
+          'Seek the wisdom that will untie your knot. Seek the path that demands your whole being.'
+        }
+      />
       <ScrollingCarousel>
         {jobs?.map((job: Job) => {
           const image = getImage(job.frontmatter.image);
 
           return (
             <article key={job.frontmatter.url}>
-              <JobContainer>
+              <Job>
                 <h2>{job.frontmatter.title}</h2>
                 {image && <GatsbyImage image={image} alt={'company image'} />}
                 <h3>
@@ -104,13 +110,13 @@ const Carousel = ({ id }: CarouselProps) => {
                     job.frontmatter.endyear
                   )}
                 </p>
-              </JobContainer>
+              </Job>
             </article>
           );
         })}
       </ScrollingCarousel>
-    </CarouselContainer>
+    </JobsContainer>
   );
 };
 
-export default Carousel;
+export default Jobs;

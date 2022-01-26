@@ -6,7 +6,7 @@ const color = {
   tertiary: '#2f3061',
   muted: '#d88c6c',
   accent: '#6d545d',
-  background: '#f0e9df',
+  background: '#fff8e4',
   light: '#f0f0f0',
   mid: '#4e4e4e',
   dark: '#282c34',

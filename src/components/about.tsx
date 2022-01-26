@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import AboutMe1 from './../images/viaduct.png';
-import AboutMe2 from './../images/fundy.png';
+import AboutMe2 from './../images/quebec.png';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import ScrollingHeadline from './ScrollingHeadline';
+import { Parallax } from 'react-scroll-parallax';
 
 const AboutContainer = styled.div`
   background-color: ${({ theme }) => theme.color.secondary};
@@ -13,18 +15,27 @@ const AboutContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  img {
+    max-width: 320px;
+  }
+`;
+
+const Padding = styled.div`
   padding: ${({ theme }) => theme.styles.padding};
   @media ${({ theme }) => theme.device.tablet} {
     padding: ${({ theme }) => theme.styles.paddingTablet};
+    display: flex;
     flex-direction: row;
   }
   @media ${({ theme }) => theme.device.laptop} {
     padding: ${({ theme }) => theme.styles.paddingLaptop};
   }
+`;
 
-  img {
-    max-width: 320px;
-  }
+const ImageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const TextContainer = styled.div`
@@ -48,41 +59,49 @@ const About = ({ id }: AboutProps) => {
 
   return (
     <AboutContainer id={id}>
-      <img src={AboutMe1} />
-      <img src={AboutMe2} />
-      <TextContainer>
-        <h1>What’s in a name?</h1>
+      <ScrollingHeadline
+        headline={
+          'We do not come into this world; we come out of it, as leaves from a tree.'
+        }
+      />
+      <Padding>
+        <ImageContainer>
+          <img src={AboutMe1} />
+          <img src={AboutMe2} />
+        </ImageContainer>
 
-        <p>
-          Canadian-born coffee enthusiast, cat lover, and globetrotter. I’ve
-          lived in Canada, the US, Singapore, Japan, and Spain, but spent time
-          in many more. Currently based in the UK, where you’ll find me
-          meditating on my balcony with far too many plants.
-        </p>
+        <TextContainer>
+          <p>
+            Canadian-born coffee enthusiast, cat lover, and globetrotter. I’ve
+            lived in Canada, the US, Singapore, Japan, and Spain, but spent time
+            in many more. Currently based in the UK, where you’ll find me
+            meditating on my balcony with far too many plants.
+          </p>
 
-        <a href={data.file.publicURL} target="_blank" className="button">
-          <FontAwesomeIcon icon={faFilePdf} />
-          Get my CV
-        </a>
-        <br />
-        <a
-          href="https://github.com/momentmuse"
-          target="_blank"
-          className="button"
-        >
-          <FontAwesomeIcon icon={faGithub} />
-          Github
-        </a>
-        <br />
-        <a
-          href="https://www.linkedin.com/in/amy-kirasack"
-          target="_blank"
-          className="button"
-        >
-          <FontAwesomeIcon icon={faLinkedin} />
-          LinkedIn
-        </a>
-      </TextContainer>
+          <a href={data.file.publicURL} target="_blank" className="button">
+            <FontAwesomeIcon icon={faFilePdf} />
+            get my cv
+          </a>
+          <br />
+          <a
+            href="https://github.com/momentmuse"
+            target="_blank"
+            className="button"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+            github
+          </a>
+          <br />
+          <a
+            href="https://www.linkedin.com/in/amy-kirasack"
+            target="_blank"
+            className="button"
+          >
+            <FontAwesomeIcon icon={faLinkedin} />
+            linkedin
+          </a>
+        </TextContainer>
+      </Padding>
     </AboutContainer>
   );
 };

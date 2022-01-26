@@ -1,10 +1,10 @@
 import * as React from 'react';
-import Layout from './../components/layout';
-import Hero from './../components/hero';
-import Profile from './../components/profile';
-import About from './../components/about';
-import Carousel from './../components/carousel';
-import Contact from './../components/contact';
+import Layout from '../components/Layout';
+import Hero from '../components/Hero';
+import Profile from '../components/Profile';
+import About from '../components/About';
+import Jobs from '../components/Jobs';
+import Contact from '../components/Contact';
 import styled from 'styled-components';
 
 const Section = styled.section`
@@ -18,7 +18,7 @@ const IndexPage = () => {
         <Hero />
         <Profile id={'profile'} />
         <About id={'about'} />
-        <Carousel id={'work'} />
+        <Jobs id={'work'} />
         <Contact id={'contact'} />
       </Section>
     </Layout>

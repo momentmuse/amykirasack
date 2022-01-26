@@ -1,5 +1,4 @@
 import * as React from 'react';
-// import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from 'styled-components';

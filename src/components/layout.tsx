@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Header from './header';
+import Header from './Header';
 import styled, { ThemeProvider } from 'styled-components';
-import theme from './../theme';
+import theme from '../theme';
 import 'normalize.css';
 import '../css/typography.css';
 import '@fontsource/dm-mono';
@@ -18,6 +18,7 @@ const MainWrapper = styled.div`
   position: relative;
   top: 3vh;
   margin: 0 auto;
+  overflow-x: hidden;
 
   /* @media ${({ theme }) => theme.device.tablet} {
     width: 90vw;
@@ -39,13 +40,13 @@ const MainWrapper = styled.div`
       content: '“';
       font-family: 'Times New Roman', serif;
       font-size: ${({ theme }) => theme.font.size.xlarge};
-      text-shadow: -2px 2px 0px ${({ theme }) => theme.color.background};
+      text-shadow: -2px 2px 0px ${({ theme }) => theme.color.light};
     }
     &::after {
       content: '”';
       font-family: 'Times New Roman', serif;
       font-size: ${({ theme }) => theme.font.size.xlarge};
-      text-shadow: -2px 2px 0px ${({ theme }) => theme.color.background};
+      text-shadow: -2px 2px 0px ${({ theme }) => theme.color.light};
       vertical-align: text-top;
     }
   }

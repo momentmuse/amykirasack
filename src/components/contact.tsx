@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import ContactMe from './../images/amycat.png';
+import ScrollingHeadline from './ScrollingHeadline';
 
 const ContactContainer = styled.div`
   background-color: ${({ theme }) => theme.color.muted};
@@ -36,10 +37,9 @@ const Contact = ({ id }: ContactProps) => {
   return (
     <ContactContainer id={id}>
       <TextContainer>
-        <h1>
-          Much unhappiness has come into the world because of things left
-          unsaid.
-        </h1>
+        <ScrollingHeadline
+          headline={'The next message you need is always right where you are.'}
+        />
         <p>
           Have an opportunity or idea you’d like to share? Just want to say hi?
           Don't be a stranger, drop me a line.
