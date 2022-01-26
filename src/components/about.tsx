@@ -7,30 +7,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import ScrollingHeadline from './ScrollingHeadline';
+import { Container, Padding } from '../styles';
 import { Parallax } from 'react-scroll-parallax';
 
-const AboutContainer = styled.div`
+const AboutContainer = styled(Container)`
   background-color: ${({ theme }) => theme.color.secondary};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  img {
-    max-width: 320px;
-  }
-`;
-
-const Padding = styled.div`
-  padding: ${({ theme }) => theme.styles.padding};
-  @media ${({ theme }) => theme.device.tablet} {
-    padding: ${({ theme }) => theme.styles.paddingTablet};
-    display: flex;
-    flex-direction: row;
-  }
-  @media ${({ theme }) => theme.device.laptop} {
-    padding: ${({ theme }) => theme.styles.paddingLaptop};
-  }
 `;
 
 const ImageContainer = styled.div`

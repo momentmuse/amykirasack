@@ -54,11 +54,11 @@ const device = {
   laptop: `(min-width: ${screenWidth.laptop})`,
 };
 
-const styles = {
-  padding: '2em 1em',
-  paddingTablet: '2em 7em',
-  paddingLaptop: '2em 10em',
+const padding = {
+  mobile: '2em 1em',
+  tablet: '2em 7em',
+  laptop: '2em 10em',
 };
 
-const theme = { color, font, styles, device };
+const theme = { color, font, padding, device };
 export default theme;
