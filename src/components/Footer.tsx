@@ -11,7 +11,7 @@ const StyledFooter = styled.footer`
 const Divider = styled.hr`
   border: 0;
   height: 1px;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
   background-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0),

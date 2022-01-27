@@ -37,8 +37,7 @@ const MainWrapper = styled.div`
 
   h1 {
     font-size: ${({ theme }) => theme.font.size.xxlarge};
-
-    color: ${({ theme }) => theme.color.background};
+    color: ${({ theme }) => theme.color.light};
     text-shadow: 0 0 3px ${({ theme }) => theme.color.background},
       0 0 3px ${({ theme }) => theme.color.accent},
       0 0 3px ${({ theme }) => theme.color.accent},
@@ -67,6 +66,7 @@ const MainWrapper = styled.div`
     cursor: url(${Pointer}), pointer;
     font-family: ${({ theme }) => theme.font.family.bodyBold};
     color: ${({ theme }) => theme.color.accent};
+    font-size: ${({ theme }) => theme.font.size.medium};
     text-decoration: 2px ${({ theme }) => theme.color.secondary} wavy underline;
   }
 `;

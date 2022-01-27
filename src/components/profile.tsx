@@ -21,7 +21,7 @@ const ImageMask = styled(BlobMask)`
 `;
 
 const TextContainer = styled.div`
-  margin-top: -12vh;
+  margin-top: -8rem;
   display: flex;
   flex-direction: column;
   color: ${({ theme }) => theme.color.accent};
@@ -29,7 +29,7 @@ const TextContainer = styled.div`
 
   @media ${({ theme }) => theme.device.tablet} {
     margin-top: 10vh;
-    padding: 0em 6em;
+    width: 35rem;
   }
 
   span {
@@ -42,7 +42,7 @@ const TextContainer = styled.div`
 
 const StyledParallax = styled(Parallax)`
   @media ${({ theme }) => theme.device.tablet} {
-    margin-left: -6em;
+    margin-left: -5rem;
   }
 `;
 

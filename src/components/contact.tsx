@@ -16,7 +16,8 @@ const TextContainer = styled.div`
   flex-direction: column;
 
   @media ${({ theme }) => theme.device.tablet} {
-    padding: 0em 6em;
+    padding: 0em 2rem;
+    width: 35rem;
   }
 `;
 
@@ -33,11 +34,11 @@ const ContactForm = styled.form`
     font-family: inherit;
     font-size: ${({ theme }) => theme.font.size.small};
     width: 100%;
-    padding: 1em;
-    margin: 0.5em 0;
+    padding: 1rem;
+    margin: 0.5rem 0;
     border: 0;
     border-bottom: 2px solid ${({ theme }) => theme.color.accent};
-    border-radius: 25px;
+    border-radius: 30px;
     box-sizing: border-box;
     resize: vertical;
 
@@ -60,10 +61,10 @@ const Button = styled.button`
   font-size: ${({ theme }) => theme.font.size.medium};
   color: ${({ theme }) => theme.color.accent};
   text-decoration: 2px ${({ theme }) => theme.color.secondary} wavy underline;
-  padding: 1em 1.2em;
+  padding: 1em 1.5em;
   background-color: ${({ theme }) => theme.color.light};
   border: 1px solid ${({ theme }) => theme.color.accent};
-  border-radius: 25px;
+  border-radius: 30px;
 `;
 
 const ImageMask = styled(BlobMask)`
@@ -92,18 +93,19 @@ const Contact = ({ id }: ContactProps) => {
             <p>
               <label>
                 <FormLabel>name</FormLabel>
-                <input type="text" name="name" />
+                <input type="text" name="name" autoComplete="off" />
               </label>
             </p>
             <p>
               <label>
-                <FormLabel>email</FormLabel> <input type="email" name="email" />
+                <FormLabel>email</FormLabel>{' '}
+                <input type="email" name="email" autoComplete="off" />
               </label>
             </p>
             <p>
               <label>
                 <FormLabel>subject</FormLabel>{' '}
-                <input type="text" name="subject" autocomplete="off" />
+                <input type="text" name="subject" autoComplete="off" />
               </label>
             </p>
             <p>

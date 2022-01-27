@@ -6,7 +6,7 @@ const color = {
   muted: '#d88c6c',
   accent: '#6d545d',
   background: '#fff8e4',
-  light: '#fffaf0',
+  light: '#fdfeff',
   mid: '#4e4e4e',
   dark: '#282c34',
 };
@@ -25,17 +25,17 @@ const font = {
     body: 400,
   },
   size: {
-    xsmall: '0.6em',
-    small: '0.9em',
-    medium: '1.1em',
-    large: '1.5em',
-    xlarge: '2em',
-    xxlarge: '2.5em',
-    xxxlarge: '3.5em',
+    xsmall: '0.6rem',
+    small: '0.9rem',
+    medium: '1.1rem',
+    large: '1.5rem',
+    xlarge: '2rem',
+    xxlarge: '2.5rem',
+    xxxlarge: '3.5rem',
   },
   lineHeight: {
-    heading: '1.2em',
-    body: '2em',
+    heading: '1.2rem',
+    body: '2rem',
   },
 };
 
@@ -54,9 +54,9 @@ const device = {
 };
 
 const padding = {
-  mobile: '1.5em 2em 3em 1.5em',
-  tablet: '2em 7em 2em 7em',
-  laptop: '3em 9em 3em 9em',
+  mobile: '1rem 2rem',
+  tablet: '2rem 7rem',
+  laptop: '3rem 8rem',
 };
 
 const theme = { color, font, padding, device };

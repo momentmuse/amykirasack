@@ -28,11 +28,10 @@ const ImageMaskB = styled(BlobMask)`
 `;
 
 const TextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-
   @media ${({ theme }) => theme.device.tablet} {
-    padding: 0em 6em;
+    margin-left: -30rem;
+    margin-top: -10rem;
+    width: 35rem;
   }
 `;
 
@@ -40,7 +39,7 @@ const LinkContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 2em;
+  margin-top: 2rem;
 `;
 
 interface AboutProps {
@@ -77,6 +76,7 @@ const About = ({ id }: AboutProps) => {
           </ImageMaskB>
         </Parallax>
       </ImageContainer>
+
       <Padding>
         <TextContainer>
           <p>

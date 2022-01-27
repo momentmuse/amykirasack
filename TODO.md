@@ -38,14 +38,14 @@
 ✅ Add img div blobs
 
 Style carousel
-Style Contact Form
+✅ Style Contact Form
 Style Blog Landing Page
 Style Blog Post
 Animated Menu
 
 Style pages with styled-components (mobile-first)
-Style pages with styled-components (tablet&laptop)
-Add custom cursor
+Style pages with styled-components (tablet&laptop&4k+)
+✅ Add custom cursor
 Add console message?
 
 Add some blog posts

@@ -3,12 +3,15 @@ import { Helmet } from 'react-helmet';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from 'styled-components';
 import Logo from './../images/icon.png';
+import Cursor from './../cursors/cursor.png';
+import Pointer from './../cursors/pointer.png';
 
 interface HeaderProps {
   siteTitle: string;
 }
 
 const StyledHeader = styled.header`
+  cursor: url(${Cursor}), auto;
   position: fixed;
   width: 100vw;
   top: 0;
@@ -21,7 +24,7 @@ const StyledHeader = styled.header`
     padding: 0.5rem;
   }
   img {
-    width: 2em;
+    width: 2rem;
   }
 `;
 
@@ -36,6 +39,7 @@ const Navbar = styled.nav`
 `;
 
 const StyledLink = styled(AnchorLink)`
+  cursor: url(${Pointer}), pointer;
   color: ${({ theme }) => theme.color.primary};
   text-decoration: none;
 `;
