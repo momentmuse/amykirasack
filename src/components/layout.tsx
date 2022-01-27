@@ -19,6 +19,7 @@ const MainWrapper = styled.div`
   top: 3vh;
   margin: 0 auto;
   overflow-x: hidden;
+  background-color: ${({ theme }) => theme.color.background};
 
   h1,
   h2,
@@ -30,19 +31,19 @@ const MainWrapper = styled.div`
 
   h1 {
     color: ${({ theme }) => theme.color.background};
-    text-shadow: 0 0 2px ${({ theme }) => theme.color.light},
-      0 0 2px ${({ theme }) => theme.color.accent},
-      0 0 2px ${({ theme }) => theme.color.accent},
-      0 0 2px ${({ theme }) => theme.color.accent};
+    text-shadow: 0 0 3px ${({ theme }) => theme.color.light},
+      0 0 3px ${({ theme }) => theme.color.accent},
+      0 0 3px ${({ theme }) => theme.color.accent},
+      0 0 3px ${({ theme }) => theme.color.accent};
     &::before {
       content: '“';
-      font-family: 'Times New Roman', serif;
       font-size: ${({ theme }) => theme.font.size.xxlarge};
+      font-family: 'Times New Roman', serif;
     }
     &::after {
       content: '”';
-      font-family: 'Times New Roman', serif;
       font-size: ${({ theme }) => theme.font.size.xxlarge};
+      font-family: 'Times New Roman', serif;
       vertical-align: text-top;
     }
   }
@@ -57,14 +58,14 @@ const MainWrapper = styled.div`
   a {
     font-family: ${({ theme }) => theme.font.family.bodyBold};
     color: ${({ theme }) => theme.color.accent};
-    text-decoration: ${({ theme }) => theme.color.light} wavy underline;
+    text-decoration: 2px ${({ theme }) => theme.color.primary} wavy underline;
   }
 `;
 
 const Footer = styled.footer`
-  margin-top: 2vh;
-  font-family: ${({ theme }) => theme.font.family.body};
-  color: ${({ theme }) => theme.color.mid};
+  margin: 2vh 0;
+  font-family: ${({ theme }) => theme.font.family.heading};
+  color: ${({ theme }) => theme.color.accent};
 `;
 
 const Layout = ({ children }: LayoutProps) => {

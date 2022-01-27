@@ -6,8 +6,6 @@ import { Parallax } from 'react-scroll-parallax';
 import { Container, Blobs, BlobMask } from '../styles';
 
 const ProfileContainer = styled(Container)`
-  background-color: ${({ theme }) => theme.color.background};
-
   padding: ${({ theme }) => theme.padding.mobile};
   @media ${({ theme }) => theme.device.tablet} {
     padding: ${({ theme }) => theme.padding.tablet};

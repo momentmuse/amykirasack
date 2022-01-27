@@ -7,7 +7,7 @@ import { Container, Padding } from '../styles';
 import { Parallax } from 'react-scroll-parallax';
 
 const JobsContainer = styled(Container)`
-  background-color: ${({ theme }) => theme.color.primary};
+  /* background-color: ${({ theme }) => theme.color.primary}; */
 `;
 
 const ScrollingCarousel = styled.div`

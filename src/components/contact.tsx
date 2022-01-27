@@ -6,7 +6,7 @@ import { Container, Padding, BlobMask, Blobs } from '../styles';
 import { Parallax } from 'react-scroll-parallax';
 
 const ContactContainer = styled(Container)`
-  background-color: ${({ theme }) => theme.color.muted};
+  /* background-color: ${({ theme }) => theme.color.muted}; */
 `;
 
 const TextContainer = styled.div`
@@ -58,7 +58,7 @@ const Contact = ({ id }: ContactProps) => {
               </label>
             </p>
             <p>
-              <button type="submit">send me!</button>
+              <button type="submit">send!</button>
             </p>
           </form>
         </TextContainer>

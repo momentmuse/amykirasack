@@ -11,7 +11,7 @@ import { Container, Padding, BlobMask, Blobs } from '../styles';
 import { Parallax } from 'react-scroll-parallax';
 
 const AboutContainer = styled(Container)`
-  background-color: ${({ theme }) => theme.color.secondary};
+  /* background-color: ${({ theme }) => theme.color.secondary}; */
 `;
 
 const ImageContainer = styled.div`

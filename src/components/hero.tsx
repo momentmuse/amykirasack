@@ -15,7 +15,7 @@ const HeroContainer = styled.div`
 
 const StyledVideoContainer = styled.div`
   position: relative;
-  z-index: -1;
+  z-index: 1;
   margin: 0 auto;
   @media ${({ theme }) => theme.device.tablet} {
     width: 70vw;
