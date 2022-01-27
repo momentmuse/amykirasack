@@ -38,7 +38,7 @@ const Blog = ({ data }: BlogProps) => {
                 <p>{post.frontmatter.date}</p>
                 <p>{post.excerpt}</p>
                 <p>
-                  <Link to={post.frontmatter.slug}>Read more</Link>
+                  <Link to={post.frontmatter.slug}>read more</Link>
                 </p>
               </div>
             </article>

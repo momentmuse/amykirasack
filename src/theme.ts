@@ -36,7 +36,7 @@ const font = {
   },
   lineHeight: {
     heading: 1.125,
-    body: 1.5,
+    body: 1.7,
   },
 };
 
@@ -55,9 +55,9 @@ const device = {
 };
 
 const padding = {
-  mobile: '2em 1em',
-  tablet: '2em 7em',
-  laptop: '2em 10em',
+  mobile: '0em 2.5em 3em 2.5em',
+  tablet: '0em 7em 3em 7em',
+  laptop: '0em 9em 3em 9em',
 };
 
 const theme = { color, font, padding, device };

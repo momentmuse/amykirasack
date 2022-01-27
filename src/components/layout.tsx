@@ -43,7 +43,6 @@ const MainWrapper = styled.div`
       content: '”';
       font-family: 'Times New Roman', serif;
       font-size: ${({ theme }) => theme.font.size.xxlarge};
-
       vertical-align: text-top;
     }
   }
@@ -52,6 +51,7 @@ const MainWrapper = styled.div`
     font-family: ${({ theme }) => theme.font.family.body};
     color: ${({ theme }) => theme.color.accent};
     font-size: ${({ theme }) => theme.font.size.medium};
+    line-height: ${({ theme }) => theme.font.lineHeight.body};
   }
 
   a {

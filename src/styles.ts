@@ -7,7 +7,7 @@ const Container = styled.div`
   justify-content: center;
 
   img {
-    max-width: 330px;
+    max-width: 340px;
   }
 `;
 

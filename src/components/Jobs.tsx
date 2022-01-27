@@ -26,6 +26,12 @@ const Job = styled.div`
   @media ${({ theme }) => theme.device.tablet} {
     width: 30vw;
   }
+
+  span {
+    font-family: ${({ theme }) => theme.font.family.body};
+    color: ${({ theme }) => theme.color.accent};
+    font-size: ${({ theme }) => theme.font.size.small};
+  }
 `;
 
 interface JobsProps {
@@ -98,7 +104,7 @@ const Jobs = ({ id }: JobsProps) => {
                       {job.frontmatter.company}
                     </a>
                   </h3>
-                  <p>{job.frontmatter.description}</p>
+                  <span>{job.frontmatter.description}</span>
                   <p>
                     {sanitizeYear(
                       job.frontmatter.startyear,

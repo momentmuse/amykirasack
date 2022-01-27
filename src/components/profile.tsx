@@ -42,7 +42,7 @@ const TextContainer = styled.div`
 
 const StyledParallax = styled(Parallax)`
   @media ${({ theme }) => theme.device.tablet} {
-    margin-left: -6em;
+    margin-left: -4em;
   }
 `;
 
@@ -66,13 +66,13 @@ const Profile = ({ id }: ProfileProps) => {
 
   return (
     <ProfileContainer id={id}>
-      <Parallax rotate={[10, -10]} scale={[0.7, 1]}>
+      <Parallax rotate={[10, -10]} scale={[0.85, 1.1]}>
         <ImageMask>
           <img src={AboutMe3} />
         </ImageMask>
       </Parallax>
       <TextContainer>
-        <StyledParallax scale={[0.7, 1]}>
+        <StyledParallax scale={[0.85, 1]}>
           <span>Amy Kirasack</span>
           <p>
             founder of seedling | software developer | writer | lifelong learner

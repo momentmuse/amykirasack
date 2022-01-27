@@ -49,11 +49,16 @@ const Contact = ({ id }: ContactProps) => {
             </p>
             <p>
               <label>
+                Subject: <input type="subject" name="subject" />
+              </label>
+            </p>
+            <p>
+              <label>
                 Message: <textarea name="message"></textarea>
               </label>
             </p>
             <p>
-              <button type="submit">Send</button>
+              <button type="submit">send me!</button>
             </p>
           </form>
         </TextContainer>

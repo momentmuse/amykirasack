@@ -19,17 +19,18 @@ const Template = ({ data }: TemplateProps) => {
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
-      <h1>This is the BlogPost template</h1>
-      <article>
-        <div>
-          <h1>{frontmatter.title}</h1>
-          <p>{frontmatter.date}</p>
-        </div>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </article>
-      <p>
-        <Link to={'/blog'}>to blog index</Link>
-      </p>
+      <>
+        <article>
+          <div>
+            <h2>{frontmatter.title}</h2>
+            <p>{frontmatter.date}</p>
+          </div>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </article>
+        <p>
+          <Link to={'/blog'}>to blog index</Link>
+        </p>
+      </>
     </Layout>
   );
 };

@@ -16,7 +16,7 @@ const AboutContainer = styled(Container)`
 
 const ImageContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 `;
 
 const ImageMaskA = styled(BlobMask)`
@@ -30,6 +30,17 @@ const ImageMaskB = styled(BlobMask)`
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    padding: 0em 6em;
+  }
+`;
+
+const LinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 2em;
 `;
 
 interface AboutProps {
@@ -53,20 +64,20 @@ const About = ({ id }: AboutProps) => {
           'We do not come into this world; we come out of it, as leaves from a tree.'
         }
       />
-      <Padding>
-        <ImageContainer>
-          <Parallax translateY={[-20, 30]} translateX={[30, -10]}>
-            <ImageMaskA>
-              <img src={AboutMe1} />
-            </ImageMaskA>
-          </Parallax>
-          <Parallax translateY={[25, -25]} translateX={[-20, 40]}>
-            <ImageMaskB>
-              <img src={AboutMe2} />
-            </ImageMaskB>
-          </Parallax>
-        </ImageContainer>
 
+      <ImageContainer>
+        <Parallax translateY={[-20, 30]} translateX={[30, -10]}>
+          <ImageMaskA>
+            <img src={AboutMe1} />
+          </ImageMaskA>
+        </Parallax>
+        <Parallax translateY={[25, -25]} translateX={[-20, 40]}>
+          <ImageMaskB>
+            <img src={AboutMe2} />
+          </ImageMaskB>
+        </Parallax>
+      </ImageContainer>
+      <Padding>
         <TextContainer>
           <p>
             Canadian-born coffee enthusiast, cat lover, and globetrotter. I’ve
@@ -75,28 +86,30 @@ const About = ({ id }: AboutProps) => {
             meditating on my balcony with far too many plants.
           </p>
 
-          <a href={data.file.publicURL} target="_blank" className="button">
-            <FontAwesomeIcon icon={faFilePdf} />
-            get my cv
-          </a>
-          <br />
-          <a
-            href="https://github.com/momentmuse"
-            target="_blank"
-            className="button"
-          >
-            <FontAwesomeIcon icon={faGithub} />
-            github
-          </a>
-          <br />
-          <a
-            href="https://www.linkedin.com/in/amy-kirasack"
-            target="_blank"
-            className="button"
-          >
-            <FontAwesomeIcon icon={faLinkedin} />
-            linkedin
-          </a>
+          <LinkContainer>
+            <a href={data.file.publicURL} target="_blank" className="button">
+              <FontAwesomeIcon icon={faFilePdf} />
+              &nbsp;get my cv
+            </a>
+            <br />
+            <a
+              href="https://github.com/momentmuse"
+              target="_blank"
+              className="button"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+              &nbsp;github
+            </a>
+            <br />
+            <a
+              href="https://www.linkedin.com/in/amy-kirasack"
+              target="_blank"
+              className="button"
+            >
+              <FontAwesomeIcon icon={faLinkedin} />
+              &nbsp;linkedin
+            </a>
+          </LinkContainer>
         </TextContainer>
       </Padding>
     </AboutContainer>
