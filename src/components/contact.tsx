@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import ContactMe from './../images/amycat.png';
 import ScrollingHeadline from './ScrollingHeadline';
 import { Container, Padding, BlobMask, Blobs } from '../styles';
+import Pointer from './../cursors/pointer.png';
+import Text from './../cursors/text.png';
 import { Parallax } from 'react-scroll-parallax';
 
 const ContactContainer = styled(Container)`
@@ -24,13 +26,15 @@ const ContactForm = styled.form`
   input[type='text'],
   input[type='email'],
   textarea {
+    cursor: url(${Text}), text;
+
     background-color: ${({ theme }) => theme.color.light};
     color: ${({ theme }) => theme.color.accent};
     font-family: inherit;
     font-size: ${({ theme }) => theme.font.size.small};
     width: 100%;
     padding: 1em;
-    margin: 1em 0;
+    margin: 0.5em 0;
     border: 0;
     border-bottom: 2px solid ${({ theme }) => theme.color.accent};
     border-radius: 25px;
@@ -51,6 +55,7 @@ const FormLabel = styled.span`
 `;
 
 const Button = styled.button`
+  cursor: url(${Pointer}), pointer;
   font-family: ${({ theme }) => theme.font.family.bodyBold};
   font-size: ${({ theme }) => theme.font.size.medium};
   color: ${({ theme }) => theme.color.accent};
@@ -104,10 +109,9 @@ const Contact = ({ id }: ContactProps) => {
             <p>
               <label>
                 <FormLabel>message</FormLabel>{' '}
-                <textarea name="message"></textarea>
+                <textarea name="message" rows={4}></textarea>
               </label>
             </p>
-
             <Button type="submit">here we go!</Button>
           </ContactForm>
         </TextContainer>

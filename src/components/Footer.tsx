@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
   margin: 3em auto;
-  font-family: ${({ theme }) => theme.font.family.heading};
+  font-family: ${({ theme }) => theme.font.family.body};
   color: ${({ theme }) => theme.color.accent};
   font-size: ${({ theme }) => theme.font.size.small};
 `;
@@ -23,7 +23,7 @@ const Divider = styled.hr`
 const Footer = () => {
   return (
     <StyledFooter>
-      <Divider />© {new Date().getFullYear()} Amy Kirasack | Built with ❤️ with
+      <Divider />© {new Date().getFullYear()} Amy Kirasack | built with ❤️ with
       {` `}
       <a href="https://www.gatsbyjs.com">
         <img

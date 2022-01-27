@@ -54,9 +54,9 @@ const device = {
 };
 
 const padding = {
-  mobile: '0em 2em 3em 2em',
-  tablet: '0em 7em 3em 7em',
-  laptop: '0em 9em 3em 9em',
+  mobile: '1.5em 2em 3em 1.5em',
+  tablet: '2em 7em 2em 7em',
+  laptop: '3em 9em 3em 9em',
 };
 
 const theme = { color, font, padding, device };

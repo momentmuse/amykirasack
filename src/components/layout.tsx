@@ -8,6 +8,9 @@ import theme from '../theme';
 import 'normalize.css';
 import '../css/typography.css';
 import '@fontsource/dm-mono';
+import Cursor from './../cursors/cursor.png';
+import Pointer from './../cursors/pointer.png';
+
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 interface LayoutProps {
@@ -15,6 +18,7 @@ interface LayoutProps {
 }
 
 const MainWrapper = styled.div`
+  cursor: url(${Cursor}), auto;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -32,6 +36,8 @@ const MainWrapper = styled.div`
   }
 
   h1 {
+    font-size: ${({ theme }) => theme.font.size.xxlarge};
+
     color: ${({ theme }) => theme.color.background};
     text-shadow: 0 0 3px ${({ theme }) => theme.color.background},
       0 0 3px ${({ theme }) => theme.color.accent},
@@ -58,6 +64,7 @@ const MainWrapper = styled.div`
   }
 
   a {
+    cursor: url(${Pointer}), pointer;
     font-family: ${({ theme }) => theme.font.family.bodyBold};
     color: ${({ theme }) => theme.color.accent};
     text-decoration: 2px ${({ theme }) => theme.color.secondary} wavy underline;
