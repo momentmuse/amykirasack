@@ -1,3 +1,5 @@
+import { DefaultTheme } from 'styled-components';
+
 // --- Configurables ---
 
 const color = {
@@ -59,5 +61,5 @@ const padding = {
   laptop: '3rem 8rem',
 };
 
-const theme = { color, font, padding, device };
+const theme: DefaultTheme = { color, font, padding, device };
 export default theme;

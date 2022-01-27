@@ -3,15 +3,12 @@ import { Helmet } from 'react-helmet';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from 'styled-components';
 import Logo from './../images/icon.png';
-import Cursor from './../cursors/cursor.png';
-import Pointer from './../cursors/pointer.png';
 
 interface HeaderProps {
   siteTitle: string;
 }
 
 const StyledHeader = styled.header`
-  cursor: url(${Cursor}), auto;
   position: fixed;
   width: 100vw;
   top: 0;
@@ -38,35 +35,29 @@ const Navbar = styled.nav`
   }
 `;
 
-const StyledLink = styled(AnchorLink)`
-  cursor: url(${Pointer}), pointer;
-  color: ${({ theme }) => theme.color.primary};
-  text-decoration: none;
-`;
-
 const Header = ({ siteTitle }: HeaderProps) => (
   <StyledHeader>
     <Helmet title={siteTitle} titleTemplate="%s | Software Engineer" />
     <div>
       <h1>
-        <StyledLink to="/">
+        <AnchorLink to="/">
           <img src={Logo} alt="site logo" />
-        </StyledLink>
+        </AnchorLink>
       </h1>
     </div>
     <Navbar>
       <ul>
         <li>
-          <StyledLink to="/#work">work</StyledLink>
+          <AnchorLink to="/#work">work</AnchorLink>
         </li>
         <li>
-          <StyledLink to="/#about">about</StyledLink>
+          <AnchorLink to="/#about">about</AnchorLink>
         </li>
         <li>
-          <StyledLink to="/blog">blog</StyledLink>
+          <AnchorLink to="/blog">blog</AnchorLink>
         </li>
         <li>
-          <StyledLink to="/#contact">contact</StyledLink>
+          <AnchorLink to="/#contact">contact</AnchorLink>
         </li>
       </ul>
     </Navbar>
