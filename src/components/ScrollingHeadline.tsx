@@ -7,7 +7,7 @@ interface ScrollingHeadlineProps {
 
 const ScrollingHeadline = ({ headline }: ScrollingHeadlineProps) => {
   return (
-    <Marquee gradient={false} speed={90} pauseOnClick={true}>
+    <Marquee gradient={false} speed={80} pauseOnClick={true}>
       <h1>{headline}</h1>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </Marquee>

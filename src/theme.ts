@@ -3,7 +3,6 @@
 const color = {
   primary: '#68a691',
   secondary: '#eab871',
-  tertiary: '#2f3061',
   muted: '#d88c6c',
   accent: '#6d545d',
   background: '#fff8e4',
