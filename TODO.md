@@ -33,9 +33,19 @@
 ✅ Change favicon, icons
 
 ✅ Add typewriter animations
-Add [parallax](https://github.com/jscottsmith/react-scroll-parallax) scrolling animations :)
-Add div blobs
+✅ Add bg video
+✅ Add [parallax](https://github.com/jscottsmith/react-scroll-parallax) scrolling animations :)
+✅ Add img div blobs
+
+Style carousel
+Style Contact Form
+Style Blog Landing Page
+Style Blog Post
+Animated Menu
+
 Style pages with styled-components (mobile-first)
+Style pages with styled-components (tablet&laptop)
+Add custom cursor
 Add console message?
 
 Add some blog posts

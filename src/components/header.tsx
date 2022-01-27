@@ -28,6 +28,7 @@ const StyledHeader = styled.header`
 const Navbar = styled.nav`
   margin: 0 auto;
   padding: 1.5rem;
+  z-index: 100;
   > ul {
     margin-left: 1.5rem;
     list-style-type: none;
@@ -52,16 +53,16 @@ const Header = ({ siteTitle }: HeaderProps) => (
     <Navbar>
       <ul>
         <li>
-          <StyledLink to="/#work">Work</StyledLink>
+          <StyledLink to="/#work">work</StyledLink>
         </li>
         <li>
-          <StyledLink to="/#about">About</StyledLink>
+          <StyledLink to="/#about">about</StyledLink>
         </li>
         <li>
-          <StyledLink to="/blog">Blog</StyledLink>
+          <StyledLink to="/blog">blog</StyledLink>
         </li>
         <li>
-          <StyledLink to="/#contact">Contact</StyledLink>
+          <StyledLink to="/#contact">contact</StyledLink>
         </li>
       </ul>
     </Navbar>

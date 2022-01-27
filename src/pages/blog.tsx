@@ -1,6 +1,15 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
 import { Link, graphql } from 'gatsby';
+import styled from 'styled-components';
+import { Container } from '../styles';
+
+const BlogContainer = styled(Container)`
+  padding: ${({ theme }) => theme.padding.mobile};
+  @media ${({ theme }) => theme.device.tablet} {
+    padding: 6em 20em;
+  }
+`;
 
 type Post = {
   frontmatter: {
@@ -24,7 +33,7 @@ const Blog = ({ data }: BlogProps) => {
   const posts = data.allMarkdownRemark?.nodes;
   const generatePosts = (posts: Post[]): JSX.Element => {
     return (
-      <>
+      <BlogContainer>
         {posts.map((post) => {
           return (
             <article key={post.frontmatter.slug}>
@@ -44,7 +53,7 @@ const Blog = ({ data }: BlogProps) => {
             </article>
           );
         })}
-      </>
+      </BlogContainer>
     );
   };
 

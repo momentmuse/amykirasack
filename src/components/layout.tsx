@@ -33,11 +33,11 @@ const MainWrapper = styled.div`
 
   h1 {
     color: ${({ theme }) => theme.color.background};
-    text-shadow: 0 0 3px ${({ theme }) => theme.color.light},
+    text-shadow: 0 0 3px ${({ theme }) => theme.color.background},
       0 0 3px ${({ theme }) => theme.color.accent},
       0 0 3px ${({ theme }) => theme.color.accent},
       0 0 3px ${({ theme }) => theme.color.accent};
-    &::before {
+    /* &::before {
       content: '“';
       font-size: ${({ theme }) => theme.font.size.xxlarge};
       font-family: 'Times New Roman', serif;
@@ -47,7 +47,7 @@ const MainWrapper = styled.div`
       font-size: ${({ theme }) => theme.font.size.xxlarge};
       font-family: 'Times New Roman', serif;
       vertical-align: text-top;
-    }
+    } */
   }
 
   p {
