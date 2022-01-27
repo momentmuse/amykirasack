@@ -37,6 +37,9 @@ const TextContainer = styled.div`
     font-size: ${({ theme }) => theme.font.size.xxxlarge};
     text-shadow: -2px 2px 0px ${({ theme }) => theme.color.light};
     letter-spacing: -0.7px;
+    &:hover {
+      color: ${({ theme }) => theme.color.primary};
+    }
   }
 `;
 

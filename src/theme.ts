@@ -29,7 +29,7 @@ const font = {
   size: {
     xsmall: '0.6rem',
     small: '0.9rem',
-    medium: '1.1rem',
+    medium: '1.2rem',
     large: '1.5rem',
     xlarge: '2rem',
     xxlarge: '2.5rem',

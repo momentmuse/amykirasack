@@ -44,7 +44,7 @@ const ContactForm = styled.form`
 
     &:focus {
       outline: none;
-      border-bottom: 3px solid ${({ theme }) => theme.color.secondary};
+      border-bottom: 3px solid ${({ theme }) => theme.color.primary};
     }
   }
 `;
@@ -65,6 +65,11 @@ const Button = styled.button`
   background-color: ${({ theme }) => theme.color.light};
   border: 1px solid ${({ theme }) => theme.color.accent};
   border-radius: 30px;
+
+  &:hover {
+    border: 3px solid ${({ theme }) => theme.color.primary};
+    color: ${({ theme }) => theme.color.primary};
+  }
 `;
 
 const ImageMask = styled(BlobMask)`

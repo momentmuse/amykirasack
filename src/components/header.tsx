@@ -13,23 +13,29 @@ const StyledHeader = styled.header`
   width: 100vw;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 99;
   display: flex;
   > div {
     margin: 0 auto;
-    padding: 0.5rem;
   }
-  img {
-    width: 2rem;
+`;
+
+const LogoIcon = styled.img`
+  width: 5rem;
+  will-change: transform;
+  transition: transform 450ms;
+
+  &:hover {
+    transition: transform 140ms;
+    transform: translateY(-10px);
   }
 `;
 
 const Navbar = styled.nav`
   margin: 0 auto;
   padding: 1.5rem;
-  z-index: 100;
   > ul {
-    margin-left: 1.5rem;
+    /* margin-left: 1.5rem; */
     list-style-type: none;
   }
 `;
@@ -40,7 +46,7 @@ const Header = ({ siteTitle }: HeaderProps) => (
     <div>
       <h1>
         <AnchorLink to="/">
-          <img src={Logo} alt="site logo" />
+          <LogoIcon src={Logo} alt="site logo" />
         </AnchorLink>
       </h1>
     </div>
