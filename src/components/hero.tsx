@@ -16,6 +16,10 @@ const HeroContainer = styled.div`
 const StyledVideoContainer = styled.div`
   position: relative;
   z-index: -1;
+  margin: 0 auto;
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 70vw;
+  }
 `;
 
 const StyledType = styled.div`
@@ -28,8 +32,8 @@ const StyledType = styled.div`
     left: 0;
     right: 0;
     margin: auto;
-    top: 33%;
-    width: 42%;
+    top: 32%;
+    width: 44%;
   }
 
   & .Typewriter__wrapper,

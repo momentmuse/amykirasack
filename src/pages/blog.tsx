@@ -48,12 +48,7 @@ const Blog = ({ data }: BlogProps) => {
     );
   };
 
-  return (
-    <Layout>
-      <h1>This is the Blog page 📝 </h1>
-      {generatePosts(posts)}
-    </Layout>
-  );
+  return <Layout>{generatePosts(posts)}</Layout>;
 };
 
 export default Blog;

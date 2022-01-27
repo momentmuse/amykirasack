@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import AboutMe3 from './../images/espai.png';
 import styled from 'styled-components';
 import { Parallax } from 'react-scroll-parallax';
@@ -39,11 +40,30 @@ const TextContainer = styled.div`
   }
 `;
 
+const StyledParallax = styled(Parallax)`
+  @media ${({ theme }) => theme.device.tablet} {
+    margin-left: -6em;
+  }
+`;
+
 interface ProfileProps {
   id: string;
 }
 
 const Profile = ({ id }: ProfileProps) => {
+  const data = useStaticQuery(graphql`
+    {
+      markdownRemark(fileAbsolutePath: { regex: "/blog-posts/" }) {
+        excerpt
+        frontmatter {
+          slug
+        }
+      }
+    }
+  `);
+
+  const newestPost = data.markdownRemark;
+
   return (
     <ProfileContainer id={id}>
       <Parallax rotate={[10, -10]} scale={[0.7, 1]}>
@@ -52,12 +72,18 @@ const Profile = ({ id }: ProfileProps) => {
         </ImageMask>
       </Parallax>
       <TextContainer>
-        <Parallax scale={[0.7, 1]}>
+        <StyledParallax scale={[0.7, 1]}>
           <span>Amy Kirasack</span>
           <p>
             founder of seedling | software developer | writer | lifelong learner
           </p>
-        </Parallax>
+        </StyledParallax>
+        {data && (
+          <>
+            <p>{newestPost.excerpt}</p>
+            <Link to={newestPost.frontmatter.slug}>read more</Link>
+          </>
+        )}
       </TextContainer>
     </ProfileContainer>
   );
