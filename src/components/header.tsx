@@ -15,7 +15,6 @@ const StyledHeader = styled.header`
   left: 0;
   z-index: 1;
   display: flex;
-  font-family: ${({ theme }) => theme.font.family.heading};
   > div {
     margin: 0 auto;
     padding: 0.5rem;
