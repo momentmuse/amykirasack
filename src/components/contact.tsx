@@ -18,12 +18,9 @@ const ContactContainer = styled(Container)`
 `;
 
 const TextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-
   @media ${({ theme }) => theme.device.tablet} {
     padding: 0em 2rem;
-    width: 35rem;
+    width: 40vw;
   }
 `;
 
@@ -129,7 +126,7 @@ const Contact = ({ id }: ContactProps) => {
             <Button type="submit">here we go!</Button>
           </ContactForm>
         </TextContainer>
-        <Parallax translateX={[30, -30]}>
+        <Parallax translateX={[30, -25]}>
           <ImageMask>
             <img src={ContactMe} />
           </ImageMask>

@@ -4,7 +4,7 @@ import { DefaultTheme } from 'styled-components';
 
 const color = {
   primary: '#68a691',
-  secondary: '#eab871',
+  secondary: '#f9b145',
   muted: '#d88c6c',
   accent: '#6d545d',
   background: '#fff8e4',
@@ -46,6 +46,7 @@ const screenWidth = {
   mobile: '480px',
   tablet: '768px',
   laptop: '1024px',
+  highres: '2000px',
 };
 
 // --- Breakpoints & Spacing ---
@@ -54,6 +55,7 @@ const device = {
   mobile: `(min-width: ${screenWidth.mobile})`,
   tablet: `(min-width: ${screenWidth.tablet})`,
   laptop: `(min-width: ${screenWidth.laptop})`,
+  highres: `(min-width: ${screenWidth.highres})`,
 };
 
 const padding = {

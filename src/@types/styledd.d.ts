@@ -52,6 +52,7 @@ declare module 'styled-components' {
       mobile: string;
       tablet: string;
       laptop: string;
+      highres: string;
     };
   }
 }

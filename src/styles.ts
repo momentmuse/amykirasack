@@ -35,14 +35,14 @@ const BlobMask = styled.div`
 const SectionHeader = styled.h1`
   font-family: ${({ theme }) => theme.font.family.alt};
   font-size: ${({ theme }) => theme.font.size.xxxlarge};
-  text-shadow: -2px 2px 0px ${({ theme }) => theme.color.light};
+  text-shadow: -3px 3px 0px ${({ theme }) => theme.color.light};
   letter-spacing: -0.7px;
 `;
 
 const SectionHeaderAlt = styled(SectionHeader)`
   position: absolute;
   z-index: -2;
-  top: -1.5rem;
+  top: -2rem;
   right: 0;
   font-size: ${({ theme }) => theme.font.size.giant};
   text-decoration: underline 6px solid ${({ theme }) => theme.color.primary};

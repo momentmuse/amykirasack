@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from 'styled-components';
 import Logo from './../images/icon.png';
@@ -52,16 +53,16 @@ const Header = ({ siteTitle }: HeaderProps) => (
     <Navbar>
       <ul>
         <li>
-          <AnchorLink to="/#work">work</AnchorLink>
-        </li>
-        <li>
           <AnchorLink to="/#about">about</AnchorLink>
         </li>
         <li>
-          <AnchorLink to="/blog">blog</AnchorLink>
+          <AnchorLink to="/#work">work</AnchorLink>
         </li>
         <li>
           <AnchorLink to="/#contact">contact</AnchorLink>
+        </li>
+        <li>
+          <Link to="/blog">blog</Link>
         </li>
       </ul>
     </Navbar>

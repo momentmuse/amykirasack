@@ -38,11 +38,11 @@ const Blog = ({ data }: BlogProps) => {
           return (
             <article key={post.frontmatter.slug}>
               <div>
-                <h2>
+                <h1>
                   <Link to={post.frontmatter.slug}>
                     {post.frontmatter.title}
                   </Link>
-                </h2>
+                </h1>
                 <h3>{post.frontmatter.description}</h3>
                 <p>{post.frontmatter.date}</p>
                 <p>{post.excerpt}</p>

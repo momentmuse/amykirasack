@@ -23,6 +23,9 @@ const AboutContainer = styled(Container)`
 const ImageContainer = styled.div`
   display: flex;
   flex-direction: row;
+  @media ${({ theme }) => theme.device.tablet} {
+    margin-bottom: 4rem;
+  }
 `;
 
 const ImageMaskA = styled(BlobMask)`
@@ -34,10 +37,14 @@ const ImageMaskB = styled(BlobMask)`
 `;
 
 const TextContainer = styled.div`
+  margin-top: -3rem;
   @media ${({ theme }) => theme.device.tablet} {
-    margin-left: -30rem;
-    margin-top: -10rem;
-    width: 35rem;
+    position: absolute;
+    max-width: 33rem;
+  }
+  @media ${({ theme }) => theme.device.laptop} {
+    left: 25%;
+    bottom: 4vw;
   }
 `;
 
