@@ -42,7 +42,7 @@ const SectionHeader = styled.h1`
 const SectionHeaderAlt = styled(SectionHeader)`
   position: absolute;
   z-index: -2;
-  top: -2rem;
+  top: -1rem;
   right: 0;
   font-size: ${({ theme }) => theme.font.size.giant};
   text-decoration: underline 6px solid ${({ theme }) => theme.color.primary};
