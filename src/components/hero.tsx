@@ -33,7 +33,7 @@ const StyledType = styled.div`
     right: 0;
     margin: auto;
     top: 32%;
-    width: 44%;
+    width: 48%;
   }
 
   & .Typewriter__wrapper,

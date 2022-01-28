@@ -23,6 +23,7 @@ const AboutContainer = styled(Container)`
 const ImageContainer = styled.div`
   display: flex;
   flex-direction: row;
+  z-index: -3;
   @media ${({ theme }) => theme.device.tablet} {
     margin-bottom: 4rem;
   }
@@ -43,8 +44,8 @@ const TextContainer = styled.div`
     max-width: 33rem;
   }
   @media ${({ theme }) => theme.device.laptop} {
-    left: 25%;
-    bottom: 4vw;
+    left: 20rem;
+    bottom: 2rem;
   }
 `;
 

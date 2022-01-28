@@ -15,7 +15,11 @@ const GlobalStyle = createGlobalStyle`
   :root {
     background-color: ${({ theme }) => theme.color.background};
     cursor: url(${Cursor}), auto;
-    }
+  }
+
+  body {
+    overscroll-behavior: none;
+  }
 
   html {
     font-size: 14px;
@@ -26,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
       @media ${({ theme }) => theme.device.highres} {
         font-size: 28px;
       }
-    }
+  }
 
     h1,
     h2,
