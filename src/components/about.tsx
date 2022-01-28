@@ -17,7 +17,8 @@ import {
 import { Parallax } from 'react-scroll-parallax';
 
 const AboutContainer = styled(Container)`
-  /* background-color: ${({ theme }) => theme.color.secondary}; */
+  align-items: center;
+  justify-content: center;
 `;
 
 const ImageContainer = styled.div`

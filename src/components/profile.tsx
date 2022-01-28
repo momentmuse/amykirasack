@@ -6,6 +6,9 @@ import { Parallax } from 'react-scroll-parallax';
 import { Container, Blobs, BlobMask, SectionHeader } from '../styles';
 
 const ProfileContainer = styled(Container)`
+  align-items: center;
+  justify-content: center;
+
   padding: ${({ theme }) => theme.padding.mobile};
   @media ${({ theme }) => theme.device.tablet} {
     padding: ${({ theme }) => theme.padding.tablet};

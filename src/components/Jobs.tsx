@@ -3,25 +3,45 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import ScrollingHeadline from './ScrollingHeadline';
-import { Container, Padding, SectionHeaderAlt } from '../styles';
-import { Parallax } from 'react-scroll-parallax';
+import { Container, SectionHeaderAlt } from '../styles';
 
-const JobsContainer = styled(Container)`
-  /* background-color: ${({ theme }) => theme.color.primary}; */
+const JobsContainer = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
 `;
 
 const ScrollingCarousel = styled.div`
-  padding: 4rem 0;
+  margin: 4rem 0;
+
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  align-items: center;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &::scrollbar {
+    display: none;
+  }
+
+  @media ${({ theme }) => theme.device.tablet} {
+    margin: 6rem 0;
+    padding-left: 4rem;
+  }
 `;
 
 const Job = styled.div`
-  flex: 0 0 auto;
   width: 60vw;
+  padding: 0 2rem;
   @media ${({ theme }) => theme.device.tablet} {
-    width: 30vw;
+    width: 22rem;
+  }
+
+  img {
+    border-radius: 30px;
   }
 
   span {
@@ -64,7 +84,11 @@ const Jobs = ({ id }: JobsProps) => {
             url
             image {
               childImageSharp {
-                gatsbyImageData(width: 280, placeholder: DOMINANT_COLOR)
+                gatsbyImageData(
+                  height: 300
+                  quality: 85
+                  placeholder: DOMINANT_COLOR
+                )
               }
             }
           }
@@ -87,7 +111,6 @@ const Jobs = ({ id }: JobsProps) => {
           'Seek the wisdom that will untie your knot. Seek the path that demands your whole being.'
         }
       />
-
       <ScrollingCarousel>
         {jobs?.map((job: Job) => {
           const image = getImage(job.frontmatter.image);
@@ -95,7 +118,7 @@ const Jobs = ({ id }: JobsProps) => {
           return (
             <article key={job.frontmatter.url}>
               <Job>
-                <h2>{job.frontmatter.title}</h2>
+                <h3>{job.frontmatter.title}</h3>
                 {image && <GatsbyImage image={image} alt={'company image'} />}
                 <h3>
                   <a href={job.frontmatter.url} target="_blank">
