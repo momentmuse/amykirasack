@@ -34,6 +34,7 @@ declare module 'styled-components' {
         xlarge: string;
         xxlarge: string;
         xxxlarge: string;
+        giant: string;
       };
       lineHeight: {
         heading: string;

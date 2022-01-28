@@ -25,12 +25,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h1 {
-      font-size: ${({ theme }) => theme.font.size.xxlarge};
-      color: ${({ theme }) => theme.color.light};
-      text-shadow: 0 0 3px ${({ theme }) => theme.color.background},
-        0 0 3px ${({ theme }) => theme.color.accent},
-        0 0 3px ${({ theme }) => theme.color.accent},
-        0 0 3px ${({ theme }) => theme.color.accent};
+  
       /* &::before {
         content: '“';
         font-size: ${({ theme }) => theme.font.size.xxlarge};
@@ -63,6 +58,7 @@ const GlobalStyle = createGlobalStyle`
     }
    };
   }
+  
 `;
 
 const MainWrapper = styled.div`

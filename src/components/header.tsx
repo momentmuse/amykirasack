@@ -35,7 +35,6 @@ const Navbar = styled.nav`
   margin: 0 auto;
   padding: 1.5rem;
   > ul {
-    /* margin-left: 1.5rem; */
     list-style-type: none;
   }
 `;

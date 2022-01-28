@@ -2,7 +2,13 @@ import * as React from 'react';
 import styled from 'styled-components';
 import ContactMe from './../images/amycat.png';
 import ScrollingHeadline from './ScrollingHeadline';
-import { Container, Padding, BlobMask, Blobs } from '../styles';
+import {
+  Container,
+  Padding,
+  BlobMask,
+  Blobs,
+  SectionHeaderAlt,
+} from '../styles';
 import Pointer from './../cursors/pointer.png';
 import Text from './../cursors/text.png';
 import { Parallax } from 'react-scroll-parallax';
@@ -37,7 +43,7 @@ const ContactForm = styled.form`
     padding: 1rem;
     margin: 0.5rem 0;
     border: 0;
-    border-bottom: 2px solid ${({ theme }) => theme.color.accent};
+    border-bottom: 3px solid ${({ theme }) => theme.color.accent};
     border-radius: 30px;
     box-sizing: border-box;
     resize: vertical;
@@ -61,13 +67,13 @@ const Button = styled.button`
   font-size: ${({ theme }) => theme.font.size.medium};
   color: ${({ theme }) => theme.color.accent};
   text-decoration: 2px ${({ theme }) => theme.color.secondary} wavy underline;
-  padding: 1em 1.5em;
+  padding: 1rem 1.5rem;
   background-color: ${({ theme }) => theme.color.light};
-  border: 1px solid ${({ theme }) => theme.color.accent};
+  border: 2px solid ${({ theme }) => theme.color.accent};
   border-radius: 30px;
 
   &:hover {
-    border: 3px solid ${({ theme }) => theme.color.primary};
+    border: 2px solid ${({ theme }) => theme.color.primary};
     color: ${({ theme }) => theme.color.primary};
   }
 `;
@@ -83,6 +89,7 @@ interface ContactProps {
 const Contact = ({ id }: ContactProps) => {
   return (
     <ContactContainer id={id}>
+      <SectionHeaderAlt>contact.</SectionHeaderAlt>
       <ScrollingHeadline
         headline={'The next message you need is always right where you are.'}
       />

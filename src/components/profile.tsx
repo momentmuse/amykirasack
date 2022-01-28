@@ -3,7 +3,7 @@ import { Link, useStaticQuery, graphql } from 'gatsby';
 import AboutMe3 from './../images/espai.png';
 import styled from 'styled-components';
 import { Parallax } from 'react-scroll-parallax';
-import { Container, Blobs, BlobMask } from '../styles';
+import { Container, Blobs, BlobMask, SectionHeader } from '../styles';
 
 const ProfileContainer = styled(Container)`
   padding: ${({ theme }) => theme.padding.mobile};
@@ -21,25 +21,15 @@ const ImageMask = styled(BlobMask)`
 `;
 
 const TextContainer = styled.div`
-  margin-top: -8rem;
+  margin-top: -10rem;
   display: flex;
   flex-direction: column;
   color: ${({ theme }) => theme.color.accent};
   z-index: 1;
 
   @media ${({ theme }) => theme.device.tablet} {
-    margin-top: 10vh;
+    margin-top: 5rem;
     width: 35rem;
-  }
-
-  span {
-    font-family: ${({ theme }) => theme.font.family.alt};
-    font-size: ${({ theme }) => theme.font.size.xxxlarge};
-    text-shadow: -2px 2px 0px ${({ theme }) => theme.color.light};
-    letter-spacing: -0.7px;
-    &:hover {
-      color: ${({ theme }) => theme.color.primary};
-    }
   }
 `;
 
@@ -69,14 +59,14 @@ const Profile = ({ id }: ProfileProps) => {
 
   return (
     <ProfileContainer id={id}>
-      <Parallax rotate={[10, -10]} scale={[0.85, 1.1]}>
+      <Parallax rotate={[10, -10]} scale={[0.7, 1.1]}>
         <ImageMask>
           <img src={AboutMe3} />
         </ImageMask>
       </Parallax>
       <TextContainer>
-        <StyledParallax scale={[0.85, 1]}>
-          <span>Amy Kirasack</span>
+        <StyledParallax scale={[0.7, 1]}>
+          <SectionHeader>Amy Kirasack</SectionHeader>
           <p>
             founder of seedling | software developer | writer | lifelong learner
           </p>
@@ -84,7 +74,7 @@ const Profile = ({ id }: ProfileProps) => {
         {data && (
           <>
             <p>{newestPost.excerpt}</p>
-            <Link to={newestPost.frontmatter.slug}>read more</Link>
+            <Link to={newestPost.frontmatter.slug}>read more?</Link>
           </>
         )}
       </TextContainer>

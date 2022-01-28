@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import ScrollingHeadline from './ScrollingHeadline';
-import { Container, Padding } from '../styles';
+import { Container, Padding, SectionHeaderAlt } from '../styles';
 import { Parallax } from 'react-scroll-parallax';
 
 const JobsContainer = styled(Container)`
@@ -11,13 +11,10 @@ const JobsContainer = styled(Container)`
 `;
 
 const ScrollingCarousel = styled.div`
+  padding: 4rem 0;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-
-  ::-webkit-scrollbar {
-    display: none;
-  }
 `;
 
 const Job = styled.div`
@@ -84,39 +81,39 @@ const Jobs = ({ id }: JobsProps) => {
 
   return (
     <JobsContainer id={id}>
+      <SectionHeaderAlt>work.</SectionHeaderAlt>
       <ScrollingHeadline
         headline={
           'Seek the wisdom that will untie your knot. Seek the path that demands your whole being.'
         }
       />
-      <Padding>
-        <ScrollingCarousel>
-          {jobs?.map((job: Job) => {
-            const image = getImage(job.frontmatter.image);
 
-            return (
-              <article key={job.frontmatter.url}>
-                <Job>
-                  <h2>{job.frontmatter.title}</h2>
-                  {image && <GatsbyImage image={image} alt={'company image'} />}
-                  <h3>
-                    <a href={job.frontmatter.url} target="_blank">
-                      {job.frontmatter.company}
-                    </a>
-                  </h3>
-                  <span>{job.frontmatter.description}</span>
-                  <p>
-                    {sanitizeYear(
-                      job.frontmatter.startyear,
-                      job.frontmatter.endyear
-                    )}
-                  </p>
-                </Job>
-              </article>
-            );
-          })}
-        </ScrollingCarousel>
-      </Padding>
+      <ScrollingCarousel>
+        {jobs?.map((job: Job) => {
+          const image = getImage(job.frontmatter.image);
+
+          return (
+            <article key={job.frontmatter.url}>
+              <Job>
+                <h2>{job.frontmatter.title}</h2>
+                {image && <GatsbyImage image={image} alt={'company image'} />}
+                <h3>
+                  <a href={job.frontmatter.url} target="_blank">
+                    {job.frontmatter.company}
+                  </a>
+                </h3>
+                <span>{job.frontmatter.description}</span>
+                <p>
+                  {sanitizeYear(
+                    job.frontmatter.startyear,
+                    job.frontmatter.endyear
+                  )}
+                </p>
+              </Job>
+            </article>
+          );
+        })}
+      </ScrollingCarousel>
     </JobsContainer>
   );
 };

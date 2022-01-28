@@ -7,7 +7,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import ScrollingHeadline from './ScrollingHeadline';
-import { Container, Padding, BlobMask, Blobs } from '../styles';
+import {
+  Container,
+  Padding,
+  BlobMask,
+  Blobs,
+  SectionHeaderAlt,
+} from '../styles';
 import { Parallax } from 'react-scroll-parallax';
 
 const AboutContainer = styled(Container)`
@@ -58,6 +64,7 @@ const About = ({ id }: AboutProps) => {
 
   return (
     <AboutContainer id={id}>
+      <SectionHeaderAlt>about.</SectionHeaderAlt>
       <ScrollingHeadline
         headline={
           'We do not come into this world; we come out of it, as leaves from a tree.'
