@@ -25,6 +25,7 @@ const ImageContainer = styled.div`
   display: flex;
   flex-direction: row;
   z-index: -3;
+
   @media ${({ theme }) => theme.device.tablet} {
     margin-bottom: 4rem;
   }
@@ -39,14 +40,14 @@ const ImageMaskB = styled(BlobMask)`
 `;
 
 const TextContainer = styled.div`
-  margin-top: -3rem;
+  margin-top: -4rem;
   @media ${({ theme }) => theme.device.tablet} {
     position: absolute;
     max-width: 33rem;
   }
   @media ${({ theme }) => theme.device.laptop} {
-    left: 20rem;
-    bottom: 2rem;
+    left: 18rem;
+    bottom: 4rem;
   }
 `;
 
@@ -81,12 +82,12 @@ const About = ({ id }: AboutProps) => {
       />
 
       <ImageContainer>
-        <Parallax translateY={[-20, 30]} translateX={[30, -10]}>
+        <Parallax translateY={[-20, 30]} translateX={[50, 0]}>
           <ImageMaskA>
             <img src={AboutMe1} />
           </ImageMaskA>
         </Parallax>
-        <Parallax translateY={[25, -25]} translateX={[-20, 40]}>
+        <Parallax translateY={[40, -10]} translateX={[-40, 20]}>
           <ImageMaskB>
             <img src={AboutMe2} />
           </ImageMaskB>

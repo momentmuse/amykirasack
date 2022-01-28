@@ -34,7 +34,7 @@ const ScrollingCarousel = styled.div`
 `;
 
 const JobCard = styled.div`
-  width: 17rem;
+  width: 19rem;
   height: 30rem;
   margin: 0 2rem;
   background-color: ${({ theme }) => theme.color.light};
@@ -59,6 +59,7 @@ const JobCard = styled.div`
   &:active {
     transition: transform 140ms;
     transform: translateY(-1rem);
+    border: 1px solid ${({ theme }) => theme.color.primary};
   }
 `;
 

@@ -4,10 +4,6 @@ const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-
-  img {
-    max-width: 340px;
-  }
 `;
 
 const Padding = styled.div`

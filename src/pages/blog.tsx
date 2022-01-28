@@ -7,7 +7,7 @@ import { Container } from '../styles';
 const BlogContainer = styled(Container)`
   padding: ${({ theme }) => theme.padding.mobile};
   @media ${({ theme }) => theme.device.tablet} {
-    padding: 6rem 20rem;
+    padding: 6rem 18rem;
   }
 `;
 

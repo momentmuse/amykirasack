@@ -82,6 +82,10 @@ const Button = styled.button`
 
 const ImageMask = styled(BlobMask)`
   mask-image: url(${Blobs.contact});
+
+  img {
+    width: 100%;
+  }
 `;
 
 interface ContactProps {
