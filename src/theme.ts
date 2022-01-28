@@ -33,7 +33,7 @@ const font = {
     large: '1.5rem',
     xlarge: '2rem',
     xxlarge: '2.5rem',
-    xxxlarge: '5rem',
+    xxxlarge: '4.5rem',
     giant: '7rem',
   },
   lineHeight: {

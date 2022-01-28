@@ -28,7 +28,7 @@ const LogoIcon = styled.img`
 
   &:hover {
     transition: transform 140ms;
-    transform: translateY(-10px);
+    transform: translateY(-1rem);
   }
 `;
 

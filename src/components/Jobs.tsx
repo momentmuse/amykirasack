@@ -12,8 +12,8 @@ const JobsContainer = styled.div`
 `;
 
 const ScrollingCarousel = styled.div`
-  margin: 4rem 0;
-
+  margin: 5rem 0;
+  padding: 1rem 0;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
@@ -33,15 +33,17 @@ const ScrollingCarousel = styled.div`
   }
 `;
 
-const Job = styled.div`
-  width: 60vw;
-  padding: 0 2rem;
-  @media ${({ theme }) => theme.device.tablet} {
-    width: 22rem;
-  }
+const JobCard = styled.div`
+  width: 17rem;
+  height: 30rem;
+  margin: 0 2rem;
+  background-color: ${({ theme }) => theme.color.light};
+  border: 1px solid ${({ theme }) => theme.color.accent};
+  border-radius: 25px;
 
   img {
-    border-radius: 30px;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
   }
 
   span {
@@ -49,6 +51,19 @@ const Job = styled.div`
     color: ${({ theme }) => theme.color.accent};
     font-size: ${({ theme }) => theme.font.size.small};
   }
+
+  will-change: transform;
+  transition: transform 450ms;
+
+  &:hover,
+  &:active {
+    transition: transform 140ms;
+    transform: translateY(-1rem);
+  }
+`;
+
+const Description = styled.div`
+  padding: 1rem;
 `;
 
 interface JobsProps {
@@ -85,7 +100,7 @@ const Jobs = ({ id }: JobsProps) => {
             image {
               childImageSharp {
                 gatsbyImageData(
-                  height: 300
+                  width: 600
                   quality: 85
                   placeholder: DOMINANT_COLOR
                 )
@@ -117,22 +132,26 @@ const Jobs = ({ id }: JobsProps) => {
 
           return (
             <article key={job.frontmatter.url}>
-              <Job>
-                <h3>{job.frontmatter.title}</h3>
-                {image && <GatsbyImage image={image} alt={'company image'} />}
-                <h3>
-                  <a href={job.frontmatter.url} target="_blank">
-                    {job.frontmatter.company}
-                  </a>
-                </h3>
-                <span>{job.frontmatter.description}</span>
-                <p>
-                  {sanitizeYear(
-                    job.frontmatter.startyear,
-                    job.frontmatter.endyear
-                  )}
-                </p>
-              </Job>
+              <JobCard>
+                <a href={job.frontmatter.url} target="_blank">
+                  {image && <GatsbyImage image={image} alt={'company image'} />}{' '}
+                </a>
+                <Description>
+                  <h3>{job.frontmatter.title}</h3>
+                  <h3>
+                    <a href={job.frontmatter.url} target="_blank">
+                      {job.frontmatter.company}
+                    </a>
+                  </h3>
+                  <span>{job.frontmatter.description}</span>
+                  <p>
+                    {sanitizeYear(
+                      job.frontmatter.startyear,
+                      job.frontmatter.endyear
+                    )}
+                  </p>
+                </Description>
+              </JobCard>
             </article>
           );
         })}

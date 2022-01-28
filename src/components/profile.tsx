@@ -62,13 +62,13 @@ const Profile = ({ id }: ProfileProps) => {
 
   return (
     <ProfileContainer id={id}>
-      <Parallax rotate={[10, -10]} scale={[0.8, 1.1]}>
+      <Parallax rotate={[10, -10]} scale={[0.8, 1.2]}>
         <ImageMask>
           <img src={AboutMe3} />
         </ImageMask>
       </Parallax>
       <TextContainer>
-        <StyledParallax scale={[0.8, 1]}>
+        <StyledParallax scale={[0.8, 1.2]}>
           <SectionHeader>Amy Kirasack</SectionHeader>
           <p>
             founder of seedling | software developer | writer | lifelong learner

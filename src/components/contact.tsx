@@ -68,10 +68,15 @@ const Button = styled.button`
   background-color: ${({ theme }) => theme.color.light};
   border: 2px solid ${({ theme }) => theme.color.accent};
   border-radius: 30px;
+  will-change: transform;
+  transition: transform 450ms;
 
-  &:hover {
+  &:hover,
+  &:active {
     border: 2px solid ${({ theme }) => theme.color.primary};
     color: ${({ theme }) => theme.color.primary};
+    transition: transform 140ms;
+    transform: translateY(-0.5rem);
   }
 `;
 
