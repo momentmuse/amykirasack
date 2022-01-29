@@ -1,71 +1,28 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'gatsby';
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import HomeLogo from './HomeLogo';
+import Navbar from './Navbar';
 import styled from 'styled-components';
-import Logo from './../images/icon.png';
 
 interface HeaderProps {
   siteTitle: string;
 }
 
 const StyledHeader = styled.header`
-  position: fixed;
+  background-color: ${({ theme }) => theme.color.primary};
   width: 100vw;
+  height: 8rem;
   top: 0;
   left: 0;
-  z-index: 99;
   display: flex;
-  > div {
-    margin: 0 auto;
-  }
-`;
-
-const LogoIcon = styled.img`
-  width: 5rem;
-  will-change: transform;
-  transition: transform 450ms;
-
-  &:hover {
-    transition: transform 140ms;
-    transform: translateY(-1rem);
-  }
-`;
-
-const Navbar = styled.nav`
-  margin: 0 auto;
-  padding: 1.5rem;
-  > ul {
-    list-style-type: none;
-  }
+  overflow-x: hidden;
 `;
 
 const Header = ({ siteTitle }: HeaderProps) => (
   <StyledHeader>
     <Helmet title={siteTitle} titleTemplate="%s | Software Engineer" />
-    <div>
-      <h1>
-        <AnchorLink to="/">
-          <LogoIcon src={Logo} alt="site logo" />
-        </AnchorLink>
-      </h1>
-    </div>
-    <Navbar>
-      <ul>
-        <li>
-          <AnchorLink to="/#about">about</AnchorLink>
-        </li>
-        <li>
-          <AnchorLink to="/#work">work</AnchorLink>
-        </li>
-        <li>
-          <AnchorLink to="/#contact">contact</AnchorLink>
-        </li>
-        <li>
-          <Link to="/blog">blog</Link>
-        </li>
-      </ul>
-    </Navbar>
+    <HomeLogo />
+    <Navbar />
   </StyledHeader>
 );
 

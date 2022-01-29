@@ -3,6 +3,7 @@ import HeroSplashSq from './../videos/hero-splash-sq.mp4';
 import HeroSplash from './../videos/hero-splash.mp4';
 import styled, { useTheme } from 'styled-components';
 import Typewriter from 'typewriter-effect';
+import HeroBg from './../images/herobg.svg';
 
 interface Size {
   width: number | undefined;
@@ -10,7 +11,12 @@ interface Size {
 }
 
 const HeroContainer = styled.div`
-  width: 100%;
+  @media ${({ theme }) => theme.device.tablet} {
+    background-image: url(${HeroBg});
+    background-repeat: repeat-x;
+    background-size: contain;
+    padding-bottom: 2rem;
+  }
 `;
 
 const StyledVideoContainer = styled.div`
@@ -18,7 +24,10 @@ const StyledVideoContainer = styled.div`
   z-index: 1;
   margin: 0 auto;
   @media ${({ theme }) => theme.device.tablet} {
-    width: 70vw;
+    padding: 0 10rem;
+  }
+  @media ${({ theme }) => theme.device.highres} {
+    padding: 0 20rem;
   }
 `;
 
@@ -29,11 +38,9 @@ const StyledType = styled.div`
   width: 65%;
 
   @media ${({ theme }) => theme.device.tablet} {
-    left: 0;
-    right: 0;
-    margin: auto;
+    left: 34%;
     top: 32%;
-    width: 48%;
+    width: 40%;
   }
 
   & .Typewriter__wrapper,

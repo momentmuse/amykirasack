@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import ScrollingHeadline from './ScrollingHeadline';
-import { Container, SectionHeaderAlt } from '../styles';
+import { SectionHeaderAlt } from '../styles';
 
 const JobsContainer = styled.div`
   position: relative;
@@ -29,11 +29,12 @@ const ScrollingCarousel = styled.div`
 
   @media ${({ theme }) => theme.device.tablet} {
     margin: 6rem 0;
-    padding-left: 4rem;
+    padding: 1rem 8rem;
   }
 `;
 
 const JobCard = styled.div`
+  position: relative;
   width: 19rem;
   height: 30rem;
   margin: 0 2rem;
@@ -50,6 +51,12 @@ const JobCard = styled.div`
     font-family: ${({ theme }) => theme.font.family.body};
     color: ${({ theme }) => theme.color.accent};
     font-size: ${({ theme }) => theme.font.size.small};
+  }
+
+  p {
+    position: absolute;
+    right: 1rem;
+    bottom: 0;
   }
 
   will-change: transform;
@@ -138,12 +145,12 @@ const Jobs = ({ id }: JobsProps) => {
                   {image && <GatsbyImage image={image} alt={'company image'} />}{' '}
                 </a>
                 <Description>
-                  <h3>{job.frontmatter.title}</h3>
-                  <h3>
+                  <h2>
                     <a href={job.frontmatter.url} target="_blank">
                       {job.frontmatter.company}
                     </a>
-                  </h3>
+                  </h2>
+                  <h3>{job.frontmatter.title}</h3>
                   <span>{job.frontmatter.description}</span>
                   <p>
                     {sanitizeYear(

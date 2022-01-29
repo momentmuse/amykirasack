@@ -37,21 +37,23 @@
 ✅ Add [parallax](https://github.com/jscottsmith/react-scroll-parallax) scrolling animations :)
 ✅ Add img div blobs
 
-Style carousel
+✅ Style carousel
 ✅ Style Contact Form
-Style Blog Landing Page
-Style Blog Post
-Animated Menu
+✅ Style Blog Landing Page
+✅ Style Blog Post
+✅ Animated Menu
 
 Style pages with styled-components (mobile-first)
-Style pages with styled-components (tablet&laptop&4k+)
+Style pages with styled-components (TABLET!! & laptop &4k+)
 ✅ Add custom cursor
+✅ Optimize images, videos for size
 Add console message?
 
 Add some blog posts
 ✅ Add projects!
+Query images for gatsby dynamic image loading
 Refactor 😎
-Optimize images, videos for size
+
 Add form validation to contact form
 Connect to email on netlify
 

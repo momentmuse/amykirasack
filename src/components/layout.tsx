@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     overscroll-behavior: none;
+    overflow-x: hidden;
   }
 
   html {
@@ -80,7 +81,7 @@ const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  top: 20vh;
+
   margin: 0 auto;
   overflow-x: hidden;
 `;

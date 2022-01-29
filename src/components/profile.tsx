@@ -8,8 +8,8 @@ import { Container, Blobs, BlobMask, SectionHeader } from '../styles';
 const ProfileContainer = styled(Container)`
   align-items: center;
   justify-content: center;
+  padding: -4rem 2rem;
 
-  padding: ${({ theme }) => theme.padding.mobile};
   @media ${({ theme }) => theme.device.tablet} {
     padding: ${({ theme }) => theme.padding.tablet};
     flex-direction: row;
