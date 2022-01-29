@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
+    overscroll-behavior: none;
     overflow-x: hidden;
     width: 100%;
     position: relative;

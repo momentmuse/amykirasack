@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Pointer from './../cursors/pointer.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faChild,
+  faSmileBeam,
   faLaptopCode,
   faPaperPlane,
   faPenFancy,
@@ -137,7 +137,7 @@ const Navbar = () => {
       <Ul>
         <div>
           <Link to="/#about" onClick={() => closeMenu()}>
-            about <FontAwesomeIcon icon={faChild} />
+            about <FontAwesomeIcon icon={faSmileBeam} />
           </Link>
         </div>
         <div>
