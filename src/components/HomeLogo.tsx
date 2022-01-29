@@ -5,8 +5,8 @@ import Logo from './../images/icon.png';
 
 const LogoIcon = styled.img`
   position: fixed;
-  top: 0.4rem;
-  left: 0.4rem;
+  top: 0.8rem;
+  left: 0.8rem;
   z-index: 10;
   width: 5rem;
   will-change: transform;

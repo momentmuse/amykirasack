@@ -11,7 +11,7 @@ interface Size {
 }
 
 const HeroContainer = styled.div`
-  @media ${({ theme }) => theme.device.tablet} {
+  @media ${({ theme }) => theme.device.laptop} {
     background-image: url(${HeroBg});
     background-repeat: repeat-x;
     background-size: contain;
@@ -23,11 +23,11 @@ const StyledVideoContainer = styled.div`
   position: relative;
   z-index: 1;
   margin: 0 auto;
-  @media ${({ theme }) => theme.device.tablet} {
+  @media ${({ theme }) => theme.device.laptop} {
     padding: 0 10rem;
   }
   @media ${({ theme }) => theme.device.highres} {
-    padding: 0 20rem;
+    padding: 0 18rem;
   }
 `;
 

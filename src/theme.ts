@@ -46,7 +46,7 @@ const screenWidth = {
   mobile: '480px',
   tablet: '768px',
   laptop: '1024px',
-  highres: '2000px',
+  highres: '2200px',
 };
 
 // --- Breakpoints & Spacing ---

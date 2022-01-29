@@ -27,7 +27,7 @@ const ScrollingCarousel = styled.div`
     display: none;
   }
 
-  @media ${({ theme }) => theme.device.tablet} {
+  @media ${({ theme }) => theme.device.laptop} {
     margin: 6rem 0;
     padding: 1rem 8rem;
   }

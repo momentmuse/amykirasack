@@ -17,20 +17,18 @@ const GlobalStyle = createGlobalStyle`
     cursor: url(${Cursor}), auto;
   }
 
-  body {
-    overscroll-behavior: none;
+  html, body {
     overflow-x: hidden;
-  }
-
-  html {
+    width: 100%;
+    position: relative;
     font-size: 14px;
     @media ${({ theme }) => theme.device.tablet} {
       font-size: 16px;
 
     };
-      @media ${({ theme }) => theme.device.highres} {
+    @media ${({ theme }) => theme.device.highres} {
         font-size: 28px;
-      }
+    }
   }
 
     h1,

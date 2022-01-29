@@ -3,6 +3,14 @@ import { Link } from 'gatsby';
 // TODO: uninstall anchor link!!
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from 'styled-components';
+import Pointer from './../cursors/pointer.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faChild,
+  faLaptopCode,
+  faPaperPlane,
+  faPenFancy,
+} from '@fortawesome/free-solid-svg-icons';
 
 const Nav = styled.label`
   z-index: 99;
@@ -21,7 +29,7 @@ const Menu = styled.span`
   transition: 0.5s ease-in-out;
   box-shadow: 0 0 0 0 ${({ theme }) => theme.color.background},
     0 0 0 0 ${({ theme }) => theme.color.background};
-  cursor: pointer;
+  cursor: url(${Pointer}), pointer;
 `;
 
 const Hamburger = styled.span`
@@ -57,21 +65,27 @@ const Hamburger = styled.span`
   }
 `;
 
-const Ul = styled.ul`
+const Ul = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   z-index: 200;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 20rem;
+  right: -8rem;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   opacity: 0;
   -webkit-transition: 0.25s 0.1s ease-in-out;
   transition: 0.25s 0.1s ease-in-out;
   text-decoration: none;
-  list-style-type: none;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    right: 0rem;
+  }
 
   a {
-    font-size: ${({ theme }) => theme.font.size.xlarge};
+    font-size: ${({ theme }) => theme.font.size.xxxlarge};
     margin-bottom: 1rem;
     display: block;
   }
@@ -121,26 +135,26 @@ const Navbar = () => {
         <Hamburger></Hamburger>{' '}
       </Menu>
       <Ul>
-        <li>
+        <div>
           <Link to="/#about" onClick={() => closeMenu()}>
-            about
+            about <FontAwesomeIcon icon={faChild} />
           </Link>
-        </li>
-        <li>
+        </div>
+        <div>
           <Link to="/#work" onClick={() => closeMenu()}>
-            work
+            work <FontAwesomeIcon icon={faLaptopCode} />
           </Link>
-        </li>
-        <li>
+        </div>
+        <div>
           <Link to="/#contact" onClick={() => closeMenu()}>
-            contact
+            contact <FontAwesomeIcon icon={faPaperPlane} />
           </Link>
-        </li>
-        <li>
+        </div>
+        <div>
           <Link to="/blog" onClick={() => closeMenu()}>
-            blog
+            blog <FontAwesomeIcon icon={faPenFancy} />
           </Link>
-        </li>
+        </div>
       </Ul>
     </Nav>
   );

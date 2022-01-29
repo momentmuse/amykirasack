@@ -43,11 +43,16 @@ const TextContainer = styled.div`
   margin-top: -4rem;
   @media ${({ theme }) => theme.device.tablet} {
     position: absolute;
+    left: 6rem;
     max-width: 33rem;
   }
   @media ${({ theme }) => theme.device.laptop} {
     left: 18rem;
     bottom: 4rem;
+  }
+  @media ${({ theme }) => theme.device.laptop} {
+    left: 22rem;
+    bottom: 0rem;
   }
 `;
 

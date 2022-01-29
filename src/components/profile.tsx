@@ -42,6 +42,10 @@ const StyledParallax = styled(Parallax)`
   }
 `;
 
+const PostSpotlight = styled.div`
+  padding: ${({ theme }) => theme.padding.mobile};
+`;
+
 interface ProfileProps {
   id: string;
 }
@@ -75,10 +79,10 @@ const Profile = ({ id }: ProfileProps) => {
           </p>
         </StyledParallax>
         {data && (
-          <>
+          <PostSpotlight>
             <p>{newestPost.excerpt}</p>
             <Link to={newestPost.frontmatter.slug}>read more?</Link>
-          </>
+          </PostSpotlight>
         )}
       </TextContainer>
     </ProfileContainer>

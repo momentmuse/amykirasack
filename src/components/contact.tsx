@@ -18,7 +18,11 @@ const ContactContainer = styled(Container)`
 `;
 
 const TextContainer = styled.div`
-  @media ${({ theme }) => theme.device.tablet} {
+  @media ${({ theme }) => theme.device.laptop} {
+    padding: 0em 0.4rem;
+    width: 50vw;
+  }
+  @media ${({ theme }) => theme.device.laptop} {
     padding: 0em 2rem;
     width: 40vw;
   }
