@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-// TODO: uninstall anchor link!!
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from 'styled-components';
 import Pointer from './../cursors/pointer.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -38,7 +36,7 @@ const Hamburger = styled.span`
   left: 50px;
   width: 30px;
   height: 2px;
-  background: #69d2e7;
+  background: ${({ theme }) => theme.color.primary};
   display: block;
   -webkit-transform-origin: center;
   transform-origin: center;
@@ -54,7 +52,7 @@ const Hamburger = styled.span`
     display: block;
     width: 100%;
     height: 100%;
-    background: #69d2e7;
+    background: ${({ theme }) => theme.color.primary};
   }
 
   &::before {
@@ -65,7 +63,7 @@ const Hamburger = styled.span`
   }
 `;
 
-const Ul = styled.div`
+const LinkContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -78,7 +76,6 @@ const Ul = styled.div`
   opacity: 0;
   -webkit-transition: 0.25s 0.1s ease-in-out;
   transition: 0.25s 0.1s ease-in-out;
-  text-decoration: none;
 
   @media ${({ theme }) => theme.device.tablet} {
     right: 0rem;
@@ -116,25 +113,40 @@ const StyledInput = styled.input`
     top: 0;
   }
 
-  &:checked + ${Menu} + ${Ul} {
+  &:checked + ${Menu} + ${LinkContainer} {
     opacity: 1;
   }
 `;
 
 const Navbar = () => {
-  // TODO: make menu full screen when open, disable scroll.
+  const [isChecked, setIsChecked] = React.useState(false);
+
+  React.useEffect(() => {
+    if (isChecked) {
+      document.body.classList.add('scroll');
+    } else if (!isChecked && document.body.classList.contains('scroll')) {
+      document.body.classList.remove('scroll');
+    }
+  }, [isChecked]);
+
   const closeMenu = () => {
+    setIsChecked(false);
     document.getElementById('checkbox').checked = false;
   };
 
   return (
     <Nav>
-      <StyledInput type="checkbox" id="checkbox" />
+      <StyledInput
+        type="checkbox"
+        id="checkbox"
+        onClick={() => {
+          setIsChecked(!isChecked);
+        }}
+      />
       <Menu>
-        {' '}
-        <Hamburger></Hamburger>{' '}
+        <Hamburger></Hamburger>
       </Menu>
-      <Ul>
+      <LinkContainer>
         <div>
           <Link to="/#about" onClick={() => closeMenu()}>
             about <FontAwesomeIcon icon={faSmileBeam} />
@@ -155,7 +167,7 @@ const Navbar = () => {
             blog <FontAwesomeIcon icon={faPenFancy} />
           </Link>
         </div>
-      </Ul>
+      </LinkContainer>
     </Nav>
   );
 };

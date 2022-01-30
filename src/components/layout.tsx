@@ -10,6 +10,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import theme from './../theme';
 import Cursor from './../cursors/cursor.png';
 import Pointer from './../cursors/pointer.png';
+import './../css/Layout.css';
 
 const GlobalStyle = createGlobalStyle`
   :root {
