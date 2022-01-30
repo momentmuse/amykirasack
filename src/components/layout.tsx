@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
+    scroll-behavior: smooth;
     overscroll-behavior: none;
     overflow-x: hidden;
     width: 100%;

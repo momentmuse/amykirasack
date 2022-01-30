@@ -16,6 +16,12 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-fontawesome-css',
     {
+      resolve: 'gatsby-plugin-anchor-links',
+      options: {
+        duration: 500,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: 'src/images/icon.png',

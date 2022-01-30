@@ -19,7 +19,7 @@ const StyledHeader = styled.header`
 `;
 
 const Header = ({ siteTitle }: HeaderProps) => (
-  <StyledHeader>
+  <StyledHeader id={'top'}>
     <Helmet title={siteTitle} titleTemplate="%s | Software Engineer" />
     <HomeLogo />
     <Navbar />

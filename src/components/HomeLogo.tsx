@@ -27,7 +27,7 @@ const HomeLogo = () => {
   return (
     <div>
       <h1>
-        <Link to="/">
+        <Link to="/#top">
           <LogoIcon src={Logo} alt="site logo" />
         </Link>
       </h1>
