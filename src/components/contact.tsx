@@ -26,6 +26,10 @@ const TextContainer = styled.div`
     padding: 0em 2rem;
     width: 50vw;
   }
+  @media ${({ theme }) => theme.device.highres} {
+    padding: 0em 2rem;
+    width: 35vw;
+  }
 `;
 
 const ContactForm = styled.form`

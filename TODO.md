@@ -46,7 +46,7 @@
 ✅ Style pages with styled-components (TABLET!! & laptop &4k+)
 ✅ Add custom cursor
 ✅ Optimize images, videos for size
-Add console message?
+✅ Add console message?
 ✅ Edit 404 page
 
 Add some blog posts
