@@ -23,7 +23,6 @@
 ✅ Write bio, other copy
 ✅ Add link with downloadable pdf of resume?
 
-✅ Edit 404 page
 ✅ Add [SEO component](https://www.gatsbyjs.com/docs/add-seo-component/)
 ✅ Refactor Carousel/Blog idx etc for DRYness (useStaticQuery)
 
@@ -43,11 +42,12 @@
 ✅ Style Blog Post
 ✅ Animated Menu
 
-Style pages with styled-components (mobile-first)
-Style pages with styled-components (TABLET!! & laptop &4k+)
+✅ Style pages with styled-components (mobile-first)
+✅ Style pages with styled-components (TABLET!! & laptop &4k+)
 ✅ Add custom cursor
 ✅ Optimize images, videos for size
 Add console message?
+✅ Edit 404 page
 
 Add some blog posts
 ✅ Add projects!

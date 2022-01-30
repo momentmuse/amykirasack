@@ -1,45 +1,57 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
 import { Link } from 'gatsby';
+import styled from 'styled-components';
+import { Container, Padding, SectionHeaderAlt } from '../styles';
+import GatsbyCat from './../images/gatsbycat.jpg';
 
-// styles
-const pageStyles = {
-  color: '#232129',
-  padding: '96px',
-  fontFamily: '-apple-system, Roboto, sans-serif, serif',
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
+const NotFoundContainer = styled(Container)`
+  height: auto;
+`;
 
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: '#8A6534',
-  padding: 4,
-  backgroundColor: '#FFF4DB',
-  fontSize: '1.25rem',
-  borderRadius: 4,
-};
+const ImageContainer = styled.div`
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 100%;
+  }
+`;
 
-// markup
+const TextContainer = styled.div`
+  @media ${({ theme }) => theme.device.tablet} {
+    padding: 0em 1rem;
+    width: 50vw;
+  }
+  @media ${({ theme }) => theme.device.laptop} {
+    padding: 0em 2rem;
+  }
+`;
+
 const NotFoundPage = () => {
   return (
     <Layout>
-      <main style={pageStyles}>
-        <title>Not found</title>
-        <h1 style={headingStyles}>Oops!</h1>
-        <p style={paragraphStyles}>
-          It looks like you're looking for something that (in at least this
-          branch of the multiverse) doesn't exist.
-          <br />
-          <br />
-          Think this is a mistake? <Link to="/#contact">Let me know.</Link>
-        </p>
-      </main>
+      <NotFoundContainer>
+        <Padding>
+          <ImageContainer>
+            <img src={GatsbyCat} />
+          </ImageContainer>
+          <TextContainer>
+            <h1>oops!</h1>
+            <p>
+              It looks like you've stumbled upon a page that (in at least this
+              branch of the multiverse) doesn't exist.
+            </p>
+
+            <p>
+              But not to fret; here's a photo of Gatsby for your trouble. Isn't
+              she adorable?
+            </p>
+            <p>
+              <Link to="/">try again?</Link>
+            </p>
+          </TextContainer>
+        </Padding>
+      </NotFoundContainer>
     </Layout>
   );
 };

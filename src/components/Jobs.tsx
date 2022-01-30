@@ -109,7 +109,7 @@ const Jobs = ({ id }: JobsProps) => {
               childImageSharp {
                 gatsbyImageData(
                   width: 600
-                  quality: 85
+                  quality: 100
                   placeholder: DOMINANT_COLOR
                 )
               }

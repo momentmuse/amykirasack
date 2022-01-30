@@ -18,13 +18,13 @@ const ContactContainer = styled(Container)`
 `;
 
 const TextContainer = styled.div`
-  @media ${({ theme }) => theme.device.laptop} {
-    padding: 0em 0.4rem;
-    width: 50vw;
+  @media ${({ theme }) => theme.device.tablet} {
+    padding: 0em 1rem;
+    width: 60vw;
   }
   @media ${({ theme }) => theme.device.laptop} {
     padding: 0em 2rem;
-    width: 40vw;
+    width: 50vw;
   }
 `;
 
