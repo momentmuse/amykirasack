@@ -24,6 +24,12 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     width: 100%;
     position: relative;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
     font-size: 14px;
     @media ${({ theme }) => theme.device.tablet} {
       font-size: 16px;
@@ -40,21 +46,6 @@ const GlobalStyle = createGlobalStyle`
       font-family: ${({ theme }) => theme.font.family.heading};
       color: ${({ theme }) => theme.color.accent};
       letter-spacing: -0.7px;
-    }
-
-    h1 {
-  
-      /* &::before {
-        content: '“';
-        font-size: ${({ theme }) => theme.font.size.xxlarge};
-        font-family: 'Times New Roman', serif;
-      }
-      &::after {
-        content: '”';
-        font-size: ${({ theme }) => theme.font.size.xxlarge};
-        font-family: 'Times New Roman', serif;
-        vertical-align: text-top;
-      } */
     }
 
     p {

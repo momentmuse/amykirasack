@@ -49,7 +49,7 @@
 ✅ Add console message?
 ✅ Edit 404 page
 
-Add some blog posts
+✅ Add some blog posts
 ✅ Add projects!
 Query images for gatsby dynamic image loading
 Refactor 😎

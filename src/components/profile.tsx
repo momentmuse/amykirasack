@@ -53,10 +53,10 @@ interface ProfileProps {
 const Profile = ({ id }: ProfileProps) => {
   const data = useStaticQuery(graphql`
     {
-      markdownRemark(fileAbsolutePath: { regex: "/blog-posts/" }) {
-        excerpt
+      markdownRemark(frontmatter: { slug: { eq: "/blog/komorebi" } }) {
         frontmatter {
           slug
+          description
         }
       }
     }
@@ -80,7 +80,7 @@ const Profile = ({ id }: ProfileProps) => {
         </StyledParallax>
         {data && (
           <PostSpotlight>
-            <p>{newestPost.excerpt}</p>
+            <p>{newestPost.frontmatter.description}</p>
             <Link to={newestPost.frontmatter.slug}>read more?</Link>
           </PostSpotlight>
         )}

@@ -13,10 +13,6 @@ import Pointer from './../cursors/pointer.png';
 import Text from './../cursors/text.png';
 import { Parallax } from 'react-scroll-parallax';
 
-const ContactContainer = styled(Container)`
-  /* background-color: ${({ theme }) => theme.color.muted}; */
-`;
-
 const TextContainer = styled.div`
   @media ${({ theme }) => theme.device.tablet} {
     padding: 0em 1rem;
@@ -102,7 +98,7 @@ interface ContactProps {
 
 const Contact = ({ id }: ContactProps) => {
   return (
-    <ContactContainer id={id}>
+    <Container id={id}>
       <SectionHeaderAlt>contact.</SectionHeaderAlt>
       <ScrollingHeadline
         headline={'The next message you need is always right where you are.'}
@@ -149,7 +145,7 @@ const Contact = ({ id }: ContactProps) => {
           </ImageMask>
         </Parallax>
       </Padding>
-    </ContactContainer>
+    </Container>
   );
 };
 

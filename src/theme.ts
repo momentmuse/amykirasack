@@ -5,12 +5,9 @@ import { DefaultTheme } from 'styled-components';
 const color = {
   primary: '#68a691',
   secondary: '#f9b145',
-  muted: '#d88c6c',
   accent: '#6d545d',
   background: '#fff8e4',
   light: '#fdfeff',
-  mid: '#4e4e4e',
-  dark: '#282c34',
 };
 
 const font = {
@@ -20,11 +17,6 @@ const font = {
     bodyBold: 'Glacial Indifference Bold',
     alt: 'Butler Black',
     monospace: 'DM Mono, Menlo, monospace',
-  },
-  weight: {
-    heading: 700,
-    bold: 900,
-    body: 400,
   },
   size: {
     xsmall: '0.6rem',
@@ -37,7 +29,6 @@ const font = {
     giant: '7rem',
   },
   lineHeight: {
-    heading: '1.2rem',
     body: '2rem',
   },
 };

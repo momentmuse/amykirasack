@@ -1,21 +1,30 @@
 ---
-slug: '/blog/hello-blog'
-title: Hello blog!
-date: '2021-11-17T21:22:22.782Z'
-description: 'Hello there. This is my first post.'
+slug: '/blog/ephebe-of-marathon'
+title: Ephebe of Marathon Looks out the Courtyard Window
+date: '2021-11-10T14:12:12.782Z'
+description: 'what was before is left behind; what never was is now; and every passing moment is renewed'
 ---
 
-This is my first post on my new fake blog! How exciting!
+Through the glass I watch you flock to the feathered vermin. They flaunt their tail-fans as you make images with those strange light-tablets that have come into fashion the last few decades.
 
-I'm sure I'll write a lot more interesting things in the future.
+I have watched you for lifetimes, for you once sang praises of my beauty. But no longer do you notice my placid gaze, my bronzed glaze of sinew.
 
-Here's a Wikipedia article about
-[cats](https://en.wikipedia.org/wiki/Cat).
+Father knew of my value. So rapt was he in love that, upon my completion, for fear I may be marred, he gave his soul to preserve my form for as long as living eyes may see. Ironic, now, that few eyes come to see me.
 
-> The cat (Felis catus) is a domestic species of small carnivorous mammal.
-> It is the only domesticated species in the family Felidae and
-> is often referred to as the domestic cat to distinguish it
-> from the wild members of the family.[4] A cat can either be a house cat,
-> a farm cat or a feral cat; the latter ranges freely and avoids human contact.
+But answer me this: is not true beauty the skill of man’s own creation?
 
-![Here's a cute cat print I found](./cat-and-plant.jpeg)
+For hundreds, nay, thousands of years, I have witnessed the revolutions of fortune’s wheel, held against the fires of political upheaval, survived the ravages of war with nary a scratch to my visage. For centuries I waited for you to retrieve me from a watery grave.
+
+From horse-drawn chariots to carriages drawn by themselves, I have seen your kind tumble in vice and ascend once more upon wondrous inventions.
+
+Tell me, are not the great steel-birds of your own design more worthy than those dirty, transient creatures? You say they are of a special species, a rare genus that will soon be gone from this world.
+
+I see a grain of sand in an ocean of endless forms more beautiful. Fickle, fragile things, apt to die if you love them so. Better to resign such attachments now; do not sully your brief life with the sorrow of loss.
+
+Human, for all your ingenuity, you can be so foolish.
+
+There is only one truth worthy of your reverence: the enduring beauty of the eternal. O, Human! Am I not that, the epitome of your image, the perfect being?
+
+Then why do you turn away, and look at them instead?
+
+Why must you cling to the beauty of that which will perish?

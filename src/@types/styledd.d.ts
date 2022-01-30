@@ -5,12 +5,9 @@ declare module 'styled-components' {
     color: {
       primary: string;
       secondary: string;
-      muted: string;
       accent: string;
       background: string;
       light: string;
-      mid: string;
-      dark: string;
     };
 
     font: {
@@ -20,11 +17,6 @@ declare module 'styled-components' {
         bodyBold: string;
         alt: string;
         monospace: string;
-      };
-      weight: {
-        heading: number;
-        bold: number;
-        body: number;
       };
       size: {
         xsmall: string;
@@ -37,7 +29,6 @@ declare module 'styled-components' {
         giant: string;
       };
       lineHeight: {
-        heading: string;
         body: string;
       };
     };
