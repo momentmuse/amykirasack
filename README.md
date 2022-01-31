@@ -2,13 +2,26 @@
   👩🏻‍💻 Amy Kirasack 👩🏻‍💻
 </h1>
 
+![it me](https://media.giphy.com/media/LWJ7cKyiWPCnVyuAhT/giphy.gif)
+_it me_
+
 ## just what is this? 🤔
 
-My personal portfolio website & blog built with Gatsby. Now with 100% more _parallax scroll_ effects and snazzy animations that no one asked for, yet here we are. Responsive for mobile through 4k displays. 🤞
+My personal portfolio website + blog built with Gatsby & Typescript. Now with 100% more _parallax scroll_ effects and snazzy animations that no one asked for, yet here we are. Responsive for mobile through 4k displays. 🤞
 
 Also home to some of my writing side projects for your reading pleasure. 📖
 
 View it live [here](https://www.amykirasack.com).
+
+## future tweaks 🔮
+
+- optimize image sizes
+- parallax horizontal scroll? 🐁
+- animated page transitions
+- dark mode for blog
+- post pagination & tags
+- TS outlliers
+- css refactor ✨
 
 ## couldn't have done it without you 💗
 
