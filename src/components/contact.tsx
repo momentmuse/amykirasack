@@ -1,5 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { navigate } from 'gatsby-link';
+
 import ContactMe from './../images/amycat.png';
 import ScrollingHeadline from './ScrollingHeadline';
 import {
@@ -97,6 +99,41 @@ interface ContactProps {
 }
 
 const Contact = ({ id }: ContactProps) => {
+  const [state, setState] = React.useState({});
+
+  const encode = (data: Object) => {
+    return Object.keys(data)
+      .map(
+        // @ts-expect-error
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&');
+  };
+
+  const handleChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    setState({ ...state, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        ...state,
+        'form-name': form.getAttribute('name'),
+      }),
+    })
+      // @ts-expect-error
+      .then(() => navigate(form.getAttribute('action')))
+      .catch((error) => alert(error));
+  };
+
   return (
     <Container id={id}>
       <SectionHeaderAlt>contact.</SectionHeaderAlt>
@@ -109,31 +146,61 @@ const Contact = ({ id }: ContactProps) => {
             Have an opportunity or idea you’d like to share? Just want to say
             hi? Don't be a stranger, drop me a line.
           </p>
-
-          <ContactForm name="contact" method="POST">
-            {/* data-netlify="true" <= add this as attribute to form tag */}
+          <ContactForm
+            name="contact"
+            method="POST"
+            action="/thanks"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" />
             <p>
               <label>
                 <FormLabel>name</FormLabel>
-                <input type="text" name="name" autoComplete="off" />
+                <input
+                  type="text"
+                  name="name"
+                  autoComplete="off"
+                  required
+                  onChange={handleChange}
+                />
               </label>
             </p>
             <p>
               <label>
                 <FormLabel>email</FormLabel>{' '}
-                <input type="email" name="email" autoComplete="off" />
+                <input
+                  type="email"
+                  name="email"
+                  autoComplete="off"
+                  required
+                  onChange={handleChange}
+                />
               </label>
             </p>
             <p>
               <label>
                 <FormLabel>subject</FormLabel>{' '}
-                <input type="text" name="subject" autoComplete="off" />
+                <input
+                  type="text"
+                  name="subject"
+                  autoComplete="off"
+                  required
+                  onChange={handleChange}
+                />
               </label>
             </p>
             <p>
               <label>
                 <FormLabel>message</FormLabel>{' '}
-                <textarea name="message" rows={4}></textarea>
+                <textarea
+                  name="message"
+                  rows={4}
+                  required
+                  onChange={handleChange}
+                />
               </label>
             </p>
             <Button type="submit">here we go!</Button>

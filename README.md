@@ -8,7 +8,7 @@ My personal portfolio website & blog built with Gatsby. Now with 100% more _para
 
 Also home to some of my writing side projects for your reading pleasure. 📖
 
-View it live (**here**)[https://www.amykirasack.com].
+View it live [here](https://www.amykirasack.com).
 
 ## couldn't have done it without you 💗
 
