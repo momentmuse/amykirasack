@@ -15,7 +15,6 @@ declare module 'styled-components' {
         heading: string;
         body: string;
         bodyBold: string;
-        alt: string;
         monospace: string;
       };
       size: {

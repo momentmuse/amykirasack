@@ -4,6 +4,8 @@ import AboutMe3 from './../images/espai.png';
 import styled from 'styled-components';
 import { Parallax } from 'react-scroll-parallax';
 import { Container, Blobs, BlobMask, SectionHeader } from '../styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenFancy } from '@fortawesome/free-solid-svg-icons';
 
 const ProfileContainer = styled(Container)`
   align-items: center;
@@ -81,7 +83,9 @@ const Profile = ({ id }: ProfileProps) => {
         {data && (
           <PostSpotlight>
             <p>{newestPost.frontmatter.description}</p>
-            <Link to={newestPost.frontmatter.slug}>read more?</Link>
+            <Link to={newestPost.frontmatter.slug}>
+              read more? <FontAwesomeIcon icon={faPenFancy} />
+            </Link>
           </PostSpotlight>
         )}
       </TextContainer>

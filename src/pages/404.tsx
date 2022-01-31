@@ -42,10 +42,8 @@ const NotFoundPage = () => {
               branch of the multiverse) doesn't exist.
             </p>
 
-            <p>
-              But not to fret; here's a photo of Gatsby for your trouble. Isn't
-              she adorable?
-            </p>
+            <p>But not to fret; here's a photo of Gatsby for your trouble.</p>
+            <p>Isn't she adorable?</p>
             <p>
               <Link to="/">try again?</Link>
             </p>

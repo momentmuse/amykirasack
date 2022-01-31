@@ -2,10 +2,10 @@
 slug: '/blog/komorebi'
 title: Komorebi
 date: '2022-01-18T20:20:22.782Z'
-description: 'we are not going in circles, we are going upwards. the path is a spiral; we have already climbed many steps'
+description: 'the only way to make sense out of change is to plunge into it, move with it, and join the dance'
 ---
 
-**FALL**
+## **fall.**
 
 > _This much is clear: the universe is playing some cruel joke on all of us._
 
@@ -25,7 +25,7 @@ On the next line he adds:
 
 ---
 
-**WINTER**
+## **winter.**
 
 The park at dawn, before anyone else has arrived, is her favourite place to be. Like Saturday mornings with Babciu in the fields when she was a girl. The sunlight smells the same.
 
@@ -39,7 +39,7 @@ And the old woman smiles, because it’s about her.
 
 ---
 
-**SPRING**
+## **spring.**
 
 On the driveway in front of his house, a boy makes figure eights on his tricycle. Round and round on the chalk racetrack. His wheels squeak to a halt when a woman with a stroller walks past. Something waves at him, something small and white that flies from the stroller wheel and lands at his feet.
 
@@ -51,7 +51,7 @@ He doesn’t know who this Universe person is, but he wonders what sort of game 
 
 ---
 
-**SUMMER**
+## **summer.**
 
 A woman stands on the balcony of her sister-in-law’s apartment smoking a cigarette. She hasn’t had one in years, but tonight it envelops her with clouds of relief. Almost enough to drown out the car alarms and honking.
 
@@ -63,7 +63,7 @@ When she looks over the railing, into the smear of the too-bright red-yellow-gre
 
 ---
 
-**FALL**
+## **fall.**
 
 Dawn streams through the leaves as two sparrows build their nest. They gather twigs and soft fibres, white fluff to cushion their eggs. When the fledglings are born, they are blind and naked and helpless. For a while.
 

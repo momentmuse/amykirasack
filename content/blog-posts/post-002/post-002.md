@@ -17,7 +17,7 @@ She glances from her laptop, but he’s absorbed in a yellow paperback that make
 
 Maybe she would nonchalantly offer, _Sedaris? Good choice. You ever read Lawson?_
 
-He would smile, make a bad pun about books, she'd laugh, and they'd start chatting. Three dates and a weekend trip later he 'd bring her blueberry pancakes in bed and she'd take him kayaking at her parents’ summer cottage, until they fell asleep in the hammock together, among the scent of the hydrangeas, under the stars.
+He would smile, make a bad pun about books, she'd laugh, and they'd start chatting. Three dates and a weekend trip later he'd bring her blueberry pancakes in bed and she'd take him kayaking at her parents’ summer cottage, until they fell asleep in the hammock together, among the scent of the hydrangeas, under the stars.
 
 She scrunches her nose, stares into the mug. The sweetness is thick and cloying on her tongue.
 

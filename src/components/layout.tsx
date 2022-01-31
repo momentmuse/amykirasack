@@ -87,12 +87,12 @@ const Layout = ({ children }: LayoutProps) => {
     console.log(
       '%c %s',
       'font-weight: bold; font-size: 50px; color: red; text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) , 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68); ',
-      'Well, hello there!'
+      'Well, hello there!',
+      '\n',
+      '\n',
+      'Poking around are we? If you see anything unusual, do let me know!'
     );
-    console.log(
-      '%cPoking around are we? If you see anything unusual, do let me know!',
-      'color: white; background: #68a691; font-size: 20px'
-    );
+    console.log();
   }, []);
 
   const data = useStaticQuery(graphql`

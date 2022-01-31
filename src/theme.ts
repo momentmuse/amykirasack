@@ -15,7 +15,6 @@ const font = {
     heading: 'Young Serif',
     body: 'Glacial Indifference, sans-serif',
     bodyBold: 'Glacial Indifference Bold',
-    alt: 'Butler Black',
     monospace: 'DM Mono, Menlo, monospace',
   },
   size: {

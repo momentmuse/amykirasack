@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { Divider } from '../styles';
 
 const StyledFooter = styled.footer`
   margin: 3em auto;
@@ -8,22 +9,27 @@ const StyledFooter = styled.footer`
   font-size: ${({ theme }) => theme.font.size.small};
 `;
 
-const Divider = styled.hr`
-  border: 0;
-  height: 1px;
-  margin-bottom: 1rem;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    ${({ theme }) => theme.color.accent},
-    rgba(0, 0, 0, 0)
-  );
+const FancyDivider = styled(Divider)`
+  &:after {
+    background: ${({ theme }) => theme.color.background};
+    content: '§';
+    padding: 0 4px;
+    position: relative;
+    top: -8px;
+    @media ${({ theme }) => theme.device.laptop} {
+      top: -9px;
+    }
+    @media ${({ theme }) => theme.device.highres} {
+      top: -14px;
+    }
+  }
 `;
 
 const Footer = () => {
   return (
     <StyledFooter>
-      <Divider />© {new Date().getFullYear()} Amy Kirasack | built with ❤️ with
+      <FancyDivider />© {new Date().getFullYear()} Amy Kirasack | built with ❤️
+      with
       {` `}
       <a href="https://www.gatsbyjs.com" target="_blank">
         <img

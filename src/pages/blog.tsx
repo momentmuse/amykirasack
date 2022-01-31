@@ -2,13 +2,29 @@ import * as React from 'react';
 import Layout from '../components/Layout';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
-import { Container } from '../styles';
+import { Container, SectionHeader, Divider } from '../styles';
 
 const BlogContainer = styled(Container)`
   padding: ${({ theme }) => theme.padding.mobile};
   @media ${({ theme }) => theme.device.tablet} {
+    padding: 4rem 7rem;
+  }
+  @media ${({ theme }) => theme.device.laptop} {
     padding: 6rem 18rem;
   }
+`;
+
+const PostTitle = styled(SectionHeader)`
+  font-size: ${({ theme }) => theme.font.size.xlarge};
+  text-shadow: -1px 1px 0px ${({ theme }) => theme.color.light};
+  &:hover {
+    color: ${({ theme }) => theme.color.primary};
+  }
+`;
+
+const PostDivider = styled(Divider)`
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 `;
 
 type Post = {
@@ -38,11 +54,9 @@ const Blog = ({ data }: BlogProps) => {
           return (
             <article key={post.frontmatter.slug}>
               <div>
-                <h1>
-                  <Link to={post.frontmatter.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-                </h1>
+                <Link to={post.frontmatter.slug}>
+                  <PostTitle>{post.frontmatter.title}</PostTitle>
+                </Link>
                 <h3>{post.frontmatter.description}</h3>
                 <p>{post.frontmatter.date}</p>
                 <p>{post.excerpt}</p>
@@ -50,6 +64,7 @@ const Blog = ({ data }: BlogProps) => {
                   <Link to={post.frontmatter.slug}>read more</Link>
                 </p>
               </div>
+              <PostDivider />
             </article>
           );
         })}

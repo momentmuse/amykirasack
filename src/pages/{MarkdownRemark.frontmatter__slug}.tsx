@@ -11,6 +11,10 @@ const PostContainer = styled(Container)`
   }
 `;
 
+const BackToIndex = styled.div`
+  margin-top: 6rem;
+`;
+
 interface TemplateProps {
   data: {
     markdownRemark: {
@@ -36,9 +40,10 @@ const Template = ({ data }: TemplateProps) => {
           </div>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </article>
-        <p>
+
+        <BackToIndex>
           <Link to={'/blog'}>to blog index</Link>
-        </p>
+        </BackToIndex>
       </PostContainer>
     </Layout>
   );
