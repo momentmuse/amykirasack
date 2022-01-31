@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import AboutMe1 from './../images/viaduct.png';
-import AboutMe2 from './../images/quebec.png';
+import Viaduct from './../images/viaduct.png';
+import Quebec from './../images/quebec.png';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +13,7 @@ import {
   BlobMask,
   Blobs,
   SectionHeaderAlt,
-} from '../styles';
+} from './../styles';
 import { Parallax } from 'react-scroll-parallax';
 
 const AboutContainer = styled(Container)`
@@ -89,12 +89,12 @@ const About = ({ id }: AboutProps) => {
       <ImageContainer>
         <Parallax translateY={[-20, 30]} translateX={[50, 0]}>
           <ImageMaskA>
-            <img src={AboutMe1} />
+            <img src={Viaduct} />
           </ImageMaskA>
         </Parallax>
         <Parallax translateY={[40, -10]} translateX={[-40, 20]}>
           <ImageMaskB>
-            <img src={AboutMe2} />
+            <img src={Quebec} />
           </ImageMaskB>
         </Parallax>
       </ImageContainer>

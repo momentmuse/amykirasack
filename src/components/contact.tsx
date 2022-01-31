@@ -1,8 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { navigate } from 'gatsby-link';
-
-import ContactMe from './../images/amycat.png';
+import AmyCat from './../images/amycat.png';
 import ScrollingHeadline from './ScrollingHeadline';
 import {
   Container,
@@ -10,7 +9,7 @@ import {
   BlobMask,
   Blobs,
   SectionHeaderAlt,
-} from '../styles';
+} from './../styles';
 import Pointer from './../cursors/pointer.png';
 import Text from './../cursors/text.png';
 import { Parallax } from 'react-scroll-parallax';
@@ -208,7 +207,7 @@ const Contact = ({ id }: ContactProps) => {
         </TextContainer>
         <Parallax translateX={[30, -25]}>
           <ImageMask>
-            <img src={ContactMe} />
+            <img src={AmyCat} />
           </ImageMask>
         </Parallax>
       </Padding>

@@ -51,10 +51,10 @@
 
 ✅ Add some blog posts
 ✅ Add projects!
+✅ Add form validation to contact form
+✅ Connect to email on netlify
+
 Query images for gatsby dynamic image loading
 Refactor 😎
-
-Add form validation to contact form
-Connect to email on netlify
 
 Deploy! :)

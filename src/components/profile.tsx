@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
-import AboutMe3 from './../images/espai.png';
+import Espai from './../images/espai.png';
 import styled from 'styled-components';
 import { Parallax } from 'react-scroll-parallax';
-import { Container, Blobs, BlobMask, SectionHeader } from '../styles';
+import { Container, Blobs, BlobMask, SectionHeader } from './../styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenFancy } from '@fortawesome/free-solid-svg-icons';
 
@@ -70,7 +70,7 @@ const Profile = ({ id }: ProfileProps) => {
     <ProfileContainer id={id}>
       <Parallax rotate={[10, -10]} scale={[0.8, 1.2]}>
         <ImageMask>
-          <img src={AboutMe3} />
+          <img src={Espai} />
         </ImageMask>
       </Parallax>
       <TextContainer>

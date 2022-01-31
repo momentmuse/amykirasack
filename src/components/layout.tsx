@@ -4,7 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import 'normalize.css';
-import '../css/typography.css';
+import './../css/typography.css';
 import '@fontsource/dm-mono';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import theme from './../theme';

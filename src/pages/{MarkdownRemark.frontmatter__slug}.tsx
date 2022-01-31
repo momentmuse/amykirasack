@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Link, graphql } from 'gatsby';
-import Layout from '../components/Layout';
+import Layout from './../components/Layout';
 import styled from 'styled-components';
-import { Container } from '../styles';
+import { Container } from './../styles';
 
 const PostContainer = styled(Container)`
   padding: ${({ theme }) => theme.padding.mobile};

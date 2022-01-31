@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Layout from '../components/Layout';
+import Layout from './../components/Layout';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { Container, Padding } from '../styles';
+import { Container, Padding } from './../styles';
 import GatsbyCat from './../images/gatsbycat.jpg';
 
 const NotFoundContainer = styled(Container)`

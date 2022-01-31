@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Divider } from '../styles';
+import { Divider } from './../styles';
 
 const StyledFooter = styled.footer`
   margin: 3em auto;
