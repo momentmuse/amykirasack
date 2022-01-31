@@ -1,54 +1,19 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby minimal starter
+  👩🏻‍💻 Amy Kirasack 👩🏻‍💻
 </h1>
 
-## 🚀 Quick start
+## just what is this? 🤔
 
-1.  **Create a Gatsby site.**
+My personal portfolio website & blog built with Gatsby. Now with 100% more _parallax scroll_ effects and snazzy animations that no one asked for, yet here we are. Responsive for mobile through 4k displays. 🤞
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+Also home to some of my writing side projects for your reading pleasure. 📖
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+View it live (**here**)[https://www.amykirasack.com].
 
-2.  **Start developing.**
+## couldn't have done it without you 💗
 
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+- icons by [FontAwesome](https://fontawesome.com/)
+- custom cursors by [flaticon](https://www.flaticon.com/)
+- blobs by [haikei.app](https://haikei.app/)
+- video by [Artem Podrez](https://www.pexels.com/video/laptop-computer-on-white-table-4884233/)
+- typeface by [Bastien Sozeau](https://open-foundry.com/fonts/young_serif_regular), [Hanken Design Co.](https://hanken.co/products/glacial-indifference), and [Colophon Foundry](https://fonts.google.com/specimen/DM+Mono)

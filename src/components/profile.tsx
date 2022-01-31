@@ -64,7 +64,7 @@ const Profile = ({ id }: ProfileProps) => {
     }
   `);
 
-  const newestPost = data.markdownRemark;
+  const spotlightPost = data.markdownRemark;
 
   return (
     <ProfileContainer id={id}>
@@ -82,8 +82,8 @@ const Profile = ({ id }: ProfileProps) => {
         </StyledParallax>
         {data && (
           <PostSpotlight>
-            <p>{newestPost.frontmatter.description}</p>
-            <Link to={newestPost.frontmatter.slug}>
+            <p>{spotlightPost.frontmatter.description}</p>
+            <Link to={spotlightPost.frontmatter.slug}>
               read more? <FontAwesomeIcon icon={faPenFancy} />
             </Link>
           </PostSpotlight>

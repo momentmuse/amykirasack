@@ -131,6 +131,7 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setIsChecked(false);
+    // @ts-expect-error
     document.getElementById('checkbox').checked = false;
   };
 
