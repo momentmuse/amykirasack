@@ -50,8 +50,9 @@ const SectionHeaderAlt = styled(SectionHeader)`
   top: -1rem;
   right: 0;
   font-size: ${({ theme }) => theme.font.size.giant};
-  text-decoration: underline 6px solid ${({ theme }) => theme.color.primary};
-  text-underline-position: under;
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-color: ${({ theme }) => theme.color.primary};
+  text-decoration: solid underline ${({ theme }) => theme.color.primary} 6px;
 
   @media ${({ theme }) => theme.device.tablet} {
     font-size: ${({ theme }) => theme.font.size.giant};

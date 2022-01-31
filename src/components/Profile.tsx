@@ -26,7 +26,8 @@ const ImageMask = styled(BlobMask)`
 `;
 
 const TextContainer = styled.div`
-  margin-top: -10rem;
+  margin-top: -11rem;
+  margin-left: 2rem;
   display: flex;
   flex-direction: column;
   color: ${({ theme }) => theme.color.accent};

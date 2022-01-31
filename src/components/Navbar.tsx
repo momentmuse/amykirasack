@@ -27,6 +27,7 @@ const Menu = styled.span`
   transition: 0.5s ease-in-out;
   box-shadow: 0 0 0 0 ${({ theme }) => theme.color.background},
     0 0 0 0 ${({ theme }) => theme.color.background};
+  -webkit-cursor: url(${Pointer}), pointer;
   cursor: url(${Pointer}), pointer;
 `;
 
@@ -70,7 +71,7 @@ const LinkContainer = styled.div`
   z-index: 200;
   position: absolute;
   top: 20rem;
-  right: -8rem;
+  right: -8.5rem;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -90,6 +91,9 @@ const LinkContainer = styled.div`
 
 const StyledInput = styled.input`
   display: none;
+  -webkit-cursor: url(${Pointer}), pointer;
+  cursor: url(${Pointer}), pointer;
+
   &:checked + ${Menu} {
     box-shadow: 0 0 0 100vw ${({ theme }) => theme.color.background},
       0 0 0 100vh ${({ theme }) => theme.color.background};

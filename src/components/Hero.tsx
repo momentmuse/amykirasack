@@ -99,7 +99,7 @@ const Hero = () => {
               delay: 85,
               strings: [
                 'Clean, communicative && comprehensive code.',
-                'Because software is for humans, too. ☺️ ',
+                'Because software is for humans, too. 😀 ',
               ],
               autoStart: true,
               loop: true,
@@ -107,8 +107,10 @@ const Hero = () => {
             }}
           />
         </StyledType>
-        <video autoPlay playsInline loop muted width="100%">
-          {windowWidth && <source src={optimizeVideo()} type="video/mp4" />}
+        <video autoPlay playsInline loop muted width="100%" preload="metadata">
+          {windowWidth && (
+            <source src={optimizeVideo() + '#t=0.1'} type="video/mp4" />
+          )}
         </video>
       </StyledVideoContainer>
     </HeroContainer>

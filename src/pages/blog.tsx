@@ -12,6 +12,9 @@ const BlogContainer = styled(Container)`
   @media ${({ theme }) => theme.device.laptop} {
     padding: 6rem 18rem;
   }
+  @media ${({ theme }) => theme.device.highres} {
+    padding: 6rem 22rem;
+  }
 `;
 
 const PostTitle = styled(SectionHeader)`

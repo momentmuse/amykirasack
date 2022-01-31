@@ -15,6 +15,7 @@ import './../css/Layout.css';
 const GlobalStyle = createGlobalStyle`
   :root {
     background-color: ${({ theme }) => theme.color.background};
+    -webkit-cursor: url(${Cursor}), auto;
     cursor: url(${Cursor}), auto;
   }
 
@@ -60,8 +61,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.font.family.bodyBold};
     color: ${({ theme }) => theme.color.accent};
     font-size: ${({ theme }) => theme.font.size.medium};
-    text-decoration: 2px ${({ theme }) => theme.color.secondary} wavy underline;
-
+    -webkit-text-decoration-color: ${({ theme }) => theme.color.secondary};
+    -webkit-text-decoration-line: underline;
+    -webkit-text-decoration-style: wavy;
+    text-decoration: wavy underline ${({ theme }) => theme.color.secondary}
+    2px;
     &:hover {
       color: ${({ theme }) => theme.color.primary};
     }

@@ -35,8 +35,8 @@ const ContactForm = styled.form`
   input[type='text'],
   input[type='email'],
   textarea {
+    -webkit-cursor: url(${Text}), text;
     cursor: url(${Text}), text;
-
     background-color: ${({ theme }) => theme.color.light};
     color: ${({ theme }) => theme.color.accent};
     font-family: inherit;
@@ -68,7 +68,10 @@ const Button = styled.button`
   font-family: ${({ theme }) => theme.font.family.bodyBold};
   font-size: ${({ theme }) => theme.font.size.medium};
   color: ${({ theme }) => theme.color.accent};
-  text-decoration: 2px ${({ theme }) => theme.color.secondary} wavy underline;
+  -webkit-text-decoration-color: ${({ theme }) => theme.color.secondary};
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-style: wavy;
+  text-decoration: wavy underline ${({ theme }) => theme.color.secondary} 2px;
   padding: 1rem 1.5rem;
   background-color: ${({ theme }) => theme.color.light};
   border: 2px solid ${({ theme }) => theme.color.accent};

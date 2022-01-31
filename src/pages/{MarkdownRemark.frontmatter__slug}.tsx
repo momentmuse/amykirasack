@@ -9,6 +9,9 @@ const PostContainer = styled(Container)`
   @media ${({ theme }) => theme.device.tablet} {
     padding: 6rem 18rem;
   }
+  @media ${({ theme }) => theme.device.highres} {
+    padding: 6rem 22rem;
+  }
 `;
 
 const BackToIndex = styled.div`
