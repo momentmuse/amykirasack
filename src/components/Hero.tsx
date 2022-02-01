@@ -21,7 +21,6 @@ const HeroContainer = styled.div`
 
 const StyledVideoContainer = styled.div`
   position: relative;
-  z-index: 1;
   margin: 0 auto;
   @media ${({ theme }) => theme.device.laptop} {
     padding: 0 10rem;
@@ -99,7 +98,7 @@ const Hero = () => {
               delay: 85,
               strings: [
                 'Clean, communicative && comprehensive code.',
-                'Because software is for humans, too. 😀 ',
+                'Because software is for humans, too. :) ',
               ],
               autoStart: true,
               loop: true,

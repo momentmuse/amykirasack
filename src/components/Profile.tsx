@@ -27,7 +27,7 @@ const ImageMask = styled(BlobMask)`
 
 const TextContainer = styled.div`
   margin-top: -11rem;
-  margin-left: 2rem;
+  margin-left: 1.5rem;
   display: flex;
   flex-direction: column;
   color: ${({ theme }) => theme.color.accent};
@@ -43,6 +43,10 @@ const StyledParallax = styled(Parallax)`
   @media ${({ theme }) => theme.device.tablet} {
     margin-left: -5rem;
   }
+`;
+
+const Titles = styled.p`
+  padding: 0 1rem;
 `;
 
 const PostSpotlight = styled.div`
@@ -77,9 +81,9 @@ const Profile = ({ id }: ProfileProps) => {
       <TextContainer>
         <StyledParallax scale={[0.8, 1.2]}>
           <SectionHeader>Amy Kirasack</SectionHeader>
-          <p>
+          <Titles>
             founder of seedling | software developer | writer | lifelong learner
-          </p>
+          </Titles>
         </StyledParallax>
         {data && (
           <PostSpotlight>

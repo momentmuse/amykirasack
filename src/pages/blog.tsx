@@ -55,7 +55,7 @@ const Blog = ({ data }: BlogProps) => {
       <BlogContainer>
         {posts.map((post) => {
           return (
-            <article key={post.frontmatter.slug}>
+            <article key={post.frontmatter.slug} id={post.frontmatter.slug}>
               <div>
                 <Link to={post.frontmatter.slug}>
                   <PostTitle>{post.frontmatter.title}</PostTitle>

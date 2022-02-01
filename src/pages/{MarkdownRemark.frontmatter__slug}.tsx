@@ -24,6 +24,7 @@ interface TemplateProps {
       html: string;
       frontmatter: {
         date: string;
+        slug: string;
         title: string;
       };
     };
@@ -45,7 +46,7 @@ const Template = ({ data }: TemplateProps) => {
         </article>
 
         <BackToIndex>
-          <Link to={'/blog'}>to blog index</Link>
+          <Link to={`/blog/#${frontmatter.slug}`}>to blog index</Link>
         </BackToIndex>
       </PostContainer>
     </Layout>

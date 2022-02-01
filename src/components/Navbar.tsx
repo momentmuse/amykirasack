@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Pointer from './../cursors/pointer.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -16,13 +16,14 @@ const Nav = styled.label`
 
 const Menu = styled.span`
   position: absolute;
+  z-index: 100;
   right: -100px;
   top: -100px;
-  z-index: 100;
   width: 200px;
   height: 200px;
   background: ${({ theme }) => theme.color.background};
   border-radius: 50% 50% 50% 50%;
+  -moz-transition: 0.5s ease-in-out;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   box-shadow: 0 0 0 0 ${({ theme }) => theme.color.background},
@@ -64,28 +65,60 @@ const Hamburger = styled.span`
   }
 `;
 
-const LinkContainer = styled.div`
+const fadeIn = keyframes`
+  from {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+`;
+
+const LinkContainer = styled.div<{ menuOpen: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   z-index: 200;
   position: absolute;
-  top: 20rem;
-  right: -8.5rem;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  -webkit-transition: 0.25s 0.1s ease-in-out;
-  transition: 0.25s 0.1s ease-in-out;
-
+  top: 6rem;
+  right: 1rem;
   @media ${({ theme }) => theme.device.tablet} {
-    right: 0rem;
+    right: 6rem;
   }
+ 
+  visibility: ${(props) => (props.menuOpen ? 'visible' : 'hidden')};
+  -moz-transform-origin: top right;
+  -webkit-transform-origin: top right;
+  transform-origin: top right;
+  -moz-animation: ${(props) => (props.menuOpen ? fadeIn : fadeOut)} 0.25s
+  -webkit-animation: ${(props) =>
+    props.menuOpen ? fadeIn : fadeOut} 0.25s ease-in-out;
+  animation: ${(props) =>
+    props.menuOpen ? fadeIn : fadeOut} 0.25s ease-in-out;
+  -moz-transition: visibility 0.25s ease-in-out;
+  -webkit-transition: visibility 0.25s ease-in-out;
+  transition: visibility 0.25s ease-in-out;
 
   a {
     font-size: ${({ theme }) => theme.font.size.xxxlarge};
     margin-bottom: 1rem;
     display: block;
+    max-width: 100vw;
   }
 `;
 
@@ -101,17 +134,20 @@ const StyledInput = styled.input`
   }
 
   &:checked + ${Menu} ${Hamburger} {
+    -moz-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }
 
   &:checked + ${Menu} ${Hamburger}::after {
+    -moz-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     bottom: 0;
   }
 
   &:checked + ${Menu} ${Hamburger}::before {
+    -moz-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     top: 0;
@@ -122,7 +158,11 @@ const StyledInput = styled.input`
   }
 `;
 
-const Navbar = () => {
+interface NavProps {
+  menuOpen: boolean;
+}
+
+const Navbar: React.FC<NavProps> = () => {
   const [isChecked, setIsChecked] = React.useState(false);
 
   React.useEffect(() => {
@@ -151,7 +191,7 @@ const Navbar = () => {
       <Menu>
         <Hamburger></Hamburger>
       </Menu>
-      <LinkContainer>
+      <LinkContainer menuOpen={isChecked ? true : false}>
         <div>
           <Link to="/#about" onClick={() => closeMenu()}>
             about <FontAwesomeIcon icon={faSmileBeam} />
