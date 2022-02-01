@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
     -ms-user-select: none;
     user-select: none;
 
-    font-size: 16px;
+    font-size: 14px;
     @media ${({ theme }) => theme.device.laptop} {
       font-size: 18px;
 

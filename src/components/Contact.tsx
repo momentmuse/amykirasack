@@ -40,7 +40,7 @@ const ContactForm = styled.form`
     background-color: ${({ theme }) => theme.color.light};
     color: ${({ theme }) => theme.color.accent};
     font-family: inherit;
-    font-size: ${({ theme }) => theme.font.size.small};
+    font-size: 16px;
     width: 100%;
     padding: 1rem;
     margin: 0.5rem 0;
@@ -49,6 +49,10 @@ const ContactForm = styled.form`
     border-radius: 30px;
     box-sizing: border-box;
     resize: vertical;
+
+    @media ${({ theme }) => theme.device.tablet} {
+      font-size: ${({ theme }) => theme.font.size.small};
+    }
 
     &:focus {
       outline: none;
