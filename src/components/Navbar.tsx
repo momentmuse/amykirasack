@@ -115,10 +115,16 @@ const LinkContainer = styled.div<{ menuOpen: boolean }>`
   transition: visibility 0.25s ease-in-out;
 
   a {
-    font-size: ${({ theme }) => theme.font.size.xxxlarge};
+    font-size: ${({ theme }) => theme.font.size.xxlarge};
+    -webkit-text-decoration-thickness: 4px;
+    text-decoration-thickness: 4px;
     margin-bottom: 1rem;
     display: block;
     max-width: 100vw;
+
+    @media ${({ theme }) => theme.device.tablet} {
+    font-size: ${({ theme }) => theme.font.size.xxxlarge};
+    }
   }
 `;
 

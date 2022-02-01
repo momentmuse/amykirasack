@@ -26,6 +26,7 @@ declare module 'styled-components' {
         xxlarge: string;
         xxxlarge: string;
         giant: string;
+        enormous: string;
       };
       lineHeight: {
         body: string;

@@ -64,6 +64,7 @@ const FormLabel = styled.span`
 `;
 
 const Button = styled.button`
+  -webkit-cursor: url(${Pointer}), pointer;
   cursor: url(${Pointer}), pointer;
   font-family: ${({ theme }) => theme.font.family.bodyBold};
   font-size: ${({ theme }) => theme.font.size.medium};

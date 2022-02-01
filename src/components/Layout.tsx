@@ -31,9 +31,9 @@ const GlobalStyle = createGlobalStyle`
     -ms-user-select: none;
     user-select: none;
 
-    font-size: 14px;
-    @media ${({ theme }) => theme.device.tablet} {
-      font-size: 16px;
+    font-size: 16px;
+    @media ${({ theme }) => theme.device.laptop} {
+      font-size: 18px;
 
     };
     @media ${({ theme }) => theme.device.highres} {
@@ -57,6 +57,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     a {
+    -webkit-cursor: url(${Pointer}), pointer;
     cursor: url(${Pointer}), pointer;
     font-family: ${({ theme }) => theme.font.family.bodyBold};
     color: ${({ theme }) => theme.color.accent};

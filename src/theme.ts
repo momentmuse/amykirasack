@@ -23,9 +23,10 @@ const font = {
     medium: '1.2rem',
     large: '1.5rem',
     xlarge: '2rem',
-    xxlarge: '2.5rem',
+    xxlarge: '3.5rem',
     xxxlarge: '4.5rem',
-    giant: '7rem',
+    giant: '6rem',
+    enormous: '8rem',
   },
   lineHeight: {
     body: '2rem',
@@ -49,7 +50,7 @@ const device = {
 };
 
 const padding = {
-  mobile: '3rem 2rem',
+  mobile: '3rem 1.5rem',
   tablet: '4rem 7rem',
   laptop: '5rem 9rem',
 };

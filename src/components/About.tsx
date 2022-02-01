@@ -47,7 +47,7 @@ const TextContainer = styled.div`
     max-width: 33rem;
   }
   @media ${({ theme }) => theme.device.laptop} {
-    left: 16rem;
+    left: 9rem;
     bottom: 4rem;
   }
   @media ${({ theme }) => theme.device.highres} {
