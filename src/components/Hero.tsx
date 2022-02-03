@@ -3,7 +3,7 @@ import HeroSplashSq from './../videos/hero-splash-sq.mp4';
 import HeroSplash from './../videos/hero-splash.mp4';
 import styled, { useTheme } from 'styled-components';
 import Typewriter from 'typewriter-effect';
-import HeroBg from './../images/herobg.svg';
+import HeroBg from './../images/herobg.png';
 
 interface Size {
   width: number | undefined;
@@ -13,9 +13,8 @@ interface Size {
 const HeroContainer = styled.div`
   @media ${({ theme }) => theme.device.laptop} {
     background-image: url(${HeroBg});
-    background-repeat: repeat-x;
-    background-size: contain;
-    padding-bottom: 2rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
 `;
 
