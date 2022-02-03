@@ -40,13 +40,16 @@ const Hamburger = styled.span`
   height: 2px;
   background: ${({ theme }) => theme.color.primary};
   display: block;
+  -moz-transform-origin: center;
   -webkit-transform-origin: center;
   transform-origin: center;
+  -moz-transition: 0.5s ease-in-out;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 
   &::before,
   &::after {
+    -moz-transition: 0.5s ease-in-out;
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
     content: '';
