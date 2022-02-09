@@ -147,9 +147,7 @@ const Contact = ({ id }: ContactProps) => {
       body: encode({ ...state }),
     })
       .then(() =>
-        navigate((e.target as HTMLFormElement).getAttribute('action') || '', {
-          state,
-        })
+        navigate((e.target as HTMLFormElement).getAttribute('action') || '')
       )
       .catch((error) => alert(error));
   };
@@ -228,7 +226,10 @@ const Contact = ({ id }: ContactProps) => {
         </TextContainer>
         <Parallax translateX={[30, -25]}>
           <ImageMask>
-            <img src={AmyCat} />
+            <img
+              src={AmyCat}
+              alt="a woman kneels in an alleyway to pet a calico cat"
+            />
           </ImageMask>
         </Parallax>
       </Padding>

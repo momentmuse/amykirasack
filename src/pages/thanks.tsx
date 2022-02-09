@@ -23,24 +23,19 @@ const TextContainer = styled.div`
   }
 `;
 
-interface ThanksProps {
-  location: {
-    state: {
-      name: string;
-    };
-  };
-}
-
-const Thanks = ({ location }: ThanksProps) => {
+const Thanks = () => {
   return (
     <Layout>
       <Container>
         <Padding>
           <ImageContainer>
-            <img src={GatsbyBelly} />
+            <img
+              src={GatsbyBelly}
+              alt="a grey and white tabby cat sits exposes her belly while lying on the carpet"
+            />
           </ImageContainer>
           <TextContainer>
-            <h1>thanks, {location.state.name}!</h1>
+            <h1>thanks!</h1>
             <p>I'll get back to you soon.</p>
             <p>In the meantime, Gatsby here can keep you company.</p>
             <p>

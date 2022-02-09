@@ -75,7 +75,10 @@ const Profile = ({ id }: ProfileProps) => {
     <ProfileContainer id={id}>
       <Parallax rotate={[10, -10]} scale={[0.8, 1.2]}>
         <ImageMask>
-          <img src={Espai} />
+          <img
+            src={Espai}
+            alt="a woman smiles as she sits in a cafe full of plants"
+          />
         </ImageMask>
       </Parallax>
       <TextContainer>

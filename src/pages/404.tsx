@@ -33,7 +33,10 @@ const NotFoundPage = () => {
       <NotFoundContainer>
         <Padding>
           <ImageContainer>
-            <img src={GatsbyCat} />
+            <img
+              src={GatsbyCat}
+              alt="a grey and white tabby cat sits in a strange position on a bed"
+            />
           </ImageContainer>
           <TextContainer>
             <h1>oops!</h1>

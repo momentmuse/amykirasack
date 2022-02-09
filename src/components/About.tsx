@@ -89,12 +89,15 @@ const About = ({ id }: AboutProps) => {
       <ImageContainer>
         <Parallax translateY={[-20, 30]} translateX={[50, 0]}>
           <ImageMaskA>
-            <img src={Viaduct} />
+            <img src={Viaduct} alt="a woman sits below a brick viaduct" />
           </ImageMaskA>
         </Parallax>
         <Parallax translateY={[40, -10]} translateX={[-40, 20]}>
           <ImageMaskB>
-            <img src={Quebec} />
+            <img
+              src={Quebec}
+              alt="a woman smiles as she stands in front of a budding tree"
+            />
           </ImageMaskB>
         </Parallax>
       </ImageContainer>
