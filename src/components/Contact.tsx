@@ -105,13 +105,29 @@ interface ContactProps {
   id: string;
 }
 
-const Contact = ({ id }: ContactProps) => {
-  const [state, setState] = useState({});
+interface FormData {
+  [key: string]: string | number | boolean;
+  email: string;
+  'form-name': string;
+  message: string;
+  name: string;
+  subject: string;
+}
 
-  const encode = (data: Object) => {
+const Contact = ({ id }: ContactProps) => {
+  const initialState: FormData = {
+    email: '',
+    'form-name': 'contact',
+    message: '',
+    name: '',
+    subject: '',
+  };
+
+  const [state, setState] = useState(initialState);
+
+  const encode = (data: FormData) => {
     return Object.keys(data)
       .map(
-        // @ts-expect-error
         (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
       )
       .join('&');
@@ -125,17 +141,17 @@ const Contact = ({ id }: ContactProps) => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.target as HTMLFormElement;
+    console.log('event here ', e);
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        ...state,
-        'form-name': form.getAttribute('name'),
-      }),
+      body: encode({ ...state }),
     })
-      // @ts-expect-error
-      .then(() => navigate(form.getAttribute('action')))
+      .then(() =>
+        navigate((e.target as HTMLFormElement).getAttribute('action') || '', {
+          state,
+        })
+      )
       .catch((error) => alert(error));
   };
 
