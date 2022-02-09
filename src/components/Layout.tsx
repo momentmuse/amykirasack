@@ -96,7 +96,6 @@ const Layout = ({ children }: LayoutProps) => {
       '\n',
       'Poking around are we? If you see anything unusual, do let me know!'
     );
-    console.log();
   }, []);
 
   const data = useStaticQuery(graphql`

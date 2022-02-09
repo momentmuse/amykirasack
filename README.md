@@ -15,12 +15,13 @@ View it live [here](https://www.amykirasack.com).
 
 ## future tweaks 🔮
 
+- lazy load imports
+- prevent unnecessary rerenders
 - optimize image sizes
 - parallax horizontal scroll? 🐁
 - animated page transitions
 - dark mode for blog
 - post pagination & tags
-- TS outlliers
 - css refactor ✨
 
 ## couldn't have done it without you 💗
