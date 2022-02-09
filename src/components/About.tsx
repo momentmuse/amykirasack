@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Viaduct from './../images/viaduct.png';
 import Quebec from './../images/quebec.png';

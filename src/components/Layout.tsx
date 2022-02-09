@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Header from './Header';
 import Footer from './Footer';
@@ -87,7 +87,7 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  React.useEffect(() => {
+  useEffect(() => {
     console.log(
       '%c %s',
       'font-weight: bold; font-size: 50px; color: red; text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) , 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68); ',

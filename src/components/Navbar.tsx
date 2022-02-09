@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect, FC } from 'react';
 import { Link } from 'gatsby';
 import styled, { keyframes } from 'styled-components';
 import Pointer from './../cursors/pointer.png';
@@ -171,10 +171,10 @@ interface NavProps {
   menuOpen: boolean;
 }
 
-const Navbar: React.FC<NavProps> = () => {
-  const [isChecked, setIsChecked] = React.useState(false);
+const Navbar: FC<NavProps> = () => {
+  const [isChecked, setIsChecked] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isChecked) {
       document.body.classList.add('scroll');
     } else if (!isChecked && document.body.classList.contains('scroll')) {

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import styled from 'styled-components';
 import { navigate } from 'gatsby-link';
 import AmyCat from './../images/amycat.png';
@@ -106,7 +106,7 @@ interface ContactProps {
 }
 
 const Contact = ({ id }: ContactProps) => {
-  const [state, setState] = React.useState({});
+  const [state, setState] = useState({});
 
   const encode = (data: Object) => {
     return Object.keys(data)
@@ -118,14 +118,12 @@ const Contact = ({ id }: ContactProps) => {
   };
 
   const handleChange = (
-    e:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
   ) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     fetch('/', {

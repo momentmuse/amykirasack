@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import HeroSplashSq from './../videos/hero-splash-sq.mp4';
 import HeroSplash from './../videos/hero-splash.mp4';
 import styled, { useTheme } from 'styled-components';
@@ -57,12 +57,12 @@ const Hero = () => {
   const theme = useTheme();
 
   const useWindowSize = (): Size => {
-    const [windowSize, setWindowSize] = React.useState<Size>({
+    const [windowSize, setWindowSize] = useState<Size>({
       width: undefined,
       height: undefined,
     });
 
-    React.useEffect(() => {
+    useEffect(() => {
       const handleResize = () => {
         setWindowSize({
           width: window.innerWidth,
