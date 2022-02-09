@@ -184,8 +184,7 @@ const Navbar: FC<NavProps> = () => {
 
   const closeMenu = () => {
     setIsChecked(false);
-    // @ts-expect-error
-    document.getElementById('checkbox').checked = false;
+    (document.getElementById('checkbox') as HTMLInputElement).checked = false;
   };
 
   return (

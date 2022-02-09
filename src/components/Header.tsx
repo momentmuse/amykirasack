@@ -21,8 +21,8 @@ const Header = ({ siteTitle }: HeaderProps) => (
   <StyledHeader id={'top'}>
     <Helmet title={siteTitle} titleTemplate="%s | Software Engineer" />
     <HomeLogo />
-    {/* @ts-expect-error */}
-    <Navbar />
+
+    <Navbar menuOpen={false} />
   </StyledHeader>
 );
 
