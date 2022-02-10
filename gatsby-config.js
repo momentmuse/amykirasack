@@ -1,37 +1,71 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "Amy Kirasack",
+    siteUrl: 'https://www.amykirasack.com',
+    title: 'Amy Kirasack',
+    description: `Clean, communicative, and comprehensive code. Because code isn’t just for computers. It’s for humans, too.`,
+    author: 'Amy Kirasack',
   },
   plugins: [
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-image',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-fontawesome-css',
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: "src/images/icon.png",
+        icon: 'src/images/icon.png',
       },
     },
-    "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: 'images',
+        path: './src/images/',
       },
-      __key: "images",
+      __key: 'images',
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: 'blog-posts',
+        path: `${__dirname}/content/blog-posts/`,
       },
-      __key: "pages",
+      __key: 'blog-posts',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'jobs',
+        path: `${__dirname}/content/jobs/`,
+      },
+      __key: 'jobs',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'cv',
+        path: `${__dirname}/content/cv/`,
+      },
+      __key: 'cv',
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 700,
+              quality: 100,
+            },
+          },
+        ],
+      },
     },
   ],
 };
