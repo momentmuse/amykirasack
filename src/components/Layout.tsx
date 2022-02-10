@@ -78,7 +78,6 @@ const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-
   margin: 0 auto;
 `;
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import HeroSplashSq from './../videos/hero-splash-sq.mp4';
-import HeroSplash from './../videos/hero-splash.mp4';
+import SquareVid from './../videos/hero-splash-sq.mp4';
+import WideVid from './../videos/hero-splash.mp4';
 import styled, { useTheme } from 'styled-components';
 import Typewriter from 'typewriter-effect';
 import HeroBg from './../images/herobg.png';
@@ -21,6 +21,10 @@ const HeroContainer = styled.div`
 const StyledVideoContainer = styled.div`
   position: relative;
   margin: 0 auto;
+  min-height: 60vh;
+  @media ${({ theme }) => theme.device.tablet} {
+    min-height: fit-content;
+  }
   @media ${({ theme }) => theme.device.laptop} {
     padding: 0 10rem;
   }
@@ -84,7 +88,7 @@ const Hero = () => {
   const optimizeVideo = () => {
     if (windowWidth !== undefined) {
       const mobileWidth = Number(theme.device.mobile.replace(/[^0-9]/g, ''));
-      return windowWidth > mobileWidth ? HeroSplash : HeroSplashSq;
+      return windowWidth > mobileWidth ? WideVid : SquareVid;
     }
   };
 
@@ -105,11 +109,18 @@ const Hero = () => {
             }}
           />
         </StyledType>
-        <video autoPlay playsInline loop muted width="100%" preload="metadata">
-          {windowWidth && (
+        {windowWidth && (
+          <video
+            autoPlay
+            playsInline
+            loop
+            muted
+            width="100%"
+            preload="metadata"
+          >
             <source src={optimizeVideo() + '#t=0.1'} type="video/mp4" />
-          )}
-        </video>
+          </video>
+        )}
       </StyledVideoContainer>
     </HeroContainer>
   );

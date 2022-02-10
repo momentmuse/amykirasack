@@ -31,7 +31,7 @@ const Thanks = () => {
           <ImageContainer>
             <img
               src={GatsbyBelly}
-              alt="a grey and white tabby cat sits exposes her belly while lying on the carpet"
+              alt="a grey and white tabby cat exposes her belly while lying on the carpet"
             />
           </ImageContainer>
           <TextContainer>

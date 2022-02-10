@@ -11,6 +11,7 @@ const ProfileContainer = styled(Container)`
   align-items: center;
   justify-content: center;
   padding: -4rem 2rem;
+  min-height: 60vh;
 
   @media ${({ theme }) => theme.device.tablet} {
     padding: ${({ theme }) => theme.padding.tablet};
@@ -19,6 +20,10 @@ const ProfileContainer = styled(Container)`
   @media ${({ theme }) => theme.device.laptop} {
     padding: ${({ theme }) => theme.padding.laptop};
   }
+`;
+
+const ImageContainer = styled.div`
+  min-height: 40vh;
 `;
 
 const ImageMask = styled(BlobMask)`
@@ -73,14 +78,16 @@ const Profile = ({ id }: ProfileProps) => {
 
   return (
     <ProfileContainer id={id}>
-      <Parallax rotate={[10, -10]} scale={[0.8, 1.2]}>
-        <ImageMask>
-          <img
-            src={Espai}
-            alt="a woman smiles as she sits in a cafe full of plants"
-          />
-        </ImageMask>
-      </Parallax>
+      <ImageContainer>
+        <Parallax rotate={[10, -10]} scale={[0.8, 1.2]}>
+          <ImageMask>
+            <img
+              src={Espai}
+              alt="a woman smiles as she sits in a cafe full of plants"
+            />
+          </ImageMask>
+        </Parallax>
+      </ImageContainer>
       <TextContainer>
         <StyledParallax scale={[0.8, 1.2]}>
           <SectionHeader>Amy Kirasack</SectionHeader>
