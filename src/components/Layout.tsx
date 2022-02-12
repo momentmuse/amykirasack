@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, ReactNode } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Header from './Header';
 import Footer from './Footer';
@@ -81,9 +81,9 @@ const MainWrapper = styled.div`
   margin: 0 auto;
 `;
 
-interface LayoutProps {
-  children: JSX.Element;
-}
+type LayoutProps = {
+  children: ReactNode;
+};
 
 const Layout = ({ children }: LayoutProps) => {
   useEffect(() => {

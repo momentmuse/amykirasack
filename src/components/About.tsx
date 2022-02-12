@@ -63,9 +63,9 @@ const LinkContainer = styled.div`
   margin-top: 2rem;
 `;
 
-interface AboutProps {
+type AboutProps = {
   id: string;
-}
+};
 
 const About = ({ id }: AboutProps) => {
   const cv = useStaticQuery(graphql`

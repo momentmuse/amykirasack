@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Marquee from 'react-fast-marquee';
 
-interface ScrollingHeadlineProps {
+type ScrollingHeadlineProps = {
   headline: string;
-}
+};
 
 const StyledHeadline = styled.div`
   overflow: hidden;

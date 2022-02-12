@@ -101,9 +101,9 @@ const ImageMask = styled(BlobMask)`
   }
 `;
 
-interface ContactProps {
+type ContactProps = {
   id: string;
-}
+};
 
 interface FormData {
   [key: string]: string | number | boolean;

@@ -18,7 +18,7 @@ const BackToIndex = styled.div`
   margin-top: 6rem;
 `;
 
-interface TemplateProps {
+type TemplateProps = {
   data: {
     markdownRemark: {
       html: string;
@@ -29,7 +29,7 @@ interface TemplateProps {
       };
     };
   };
-}
+};
 
 const Template = ({
   data: {

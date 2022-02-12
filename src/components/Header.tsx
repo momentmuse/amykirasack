@@ -1,12 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import HomeLogo from './HomeLogo';
 import Navbar from './Navbar';
 import styled from 'styled-components';
-
-interface HeaderProps {
-  siteTitle: string;
-}
 
 const StyledHeader = styled.header`
   background-color: ${({ theme }) => theme.color.primary};
@@ -17,12 +13,20 @@ const StyledHeader = styled.header`
   display: flex;
 `;
 
-const Header = ({ siteTitle }: HeaderProps) => (
-  <StyledHeader id={'top'}>
-    <Helmet title={siteTitle} titleTemplate="%s | Software Engineer" />
-    <HomeLogo />
-    <Navbar menuOpen={false} />
-  </StyledHeader>
-);
+type HeaderProps = {
+  siteTitle: string;
+};
+
+const Header = ({ siteTitle }: HeaderProps) => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  return (
+    <StyledHeader id={'top'}>
+      <Helmet title={siteTitle} titleTemplate="%s | Software Engineer" />
+      <HomeLogo />
+      <Navbar isChecked={isChecked} setIsChecked={setIsChecked} />
+    </StyledHeader>
+  );
+};
 
 export default Header;

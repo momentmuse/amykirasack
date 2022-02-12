@@ -74,10 +74,6 @@ const Description = styled.div`
   padding: 1rem;
 `;
 
-interface JobsProps {
-  id: string;
-}
-
 interface Job {
   frontmatter: {
     title: string;
@@ -89,6 +85,10 @@ interface Job {
     endyear: number;
   };
 }
+
+type JobsProps = {
+  id: string;
+};
 
 const Jobs = ({ id }: JobsProps) => {
   const {

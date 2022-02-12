@@ -58,9 +58,9 @@ const PostSpotlight = styled.div`
   padding: ${({ theme }) => theme.padding.mobile};
 `;
 
-interface ProfileProps {
+type ProfileProps = {
   id: string;
-}
+};
 
 const Profile = ({ id }: ProfileProps) => {
   const { markdownRemark: spotlightPost } = useStaticQuery(graphql`

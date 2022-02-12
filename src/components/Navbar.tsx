@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FC } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'gatsby';
 import styled, { keyframes } from 'styled-components';
 import Pointer from './../cursors/pointer.png';
@@ -92,7 +92,7 @@ const fadeOut = keyframes`
   }
 `;
 
-const LinkContainer = styled.div<{ menuOpen: boolean }>`
+const LinkContainer = styled.div<{ isChecked: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -104,15 +104,15 @@ const LinkContainer = styled.div<{ menuOpen: boolean }>`
     right: 6rem;
   }
  
-  visibility: ${(props) => (props.menuOpen ? 'visible' : 'hidden')};
+  visibility: ${(props) => (props.isChecked ? 'visible' : 'hidden')};
   -moz-transform-origin: top right;
   -webkit-transform-origin: top right;
   transform-origin: top right;
-  -moz-animation: ${(props) => (props.menuOpen ? fadeIn : fadeOut)} 0.25s
+  -moz-animation: ${(props) => (props.isChecked ? fadeIn : fadeOut)} 0.25s
   -webkit-animation: ${(props) =>
-    props.menuOpen ? fadeIn : fadeOut} 0.25s ease-in-out;
+    props.isChecked ? fadeIn : fadeOut} 0.25s ease-in-out;
   animation: ${(props) =>
-    props.menuOpen ? fadeIn : fadeOut} 0.25s ease-in-out;
+    props.isChecked ? fadeIn : fadeOut} 0.25s ease-in-out;
   -moz-transition: visibility 0.25s ease-in-out;
   -webkit-transition: visibility 0.25s ease-in-out;
   transition: visibility 0.25s ease-in-out;
@@ -168,13 +168,12 @@ const StyledInput = styled.input`
   }
 `;
 
-interface NavProps {
-  menuOpen: boolean;
-}
+type NavProps = {
+  isChecked: boolean;
+  setIsChecked: (isChecked: boolean) => void;
+};
 
-const Navbar: FC<NavProps> = () => {
-  const [isChecked, setIsChecked] = useState(false);
-
+const Navbar = ({ isChecked, setIsChecked }: NavProps) => {
   useEffect(() => {
     if (isChecked) {
       document.body.classList.add('scroll');
@@ -200,7 +199,7 @@ const Navbar: FC<NavProps> = () => {
       <Menu>
         <Hamburger></Hamburger>
       </Menu>
-      <LinkContainer menuOpen={isChecked ? true : false}>
+      <LinkContainer isChecked={isChecked ? true : false}>
         <div>
           <Link to="/#about" onClick={() => closeMenu()}>
             about <FontAwesomeIcon icon={faSmileBeam} />

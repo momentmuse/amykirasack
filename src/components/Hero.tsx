@@ -5,11 +5,6 @@ import styled, { useTheme } from 'styled-components';
 import Typewriter from 'typewriter-effect';
 import HeroBg from './../images/herobg.png';
 
-interface Size {
-  width: number | undefined;
-  height: number | undefined;
-}
-
 const HeroContainer = styled.div`
   @media ${({ theme }) => theme.device.laptop} {
     background-image: url(${HeroBg});
@@ -56,6 +51,11 @@ const StyledType = styled.div`
     }
   }
 `;
+
+interface Size {
+  width: number | undefined;
+  height: number | undefined;
+}
 
 const Hero = () => {
   const theme = useTheme();

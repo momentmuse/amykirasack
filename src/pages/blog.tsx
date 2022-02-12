@@ -30,7 +30,7 @@ const PostDivider = styled(Divider)`
   margin-bottom: 1rem;
 `;
 
-type Post = {
+interface Post {
   frontmatter: {
     slug: string;
     description: string;
@@ -38,15 +38,15 @@ type Post = {
     title: string;
   };
   excerpt: string;
-};
+}
 
-interface BlogProps {
+type BlogProps = {
   data: {
     allMarkdownRemark: {
       nodes: Post[];
     };
   };
-}
+};
 
 const Blog = ({
   data: {
