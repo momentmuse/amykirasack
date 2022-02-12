@@ -121,6 +121,7 @@ const LinkContainer = styled.div<{ menuOpen: boolean }>`
     font-size: ${({ theme }) => theme.font.size.xxlarge};
     -webkit-text-decoration-thickness: 4px;
     text-decoration-thickness: 4px;
+    text-underline-offset: 0.2rem;
     margin-bottom: 1rem;
     display: block;
     max-width: 100vw;

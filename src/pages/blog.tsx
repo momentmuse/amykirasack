@@ -48,8 +48,11 @@ interface BlogProps {
   };
 }
 
-const Blog = ({ data }: BlogProps) => {
-  const posts = data.allMarkdownRemark?.nodes;
+const Blog = ({
+  data: {
+    allMarkdownRemark: { nodes: posts },
+  },
+}: BlogProps) => {
   const generatePosts = (posts: Post[]): JSX.Element => {
     return (
       <BlogContainer>

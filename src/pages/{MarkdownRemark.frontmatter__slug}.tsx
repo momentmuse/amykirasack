@@ -31,9 +31,11 @@ interface TemplateProps {
   };
 }
 
-const Template = ({ data }: TemplateProps) => {
-  const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
+const Template = ({
+  data: {
+    markdownRemark: { frontmatter, html },
+  },
+}: TemplateProps) => {
   return (
     <Layout>
       <PostContainer>
