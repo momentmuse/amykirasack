@@ -91,7 +91,9 @@ interface Job {
 }
 
 const Jobs = ({ id }: JobsProps) => {
-  const data = useStaticQuery(graphql`
+  const {
+    allMarkdownRemark: { nodes: jobs },
+  } = useStaticQuery(graphql`
     {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/jobs/" } }
@@ -119,8 +121,6 @@ const Jobs = ({ id }: JobsProps) => {
       }
     }
   `);
-
-  const jobs = data.allMarkdownRemark.nodes;
 
   const sanitizeYear = (start: number, end: number) => {
     return start === end ? end : `${start} - ${end}`;

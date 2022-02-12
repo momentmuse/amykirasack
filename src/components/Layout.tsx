@@ -97,7 +97,7 @@ const Layout = ({ children }: LayoutProps) => {
     );
   }, []);
 
-  const data = useStaticQuery(graphql`
+  const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -111,7 +111,7 @@ const Layout = ({ children }: LayoutProps) => {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <ParallaxProvider>
-        <Header siteTitle={data.site.siteMetadata?.title || `Amy Kirasack`} />
+        <Header siteTitle={site.siteMetadata?.title || `Amy Kirasack`} />
         <MainWrapper>
           <main>{children}</main>
           <Footer />

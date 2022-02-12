@@ -68,7 +68,7 @@ interface AboutProps {
 }
 
 const About = ({ id }: AboutProps) => {
-  const data = useStaticQuery(graphql`
+  const cv = useStaticQuery(graphql`
     {
       file(extension: { eq: "pdf" }, absolutePath: { regex: "/cv/" }) {
         publicURL
@@ -112,7 +112,7 @@ const About = ({ id }: AboutProps) => {
           </p>
 
           <LinkContainer>
-            <a href={data.file.publicURL} target="_blank" className="button">
+            <a href={cv.file.publicURL} target="_blank" className="button">
               <FontAwesomeIcon icon={faFilePdf} />
               &nbsp;get my cv
             </a>

@@ -63,7 +63,7 @@ interface ProfileProps {
 }
 
 const Profile = ({ id }: ProfileProps) => {
-  const data = useStaticQuery(graphql`
+  const { markdownRemark: spotlightPost } = useStaticQuery(graphql`
     {
       markdownRemark(frontmatter: { slug: { eq: "/blog/komorebi" } }) {
         frontmatter {
@@ -73,8 +73,6 @@ const Profile = ({ id }: ProfileProps) => {
       }
     }
   `);
-
-  const spotlightPost = data.markdownRemark;
 
   return (
     <ProfileContainer id={id}>
@@ -95,7 +93,7 @@ const Profile = ({ id }: ProfileProps) => {
             founder of seedling | software developer | writer | lifelong learner
           </Titles>
         </StyledParallax>
-        {data && (
+        {spotlightPost && (
           <PostSpotlight>
             <p>{spotlightPost.frontmatter.description}</p>
             <Link to={spotlightPost.frontmatter.slug}>
