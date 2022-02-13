@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
+import { getSpotlightPost } from './../queries/static';
 import Espai from './../images/espai.png';
 import styled from 'styled-components';
 import { Parallax } from 'react-scroll-parallax';
@@ -63,16 +64,7 @@ type ProfileProps = {
 };
 
 const Profile = ({ id }: ProfileProps) => {
-  const { markdownRemark: spotlightPost } = useStaticQuery(graphql`
-    {
-      markdownRemark(frontmatter: { slug: { eq: "/blog/komorebi" } }) {
-        frontmatter {
-          slug
-          description
-        }
-      }
-    }
-  `);
+  const spotlightPost = getSpotlightPost();
 
   return (
     <ProfileContainer id={id}>

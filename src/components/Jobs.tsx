@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { getJobs } from './../queries/static';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import ScrollingHeadline from './ScrollingHeadline';
@@ -91,36 +91,7 @@ type JobsProps = {
 };
 
 const Jobs = ({ id }: JobsProps) => {
-  const {
-    allMarkdownRemark: { nodes: jobs },
-  } = useStaticQuery(graphql`
-    {
-      allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/jobs/" } }
-        sort: { fields: frontmatter___endyear, order: DESC }
-      ) {
-        nodes {
-          frontmatter {
-            company
-            description
-            endyear
-            startyear
-            title
-            url
-            image {
-              childImageSharp {
-                gatsbyImageData(
-                  width: 600
-                  quality: 100
-                  placeholder: DOMINANT_COLOR
-                )
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
+  const jobs = getJobs();
 
   const sanitizeYear = (start: number, end: number) => {
     return start === end ? end : `${start} - ${end}`;

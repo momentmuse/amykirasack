@@ -81,8 +81,6 @@ const Blog = ({
   return <Layout>{generatePosts(posts)}</Layout>;
 };
 
-export default Blog;
-
 export const pageQuery = graphql`
   query Blog {
     allMarkdownRemark(
@@ -101,3 +99,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default Blog;

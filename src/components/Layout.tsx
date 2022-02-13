@@ -1,5 +1,5 @@
 import React, { useEffect, ReactNode } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { getMetadata } from './../queries/static';
 import Header from './Header';
 import Footer from './Footer';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
@@ -86,6 +86,8 @@ type LayoutProps = {
 };
 
 const Layout = ({ children }: LayoutProps) => {
+  const siteTitle = getMetadata();
+
   useEffect(() => {
     console.log(
       '%c %s',
@@ -97,21 +99,11 @@ const Layout = ({ children }: LayoutProps) => {
     );
   }, []);
 
-  const { site } = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <ParallaxProvider>
-        <Header siteTitle={site.siteMetadata?.title || `Amy Kirasack`} />
+        <Header siteTitle={siteTitle || 'Amy Kirasack'} />
         <MainWrapper>
           <main>{children}</main>
           <Footer />

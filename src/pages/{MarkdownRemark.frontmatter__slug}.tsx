@@ -55,10 +55,8 @@ const Template = ({
   );
 };
 
-export default Template;
-
-export const pageQuery = graphql`
-  query ($id: String!) {
+export const postQuery = graphql`
+  query BlogPost($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
@@ -69,3 +67,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default Template;

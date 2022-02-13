@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { getCV } from './../queries/static';
 import Viaduct from './../images/viaduct.png';
 import Quebec from './../images/quebec.png';
 import styled from 'styled-components';
@@ -68,14 +68,16 @@ type AboutProps = {
 };
 
 const About = ({ id }: AboutProps) => {
-  const cv = useStaticQuery(graphql`
-    {
-      file(extension: { eq: "pdf" }, absolutePath: { regex: "/cv/" }) {
-        publicURL
-        name
-      }
-    }
-  `);
+  // const cv = useStaticQuery(graphql`
+  //   {
+  //     file(extension: { eq: "pdf" }, absolutePath: { regex: "/cv/" }) {
+  //       publicURL
+  //       name
+  //     }
+  //   }
+  // `);
+
+  const CV = getCV();
 
   return (
     <AboutContainer id={id}>
@@ -112,7 +114,7 @@ const About = ({ id }: AboutProps) => {
           </p>
 
           <LinkContainer>
-            <a href={cv.file.publicURL} target="_blank" className="button">
+            <a href={CV} target="_blank" className="button">
               <FontAwesomeIcon icon={faFilePdf} />
               &nbsp;get my cv
             </a>
