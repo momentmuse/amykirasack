@@ -1,7 +1,7 @@
 import { Link, graphql } from 'gatsby';
-import Layout from './../components/Layout';
+import Layout from 'components/Layout';
 import styled from 'styled-components';
-import { Container } from './../styles';
+import { Container } from 'theme/styles';
 
 const PostContainer = styled(Container)`
   padding: ${({ theme }) => theme.padding.mobile};

@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'Glacial Indifference';
-  src: url('./../fonts/GlacialIndifference-Regular.otf');
+  src: url('assets/fonts/GlacialIndifference-Regular.otf');
 }
 @font-face {
   font-family: 'Glacial Indifference Bold';
-  src: url('./../fonts/GlacialIndifference-Bold.otf');
+  src: url('assets/fonts/GlacialIndifference-Bold.otf');
 }
 @font-face {
   font-family: 'Glacial Indifference Italic';
-  src: url('./../fonts/GlacialIndifference-Italic.otf');
+  src: url('assets/fonts/GlacialIndifference-Italic.otf');
 }
 @font-face {
   font-family: 'Young Serif';
-  src: url('./../fonts/YoungSerif-Regular.ttf');
+  src: url('assets/fonts/YoungSerif-Regular.ttf');
 }

@@ -16,16 +16,29 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-fontawesome-css',
     {
+      resolve: 'gatsby-plugin-module-resolver',
+      options: {
+        root: './',
+        aliases: {
+          components: './src/components',
+          assets: './src/assets',
+          css: './src/css',
+          services: './src/services',
+          theme: './src/theme',
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/icon.png',
+        icon: 'src/assets/images/icon.png',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images/',
+        path: './src/assets/images/',
       },
       __key: 'images',
     },

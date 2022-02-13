@@ -1,8 +1,8 @@
-import { getJobs } from '../services/static';
+import { getJobs } from 'services/static';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import ScrollingHeadline from './ScrollingHeadline';
-import { SectionHeaderAlt } from './../styles';
+import { SectionHeaderAlt } from 'theme/styles';
 
 const JobsContainer = styled.div`
   position: relative;

@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import Logo from './../images/icon.png';
+import Logo from 'assets/images/icon.png';
 
 const LogoIcon = styled.img`
   position: fixed;

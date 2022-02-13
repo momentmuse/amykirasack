@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'gatsby';
 import styled, { keyframes } from 'styled-components';
-import Pointer from './../cursors/pointer.png';
+import Pointer from 'assets/cursors/pointer.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faSmileBeam,

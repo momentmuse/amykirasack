@@ -1,6 +1,6 @@
-import { getCV } from '../services/static';
-import Viaduct from './../images/viaduct.png';
-import Quebec from './../images/quebec.png';
+import { getCV } from 'services/static';
+import Viaduct from 'assets/images/viaduct.png';
+import Quebec from 'assets/images/quebec.png';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
@@ -12,7 +12,7 @@ import {
   BlobMask,
   Blobs,
   SectionHeaderAlt,
-} from './../styles';
+} from 'theme/styles';
 import { Parallax } from 'react-scroll-parallax';
 
 const AboutContainer = styled(Container)`

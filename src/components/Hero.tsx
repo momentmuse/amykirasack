@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import SquareVid from './../videos/hero-splash-sq.mp4';
-import WideVid from './../videos/hero-splash.mp4';
+import SquareVid from 'assets/videos/hero-splash-sq.mp4';
+import WideVid from 'assets/videos/hero-splash.mp4';
 import styled, { useTheme } from 'styled-components';
 import Typewriter from 'typewriter-effect';
-import HeroBg from './../images/herobg.png';
+import HeroBg from 'assets/images/herobg.png';
 
 const HeroContainer = styled.div`
   @media ${({ theme }) => theme.device.laptop} {

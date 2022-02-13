@@ -1,16 +1,16 @@
 import { useEffect, ReactNode } from 'react';
-import { getMetadata } from '../services/static';
+import { getMetadata } from 'services/static';
 import Header from './Header';
 import Footer from './Footer';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import 'normalize.css';
-import './../css/typography.css';
+import 'css/typography.css';
 import '@fontsource/dm-mono';
+import 'css/Layout.css';
 import { ParallaxProvider } from 'react-scroll-parallax';
-import theme from './../theme';
-import Cursor from './../cursors/cursor.png';
-import Pointer from './../cursors/pointer.png';
-import './../css/Layout.css';
+import theme from 'theme/index';
+import Cursor from 'assets/cursors/cursor.png';
+import Pointer from 'assets/cursors/pointer.png';
 
 const GlobalStyle = createGlobalStyle`
   :root {

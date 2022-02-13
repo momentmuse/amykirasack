@@ -1,8 +1,8 @@
-import Layout from './../components/Layout';
+import Layout from 'components/Layout';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { Container, Padding } from './../styles';
-import GatsbyCat from './../images/gatsbycat.jpg';
+import { Container, Padding } from 'theme/styles';
+import GatsbyCat from 'assets/images/gatsbycat.jpg';
 
 const NotFoundContainer = styled(Container)`
   height: auto;

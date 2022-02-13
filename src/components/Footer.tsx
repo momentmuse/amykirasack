@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Divider } from './../styles';
+import { Divider } from 'theme/styles';
 
 const StyledFooter = styled.footer`
   margin: 3em auto;

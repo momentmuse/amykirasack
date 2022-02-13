@@ -1,8 +1,8 @@
-import Layout from './../components/Layout';
+import Layout from 'components/Layout';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { Container, Padding } from './../styles';
-import GatsbyBelly from './../images/gatsbybelly.png';
+import { Container, Padding } from 'theme/styles';
+import GatsbyBelly from 'assets/images/gatsbybelly.png';
 
 const ImageContainer = styled.div`
   align-items: center;

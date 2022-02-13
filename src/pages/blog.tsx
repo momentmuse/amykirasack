@@ -1,7 +1,7 @@
-import Layout from './../components/Layout';
+import Layout from 'components/Layout';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
-import { Container, SectionHeader, Divider } from './../styles';
+import { Container, SectionHeader, Divider } from 'theme/styles';
 
 const BlogContainer = styled(Container)`
   padding: ${({ theme }) => theme.padding.mobile};

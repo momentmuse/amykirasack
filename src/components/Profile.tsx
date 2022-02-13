@@ -1,9 +1,9 @@
 import { Link } from 'gatsby';
-import { getSpotlightPost } from './../services/static';
-import Espai from './../images/espai.png';
+import { getSpotlightPost } from 'services/static';
+import Espai from 'assets/images/espai.png';
 import styled from 'styled-components';
 import { Parallax } from 'react-scroll-parallax';
-import { Container, Blobs, BlobMask, SectionHeader } from './../styles';
+import { Container, Blobs, BlobMask, SectionHeader } from 'theme/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenFancy } from '@fortawesome/free-solid-svg-icons';
 
