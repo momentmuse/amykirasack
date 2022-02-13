@@ -62,7 +62,7 @@ type ProfileProps = {
   id: string;
 };
 
-const Profile = ({ id }: ProfileProps) => {
+export const Profile = ({ id }: ProfileProps) => {
   const spotlightPost = getSpotlightPost();
 
   return (
@@ -96,5 +96,3 @@ const Profile = ({ id }: ProfileProps) => {
     </ProfileContainer>
   );
 };
-
-export default Profile;

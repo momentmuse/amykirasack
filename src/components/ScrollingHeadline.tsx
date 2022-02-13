@@ -16,7 +16,7 @@ const StyledHeadline = styled.div`
   letter-spacing: -1px;
 `;
 
-const ScrollingHeadline = ({ headline }: ScrollingHeadlineProps) => {
+export const ScrollingHeadline = ({ headline }: ScrollingHeadlineProps) => {
   return (
     <Marquee gradient={false} speed={15}>
       <StyledHeadline>{`${headline} `.repeat(5).toLowerCase()}</StyledHeadline>
@@ -24,5 +24,3 @@ const ScrollingHeadline = ({ headline }: ScrollingHeadlineProps) => {
     </Marquee>
   );
 };
-
-export default ScrollingHeadline;

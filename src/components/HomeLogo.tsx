@@ -22,7 +22,7 @@ const LogoIcon = styled.img`
   }
 `;
 
-const HomeLogo = () => {
+export const HomeLogo = () => {
   return (
     <div>
       <h1>
@@ -33,5 +33,3 @@ const HomeLogo = () => {
     </div>
   );
 };
-
-export default HomeLogo;

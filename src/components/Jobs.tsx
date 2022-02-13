@@ -1,7 +1,7 @@
 import { getJobs } from 'services/static';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import styled from 'styled-components';
-import ScrollingHeadline from './ScrollingHeadline';
+import { ScrollingHeadline } from './ScrollingHeadline';
 import { SectionHeaderAlt } from 'theme/styles';
 
 const JobsContainer = styled.div`
@@ -89,7 +89,7 @@ type JobsProps = {
   id: string;
 };
 
-const Jobs = ({ id }: JobsProps) => {
+export const Jobs = ({ id }: JobsProps) => {
   const jobs = getJobs();
 
   const sanitizeYear = (start: number, end: number) => {
@@ -137,5 +137,3 @@ const Jobs = ({ id }: JobsProps) => {
     </JobsContainer>
   );
 };
-
-export default Jobs;

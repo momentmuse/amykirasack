@@ -2,7 +2,7 @@ import { useState, ChangeEvent, FormEvent } from 'react';
 import styled from 'styled-components';
 import { navigate } from 'gatsby-link';
 import AmyCat from 'assets/images/amycat.png';
-import ScrollingHeadline from './ScrollingHeadline';
+import { ScrollingHeadline } from './ScrollingHeadline';
 import {
   Container,
   Padding,
@@ -114,7 +114,7 @@ interface FormData {
   subject: string;
 }
 
-const Contact = ({ id }: ContactProps) => {
+export const Contact = ({ id }: ContactProps) => {
   const initialState: FormData = {
     email: '',
     'form-name': 'contact',
@@ -236,5 +236,3 @@ const Contact = ({ id }: ContactProps) => {
     </Container>
   );
 };
-
-export default Contact;

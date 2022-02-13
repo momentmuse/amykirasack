@@ -173,7 +173,7 @@ type NavProps = {
   setIsChecked: (isChecked: boolean) => void;
 };
 
-const Navbar = ({ isChecked, setIsChecked }: NavProps) => {
+export const Navbar = ({ isChecked, setIsChecked }: NavProps) => {
   useEffect(() => {
     if (isChecked) {
       document.body.classList.add('scroll');
@@ -224,5 +224,3 @@ const Navbar = ({ isChecked, setIsChecked }: NavProps) => {
     </Nav>
   );
 };
-
-export default Navbar;

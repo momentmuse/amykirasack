@@ -24,7 +24,7 @@ const FancyDivider = styled(Divider)`
   }
 `;
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <StyledFooter>
       <FancyDivider />© {new Date().getFullYear()} Amy Kirasack | built with ❤️
@@ -39,5 +39,3 @@ const Footer = () => {
     </StyledFooter>
   );
 };
-
-export default Footer;

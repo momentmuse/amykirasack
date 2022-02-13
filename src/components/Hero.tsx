@@ -57,7 +57,7 @@ interface Size {
   height: number | undefined;
 }
 
-const Hero = () => {
+export const Hero = () => {
   const theme = useTheme();
 
   const useWindowSize = (): Size => {
@@ -125,5 +125,3 @@ const Hero = () => {
     </HeroContainer>
   );
 };
-
-export default Hero;

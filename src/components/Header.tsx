@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import HomeLogo from './HomeLogo';
-import Navbar from './Navbar';
+import { HomeLogo } from './HomeLogo';
+import { Navbar } from './Navbar';
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
@@ -17,7 +17,7 @@ type HeaderProps = {
   siteTitle: string;
 };
 
-const Header = ({ siteTitle }: HeaderProps) => {
+export const Header = ({ siteTitle }: HeaderProps) => {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
@@ -28,5 +28,3 @@ const Header = ({ siteTitle }: HeaderProps) => {
     </StyledHeader>
   );
 };
-
-export default Header;
