@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import SquareVid from './../videos/hero-splash-sq.mp4';
 import WideVid from './../videos/hero-splash.mp4';
 import styled, { useTheme } from 'styled-components';

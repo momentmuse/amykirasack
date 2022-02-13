@@ -1,4 +1,3 @@
-import React from 'react';
 import { getCV } from '../services/static';
 import Viaduct from './../images/viaduct.png';
 import Quebec from './../images/quebec.png';

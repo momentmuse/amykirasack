@@ -1,4 +1,3 @@
-import React from 'react';
 import Layout from './../components/Layout';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';

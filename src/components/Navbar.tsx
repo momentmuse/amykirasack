@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'gatsby';
 import styled, { keyframes } from 'styled-components';
 import Pointer from './../cursors/pointer.png';

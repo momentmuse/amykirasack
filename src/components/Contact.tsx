@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react';
 import styled from 'styled-components';
 import { navigate } from 'gatsby-link';
 import AmyCat from './../images/amycat.png';

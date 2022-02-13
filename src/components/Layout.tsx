@@ -1,4 +1,4 @@
-import React, { useEffect, ReactNode } from 'react';
+import { useEffect, ReactNode } from 'react';
 import { getMetadata } from '../services/static';
 import Header from './Header';
 import Footer from './Footer';

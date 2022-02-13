@@ -1,4 +1,3 @@
-import React from 'react';
 import { getJobs } from '../services/static';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import styled from 'styled-components';
