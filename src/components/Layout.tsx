@@ -1,5 +1,5 @@
 import React, { useEffect, ReactNode } from 'react';
-import { getMetadata } from './../queries/static';
+import { getMetadata } from '../services/static';
 import Header from './Header';
 import Footer from './Footer';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';

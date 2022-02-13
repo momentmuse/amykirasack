@@ -1,5 +1,5 @@
 import React from 'react';
-import { getCV } from './../queries/static';
+import { getCV } from '../services/static';
 import Viaduct from './../images/viaduct.png';
 import Quebec from './../images/quebec.png';
 import styled from 'styled-components';
@@ -68,15 +68,6 @@ type AboutProps = {
 };
 
 const About = ({ id }: AboutProps) => {
-  // const cv = useStaticQuery(graphql`
-  //   {
-  //     file(extension: { eq: "pdf" }, absolutePath: { regex: "/cv/" }) {
-  //       publicURL
-  //       name
-  //     }
-  //   }
-  // `);
-
   const CV = getCV();
 
   return (

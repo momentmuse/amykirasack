@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { getSpotlightPost } from './../queries/static';
+import { getSpotlightPost } from './../services/static';
 import Espai from './../images/espai.png';
 import styled from 'styled-components';
 import { Parallax } from 'react-scroll-parallax';
