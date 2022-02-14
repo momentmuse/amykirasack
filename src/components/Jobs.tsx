@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { getJobs } from 'services/static';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import styled from 'styled-components';
@@ -89,11 +90,42 @@ type JobsProps = {
   id: string;
 };
 
-export const Jobs = ({ id }: JobsProps) => {
+const Jobs = ({ id }: JobsProps) => {
   const jobs = getJobs();
 
   const sanitizeYear = (start: number, end: number) => {
     return start === end ? end : `${start} - ${end}`;
+  };
+
+  const createJobArticles = () => {
+    return jobs?.map((job: Job) => {
+      const image = getImage(job.frontmatter.image);
+
+      return (
+        <article key={job.frontmatter.url}>
+          <JobCard>
+            <a href={job.frontmatter.url} target="_blank">
+              {image && <GatsbyImage image={image} alt={'company image'} />}{' '}
+            </a>
+            <Description>
+              <h2>
+                <a href={job.frontmatter.url} target="_blank">
+                  {job.frontmatter.company}
+                </a>
+              </h2>
+              <h3>{job.frontmatter.title}</h3>
+              <span>{job.frontmatter.description}</span>
+              <p>
+                {sanitizeYear(
+                  job.frontmatter.startyear,
+                  job.frontmatter.endyear
+                )}
+              </p>
+            </Description>
+          </JobCard>
+        </article>
+      );
+    });
   };
 
   return (
@@ -104,36 +136,9 @@ export const Jobs = ({ id }: JobsProps) => {
           'Seek the wisdom that will untie your knot. Seek the path that demands your whole being.'
         }
       />
-      <ScrollingCarousel>
-        {jobs?.map((job: Job) => {
-          const image = getImage(job.frontmatter.image);
-
-          return (
-            <article key={job.frontmatter.url}>
-              <JobCard>
-                <a href={job.frontmatter.url} target="_blank">
-                  {image && <GatsbyImage image={image} alt={'company image'} />}{' '}
-                </a>
-                <Description>
-                  <h2>
-                    <a href={job.frontmatter.url} target="_blank">
-                      {job.frontmatter.company}
-                    </a>
-                  </h2>
-                  <h3>{job.frontmatter.title}</h3>
-                  <span>{job.frontmatter.description}</span>
-                  <p>
-                    {sanitizeYear(
-                      job.frontmatter.startyear,
-                      job.frontmatter.endyear
-                    )}
-                  </p>
-                </Description>
-              </JobCard>
-            </article>
-          );
-        })}
-      </ScrollingCarousel>
+      <ScrollingCarousel>{createJobArticles()}</ScrollingCarousel>
     </JobsContainer>
   );
 };
+
+export const MemoizedJobs = memo(Jobs);
