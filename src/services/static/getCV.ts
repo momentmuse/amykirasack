@@ -7,7 +7,6 @@ export const getCV = () => {
     {
       file(extension: { eq: "pdf" }, absolutePath: { regex: "/cv/" }) {
         publicURL
-        name
       }
     }
   `);

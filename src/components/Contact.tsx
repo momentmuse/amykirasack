@@ -228,7 +228,7 @@ export const Contact = ({ id }: ContactProps) => {
           <ImageMask>
             <img
               src={AmyCat}
-              alt="a woman kneels in an alleyway to pet a calico cat"
+              alt="a woman kneels in front of a doorstep to pet a calico cat"
             />
           </ImageMask>
         </Parallax>
