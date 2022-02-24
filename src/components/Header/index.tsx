@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { HomeLogo } from './HomeLogo';
-import { Navbar } from './Navbar';
+import { HomeLogo } from 'components/HomeLogo';
+import { Navbar } from 'components/Navbar';
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`

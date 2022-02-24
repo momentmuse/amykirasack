@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { ScrollingHeadline } from './ScrollingHeadline';
+import { ScrollingHeadline } from 'components/ScrollingHeadline';
 import {
   Container,
   Padding,

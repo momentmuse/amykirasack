@@ -2,7 +2,7 @@ import { useState, ChangeEvent, FormEvent } from 'react';
 import styled from 'styled-components';
 import { navigate } from 'gatsby-link';
 import AmyCat from 'assets/images/amycat.png';
-import { ScrollingHeadline } from './ScrollingHeadline';
+import { ScrollingHeadline } from 'components/ScrollingHeadline';
 import {
   Container,
   Padding,

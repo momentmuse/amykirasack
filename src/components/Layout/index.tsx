@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { getMetadata } from 'services/static';
-import { Header } from './Header';
-import { Footer } from './Footer';
+import { Header } from 'components/Header';
+import { Footer } from 'components/Footer';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import 'normalize.css';
 import 'css/typography.css';
