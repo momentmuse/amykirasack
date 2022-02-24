@@ -1,62 +1,19 @@
 import { Link } from 'gatsby';
 import { getSpotlightPost } from 'services/static';
 import Espai from 'assets/images/espai.png';
-import styled from 'styled-components';
-import { Parallax } from 'react-scroll-parallax';
-import { Container, Blobs, BlobMask, SectionHeader } from 'theme/styles';
+import { SectionHeader } from 'theme/styles';
+import {
+  ProfileContainer,
+  ImageContainer,
+  ImageMask,
+  TextContainer,
+  StyledParallax,
+  Titles,
+  PostSpotlight,
+} from './Profile.styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenFancy } from '@fortawesome/free-solid-svg-icons';
-
-const ProfileContainer = styled(Container)`
-  align-items: center;
-  justify-content: center;
-  padding: -4rem 2rem;
-  min-height: 60vh;
-
-  @media ${({ theme }) => theme.device.tablet} {
-    padding: ${({ theme }) => theme.padding.tablet};
-    flex-direction: row;
-  }
-  @media ${({ theme }) => theme.device.laptop} {
-    padding: ${({ theme }) => theme.padding.laptop};
-  }
-`;
-
-const ImageContainer = styled.div`
-  min-height: 40vh;
-`;
-
-const ImageMask = styled(BlobMask)`
-  mask-image: url(${Blobs.profile});
-`;
-
-const TextContainer = styled.div`
-  margin-top: -11rem;
-  margin-left: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  color: ${({ theme }) => theme.color.accent};
-  z-index: 1;
-
-  @media ${({ theme }) => theme.device.tablet} {
-    margin-top: 5rem;
-    width: 35rem;
-  }
-`;
-
-const StyledParallax = styled(Parallax)`
-  @media ${({ theme }) => theme.device.tablet} {
-    margin-left: -5rem;
-  }
-`;
-
-const Titles = styled.p`
-  padding: 0 1rem;
-`;
-
-const PostSpotlight = styled.div`
-  padding: ${({ theme }) => theme.padding.mobile};
-`;
+import { Parallax } from 'react-scroll-parallax';
 
 type ProfileProps = {
   id: string;

@@ -2,16 +2,7 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { HomeLogo } from 'components/HomeLogo';
 import { Navbar } from 'components/Navbar';
-import styled from 'styled-components';
-
-const StyledHeader = styled.header`
-  background-color: ${({ theme }) => theme.color.primary};
-  width: 100vw;
-  height: 8rem;
-  top: 0;
-  left: 0;
-  display: flex;
-`;
+import { StyledHeader } from './Header.styled';
 
 type HeaderProps = {
   siteTitle: string;

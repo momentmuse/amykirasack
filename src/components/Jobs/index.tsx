@@ -1,78 +1,14 @@
 import { memo } from 'react';
 import { getJobs } from 'services/static';
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
-import styled from 'styled-components';
 import { ScrollingHeadline } from 'components/ScrollingHeadline';
 import { SectionHeaderAlt } from 'theme/styles';
-
-const JobsContainer = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-`;
-
-const ScrollingCarousel = styled.div`
-  margin: 5rem 0;
-  padding: 1rem 0;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  align-items: center;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  &::scrollbar {
-    display: none;
-  }
-
-  @media ${({ theme }) => theme.device.laptop} {
-    margin: 6rem 0;
-    padding: 1rem 8rem;
-  }
-`;
-
-const JobCard = styled.div`
-  position: relative;
-  width: 19rem;
-  height: 30rem;
-  margin: 0 2rem;
-  background-color: ${({ theme }) => theme.color.light};
-  border: 1px solid ${({ theme }) => theme.color.accent};
-  border-radius: 25px;
-
-  img {
-    width: 100%;
-    border-radius: 25px 25px 0 0;
-  }
-
-  span {
-    font-family: ${({ theme }) => theme.font.family.body};
-    color: ${({ theme }) => theme.color.accent};
-    font-size: ${({ theme }) => theme.font.size.small};
-  }
-
-  p {
-    position: absolute;
-    right: 1rem;
-    bottom: 0;
-  }
-
-  will-change: transform;
-  transition: transform 450ms;
-
-  &:hover,
-  &:active {
-    transition: transform 140ms;
-    transform: translateY(-1rem);
-    border: 1px solid ${({ theme }) => theme.color.primary};
-  }
-`;
-
-const Description = styled.div`
-  padding: 1rem;
-`;
+import {
+  JobsContainer,
+  ScrollingCarousel,
+  JobCard,
+  Description,
+} from './Jobs.styled';
 
 interface Job {
   frontmatter: {

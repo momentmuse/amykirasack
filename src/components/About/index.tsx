@@ -1,66 +1,20 @@
 import { getCV } from 'services/static';
 import Viaduct from 'assets/images/viaduct.png';
 import Quebec from 'assets/images/quebec.png';
-import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { ScrollingHeadline } from 'components/ScrollingHeadline';
+import { Padding, SectionHeaderAlt } from 'theme/styles';
 import {
-  Container,
-  Padding,
-  BlobMask,
-  Blobs,
-  SectionHeaderAlt,
-} from 'theme/styles';
+  AboutContainer,
+  ImageContainer,
+  ImageMaskA,
+  ImageMaskB,
+  TextContainer,
+  LinkContainer,
+} from './About.styled';
 import { Parallax } from 'react-scroll-parallax';
-
-const AboutContainer = styled(Container)`
-  align-items: center;
-  justify-content: center;
-`;
-
-const ImageContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  z-index: -3;
-
-  @media ${({ theme }) => theme.device.tablet} {
-    margin-bottom: 4rem;
-  }
-`;
-
-const ImageMaskA = styled(BlobMask)`
-  mask-image: url(${Blobs.aboutA});
-`;
-
-const ImageMaskB = styled(BlobMask)`
-  mask-image: url(${Blobs.aboutB});
-`;
-
-const TextContainer = styled.div`
-  margin-top: -4rem;
-  @media ${({ theme }) => theme.device.tablet} {
-    position: absolute;
-    left: 6rem;
-    max-width: 33rem;
-  }
-  @media ${({ theme }) => theme.device.laptop} {
-    left: 9rem;
-    bottom: 4rem;
-  }
-  @media ${({ theme }) => theme.device.highres} {
-    left: 22rem;
-    bottom: 0rem;
-  }
-`;
-
-const LinkContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 2rem;
-`;
 
 type AboutProps = {
   id: string;
